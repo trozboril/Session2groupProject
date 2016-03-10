@@ -50,20 +50,35 @@ so it can be shared for people who want to plan an event.
 
 ###pages
 __index page__
+
 featured beers && breweries
+
 beers that are trending
+
 about
+
 Beers that i am following
+
 sections for other pages
 
 __tour de brewery__
+
 left side add breweries or list of potential brweries
 right side - google map area
 somewhere needs to be social media icons to share
 
-__breweries page__
+__breweries page__ plural
+
 same as most list of breweries 
 link to look at them in more detail
 
 __brew dashboard - for brew owner__
+Be able to create, edit and delete brews
+Sections:
+1. Current brews
+2. Backlog beers - beers that aren't around anymore, but might come back
+3. On deck  - beers taht are going to be added to the tap and the date they are going to be on deck
+
+__individual brewery__
+__
 
