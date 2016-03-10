@@ -27,3 +27,15 @@ about the brewery such as description, location info, etc.
 Users will be able to login and be able to rate both the brewery/establishment as wel as the specific beers on tap, backlogged,
 and up and coming.  Ranking will be out of a five point scale and there will also be
 reviews for both the beers and breweries.  
+
+
+Users will also be able to find what beers are "hot" or "trending" as well as see all the new 
+beers that have just been added by the brewery.  Further functionality for the user will be able to go to a different
+page and be able to compare craft beer.  Users will also have a page for finding a beer near them
+within a certain distance.   Users can filter by:
+
+*Distance
+*Beer Category 
+*alcohol content
+*New and popular
+
