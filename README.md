@@ -34,8 +34,8 @@ beers that have just been added by the brewery.  Further functionality for the u
 page and be able to compare craft beer.  Users will also have a page for finding a beer near them
 within a certain distance.   Users can filter by:
 
-*Distance
-*Beer Category 
-*alcohol content
-*New and popular
+1. Distance
+2. Beer Category 
+3. Alcohol content
+4. New and popular
 
