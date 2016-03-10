@@ -19,8 +19,11 @@ that don't have a website yet and want to gain more online presence.
 The ownder also has a backlog of previous beers that were once on tap and can hopefully
 just be able to drag and drop what's currently on tap as well move it to the backlog.
 The owner finally will be able to have the ability to let users know what seasonal beer
-is about to be coming back on tap.
+is about to be coming back on tap. Finally breweries will be able also to provide information
+about the brewery such as description, location info, etc.
 
 ###Users
 
-Users will be able to 
+Users will be able to login and be able to rate both the brewery/establishment as wel as the specific beers on tap, backlogged,
+and up and coming.  Ranking will be out of a five point scale and there will also be
+reviews for both the beers and breweries.  
