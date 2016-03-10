@@ -39,3 +39,11 @@ within a certain distance.   Users can filter by:
 3. Alcohol content
 4. New and popular
 
+
+The user will also have a page where they can see all of the different types
+of beers -i.e. pale ale, stout, porter.  This provides a description of the beers
+Finally, a user will be able to create their own Tour de Brewery. This tour includes
+the ability to work with the google maps api and be able to chart out a route of breweries
+for their own adventure. This will hopefully be able to share on facebook as well as twitter
+so it can be shared for people who want to plan an event.
+
