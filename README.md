@@ -47,3 +47,18 @@ the ability to work with the google maps api and be able to chart out a route of
 for their own adventure. This will hopefully be able to share on facebook as well as twitter
 so it can be shared for people who want to plan an event.
 
+
+###pages
+i__ndex page__
+featured beers && breweries
+beers that are trending
+about
+Beers that i am following
+sections for other pages
+
+__tour de brewery__
+left side add breweries or list of potential brweries
+right side - google map area
+somewhere needs to be social media icons to share
+
+
