@@ -49,7 +49,7 @@ so it can be shared for people who want to plan an event.
 
 
 ###pages
-i__ndex page__
+__index page__
 featured beers && breweries
 beers that are trending
 about
@@ -61,4 +61,9 @@ left side add breweries or list of potential brweries
 right side - google map area
 somewhere needs to be social media icons to share
 
+__breweries page__
+same as most list of breweries 
+link to look at them in more detail
+
+__brew dashboard - for brew owner__
 
