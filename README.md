@@ -51,7 +51,7 @@ so it can be shared for people who want to plan an event.
 ###pages
 __index page__
 
-![alt tag](https://raw.githubusercontent.com/tbealer/Session2groupProject/images/index.png)
+![alt tag](images/index.png)
 
 
 featured beers && breweries
@@ -66,7 +66,7 @@ sections for other pages
 
 __tour de brewery__
 
-![alt tag](https://raw.githubusercontent.com/tbealer/Session2groupProject/images/tourdebrewery.png)
+![alt tag](images/tourdebrewery.png)
 
 left side add breweries or list of potential brweries
 right side - google map area
@@ -74,14 +74,14 @@ somewhere needs to be social media icons to share
 
 __breweries page__ plural
 
-![alt tag](https://raw.githubusercontent.com/tbealer/Session2groupProject/images/breweriesPAge.png)
+![alt tag](images/breweriesPAge.png)
 
 same as most list of breweries 
 link to look at them in more detail
 
 __brew dashboard - for brew owner__
 
-![alt tag](https://raw.githubusercontent.com/tbealer/Session2groupProject/images/brewDashboard.png)
+![alt tag](images/brewDashboardrun.png)
 
 Be able to create, edit and delete brews
 Sections:
