@@ -81,7 +81,7 @@ link to look at them in more detail
 
 __brew dashboard - for brew owner__
 
-![alt tag](images/brewDashboardrun.png)
+![alt tag](images/brewDashboard.png)
 
 Be able to create, edit and delete brews
 Sections:
