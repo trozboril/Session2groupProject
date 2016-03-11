@@ -51,6 +51,9 @@ so it can be shared for people who want to plan an event.
 ###pages
 __index page__
 
+![alt tag](images/index.png)
+
+
 featured beers && breweries
 
 beers that are trending
@@ -63,16 +66,23 @@ sections for other pages
 
 __tour de brewery__
 
+![alt tag](images/tourdebrewery.png)
+
 left side add breweries or list of potential brweries
 right side - google map area
 somewhere needs to be social media icons to share
 
 __breweries page__ plural
 
+![alt tag](images/breweriesPAge.png)
+
 same as most list of breweries 
 link to look at them in more detail
 
 __brew dashboard - for brew owner__
+
+![alt tag](images/brewDashboard.png)
+
 Be able to create, edit and delete brews
 Sections:
 1. Current brews
