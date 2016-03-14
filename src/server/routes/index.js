@@ -77,8 +77,10 @@ router.post('/createbeer', function (req, res, next) {
 });
 
 // *** user after logged in can create a new brewery *** //
-router.get('/newbrewery', function (req, res, next) {
-	res.render('newbrewery');
+
+res.get('/newbrewery', function (req, res, next) {
+	res.render('newBrewery');
+
 });
 
 router.post('/newbrewery', function (req, res, next) {
@@ -86,8 +88,10 @@ router.post('/newbrewery', function (req, res, next) {
 });
 
 // *** basic contact page *** //
+
 router.get('/contact_tapt', function (req, res, next) {
-	res.render('contact_tapt');
+	res.render('contact');
+
 });
 
 router.post('/contact_tapt', function (req, res, next) {
