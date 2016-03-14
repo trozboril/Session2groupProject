@@ -45,6 +45,9 @@ router.get('/breweries', function (req, res, next) {
 
 // *** get brewery by ID *** //
 router.get('/brewery/:id', function (req, res, next) {
+	// for an individual brewery,
+	// breweries/1
+
 	res.redirect('/brewery/' + req.params.id);
 });
 
@@ -90,13 +93,37 @@ router.post('/createbeer', function (req, res, next) {
 
 // *** user after logged in can create a new brewery *** //
 
-router.get('/newbrewery', function (req, res, next) {
+router.get('/breweries/new', function (req, res, next) {
+	// breweries/new
+
+
 	res.render('newBrewery');
 
 });
 
 router.post('/newbrewery', function (req, res, next) {
-
+	// routes should be the resource and then the "action"
+	// eg => breweries
+	var zipper = parseInt(req.body.zip);
+	console.log(req.body);
+	
+	// table names should be plural
+	// e.g. breweries
+	
+	knex('breweries').insert({
+		name: req.body.name,
+		address: req.body.address,
+		city: req.body.city,
+		state: req.body.state,
+		zip: zipper,
+		description: req.body.description,
+		image: req.body.image
+	}).then(function () {
+		knex('brewery_owner').insert({
+		}).then(function () {
+		res.redirect('/breweries');	
+	});
+	
 });
 
 // *** basic contact page *** //
