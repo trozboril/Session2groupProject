@@ -11,10 +11,19 @@ router.get('/login', function (req, res, next) {
 	res.render('login');
 });
 
+router.post('/login', function (req, res, next) {
+
+});
+
 // *** register route *** //
 router.get('/register', function (req, res, next) {
 	res.render('register');
 });
+
+router.post('/register', function (req, res, next) {
+
+});
+
 
 // *** get all breweries route *** //
 router.get('/breweries', function (req, res, next) {
@@ -24,12 +33,12 @@ router.get('/breweries', function (req, res, next) {
 
 // *** get brewery by ID *** //
 router.get('/brewery/:id', function (req, res, next) {
-	res.render('brewery/' + req.params.id);
+	res.render('brewery/');
 });
 
 // *** get user by ID (user page after login) *** //
 router.get('/user/:id', function (req, res, next) {
-	res.render('user/' + req.params.id);
+	res.render('user/');
 });
 
 // *** serve up pubcrawl app *** ///
@@ -37,9 +46,9 @@ rouer.get('/pubcrawl', function (req, res, next) {
 	res.render('pubcrawl');
 });
 
-// *** get brewery owner by id *** //
+// *** get brewery owner render brewery update page *** //
 router.get('/user/owner/:id', function (req, res, next) {
-	res.render('owner' + req.params.id);
+	res.redirect('owner/' + req.params.id);
 });
 
 
@@ -50,22 +59,39 @@ router.get('/beers', function (req, res, next) {
 
 // *** get beer by id *** //
 router.get('/beer/:id', function (req, res, next) {
-	res.render('beer' + req.params.id);
+	res.render('beer');
 });
 
 // *** logout user *** //
-res.get('/logout', function (req, res, next) {
+router.get('/logout', function (req, res, next) {
 	res.render('logout');
 });
 
+//*** create a beer *** //
+router.get('/user/owner/:id/createbeer', function (req, res, next) {
+	
+});
+
+router.post('/createbeer', function (req, res, next) {
+
+});
+
 // *** user after logged in can create a new brewery *** //
-res.get('/newbrewery', function (req, res, next) {
+router.get('/newbrewery', function (req, res, next) {
 	res.render('newbrewery');
 });
 
+router.post('/newbrewery', function (req, res, next) {
+
+});
+
 // *** basic contact page *** //
-res.get('/contact_tapt', function (req, res, next) {
+router.get('/contact_tapt', function (req, res, next) {
 	res.render('contact_tapt');
+});
+
+router.post('/contact_tapt', function (req, res, next) {
+
 });
 
 module.exports = router;
