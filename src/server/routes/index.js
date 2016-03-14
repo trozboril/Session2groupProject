@@ -42,7 +42,7 @@ router.get('/user/:id', function (req, res, next) {
 });
 
 // *** serve up pubcrawl app *** ///
-rouer.get('/pubcrawl', function (req, res, next) {
+router.get('/pubcrawl', function (req, res, next) {
 	res.render('pubCrawl');
 });
 
