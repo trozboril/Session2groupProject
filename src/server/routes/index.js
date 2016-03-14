@@ -33,22 +33,22 @@ router.get('/breweries', function (req, res, next) {
 
 // *** get brewery by ID *** //
 router.get('/brewery/:id', function (req, res, next) {
-	res.render('brewery/');
+	res.redirect('/brewery/' + req.params.id);
 });
 
 // *** get user by ID (user page after login) *** //
 router.get('/user/:id', function (req, res, next) {
-	res.render('user/');
+	res.redirect('/user/' + req.params.id);
 });
 
 // *** serve up pubcrawl app *** ///
 rouer.get('/pubcrawl', function (req, res, next) {
-	res.render('pubcrawl');
+	res.render('pubCrawl');
 });
 
 // *** get brewery owner render brewery update page *** //
 router.get('/user/owner/:id', function (req, res, next) {
-	res.redirect('owner/' + req.params.id);
+	res.redirect('/owner/' + req.params.id);
 });
 
 
@@ -59,7 +59,7 @@ router.get('/beers', function (req, res, next) {
 
 // *** get beer by id *** //
 router.get('/beer/:id', function (req, res, next) {
-	res.render('beer');
+	res.reirect('/beer' + req.params.id);
 });
 
 // *** logout user *** //
@@ -78,7 +78,7 @@ router.post('/createbeer', function (req, res, next) {
 
 // *** user after logged in can create a new brewery *** //
 
-res.get('/newbrewery', function (req, res, next) {
+router.get('/newbrewery', function (req, res, next) {
 	res.render('newBrewery');
 
 });
