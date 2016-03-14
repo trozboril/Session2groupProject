@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var knex = require('../db/knex');
 
 // *** root route *** //
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Tapt!' });
+	if( !req.user ){
+  		res.render('index', { title: 'Tapt' });
+	} else {
+		res.render('index', { title: 'Tapt', name: req.user.name});
+	}
 });
 
 // *** login route *** //
@@ -27,7 +32,14 @@ router.post('/register', function (req, res, next) {
 
 // *** get all breweries route *** //
 router.get('/breweries', function (req, res, next) {
-	res.render('breweries');
+	if( !req.user ) {
+		res.render('breweries');
+	  } else {
+	  	knex('users').where('id', req.user.id)
+	  	.then(function (user) {
+	  		res.render('breweries', {name: user[0].name});
+	  	});
+	  }
 });
 
 
