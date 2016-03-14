@@ -1,6 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+/**
+  Our Color Schema:
+  whitish: #ebe8e8;
+  redish: #C63D0F;
+  greenish: #157342;
+  blackish: #292929;
+**/
+
 body {
-  font-family: 'Oswald', sans-serif;}
+  font-family: 'Oswald', sans-serif;
+  background: #ebe8e8;
+}
 
 a {
   color: #00B7FF;
@@ -8,3 +18,24 @@ a {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+.taptHeader {
+  margin-top: 40px;
+}
+
+.btn-primary {
+  background: #157342;
+  color: #ebe8e8;
+  border: #157342;
+}
+
+.btn-danger {
+  background: #C63D0F;
+  color: #ebe8e8;
+  border: #C63D0F;
+}
+
+.navbar-brand {
+  padding-left: 20px;
+}
+
