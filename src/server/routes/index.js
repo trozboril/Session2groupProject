@@ -60,12 +60,12 @@ res.get('/logout', function (req, res, next) {
 
 // *** user after logged in can create a new brewery *** //
 res.get('/newbrewery', function (req, res, next) {
-	res.render('newbrewery');
+	res.render('newBrewery');
 });
 
 // *** basic contact page *** //
 res.get('/contact_tapt', function (req, res, next) {
-	res.render('contact_tapt');
+	res.render('contact');
 });
 
 module.exports = router;
