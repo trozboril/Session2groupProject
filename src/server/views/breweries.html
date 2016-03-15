@@ -5,13 +5,30 @@
 
 {% block content %}
 
-<div class="container">
-
-    <h3>Brewweries</h3>
-    <p>Welcome {{ name }}</p>
-
-    <h5>Create a new brewery <a href='/breweries/new'>here</a></h5>
-
+<div class="row" id="breweryHeader">
+    <div class="container">
+        <h2>Breweries</h2>
+        <p>Welcome {{ name }}</p>
+        <h5>Create a new brewery <a href='/breweries/new'>here</a></h5>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+    {% for brewery in breweries %}
+        <div class="col-md-6 col-sm-6 col-sm-offset-3 col-md-offset-3">
+            <div class="col-md-4 col-sm-4 img-responsive">
+             <img src='{{brewery.image}}'>
+                <!--<img class="img-responsive" src="../images/stein.jpg">-->
+            </div>
+            <div class="col-md-8 col-sm-8">
+                <h3>{{brewery.name}}</h3>
+                <h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
+                <p><strong>Description: </strong> {{brewery.description}}</p>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

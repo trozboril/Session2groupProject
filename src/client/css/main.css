@@ -13,6 +13,10 @@ body {
   color: #292929;
 }
 
+strong {
+  font-weight: 700;
+}
+
 a {
   color: #00B7FF;
 }
@@ -129,4 +133,9 @@ footer {
   color: #ebe8e8;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+#breweryHeader {
+  margin-top: 50px;
+  padding-bottom: 20px;
 }
