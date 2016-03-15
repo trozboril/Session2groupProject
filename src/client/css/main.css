@@ -109,7 +109,7 @@ a {
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center center;
   height: 350px;
 }
 #streets h2 {
