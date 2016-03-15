@@ -38,6 +38,9 @@
                 <ul class="dropdown-menu">
                   <li><a href="/auth/login">Log in</a></li>
                   <li><a href="/auth/logout">Log out</a></li>
+                  {% if id %}
+                  <li><a href="/user/{{id}}">Profile</a></li>
+                  {% endif %}
                 </ul>
               </li>
 

@@ -7,26 +7,8 @@ router.get('/', function (req, res, next) {
 	if( !req.user ){
   		res.render('index', { title: 'Tapt!' });
 	} else {
-		res.render('index', { title: 'Tapt,', name: req.user.name});
+		res.render('index', { title: 'Tapt,', name: req.user.name, id: req.user.id});
 	}
-});
-
-// *** login route *** //
-router.get('/login', function (req, res, next) {
-	res.render('login');
-});
-
-router.post('/login', function (req, res, next) {
-
-});
-
-// *** register route *** //
-router.get('/register', function (req, res, next) {
-	res.render('register');
-});
-
-router.post('/register', function (req, res, next) {
-
 });
 
 
@@ -34,18 +16,15 @@ router.post('/register', function (req, res, next) {
 router.get('/breweries', function (req, res, next) {
 	knex.select('*').from('breweries')
 	.then(function (breweries) {
-		console.log(breweries);
 		if( !req.user ) {
 			res.render('breweries', {breweries: breweries});
 	 	} else {
 	  		knex('users').where('id', req.user.id)
 	  		.then(function (user) {
-	  		res.render('breweries', {name: user[0].name, breweries: breweries});
+	  		res.render('breweries', {name: user[0].name, breweries: breweries, id: req.user.id});
 	  	});
 	  }
-
 	});
-	
 });
 
 
