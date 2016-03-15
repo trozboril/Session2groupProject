@@ -106,10 +106,10 @@ router.post('/newbrewery', function (req, res, next) {
 	// eg => breweries
 	var zipper = parseInt(req.body.zip);
 	console.log(req.body);
-	
+
 	// table names should be plural
 	// e.g. breweries
-	
+
 	knex('breweries').insert({
 		name: req.body.name,
 		address: req.body.address,
@@ -119,11 +119,11 @@ router.post('/newbrewery', function (req, res, next) {
 		description: req.body.description,
 		image: req.body.image
 	}).then(function () {
-		knex('brewery_owner').insert({
-		}).then(function () {
-		res.redirect('/breweries');	
+		knex('brewery_owner').insert({}).then(function () {
+			res.redirect('/breweries');
+		});
+
 	});
-	
 });
 
 // *** basic contact page *** //
