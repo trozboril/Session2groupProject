@@ -89,7 +89,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-     knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 4,
            name: 'American Black Ale',
@@ -117,7 +117,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-       knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 5,
            name: 'American Brett',
@@ -145,7 +145,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Brettanomyces, Ale/Lager possible' 
             }),
-         knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 6,
            name: 'American Brown Ale',
@@ -173,7 +173,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-           knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 7,
            name: 'American Cream Ale',
@@ -201,7 +201,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 8,
            name: 'American Imperial Porter',
@@ -229,7 +229,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-               knex('beertypes').insert(
+     knex('beertypes').insert(
        {
            id: 9,
            name: 'American Imperial Red Ale',
@@ -257,7 +257,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                 knex('beertypes').insert(
+     knex('beertypes').insert(
        {
            id: 10,
            name: 'American Imperial Stout',
@@ -285,7 +285,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                   knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 11,
            name: 'American India Pale Ale / IPA',
@@ -313,7 +313,7 @@ exports.seed = function(knex, Promise) {
            water:'High mineral content' ,
            yeast:'Ale' 
             }),
-                     knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 12,
            name: 'American Lager',
@@ -341,7 +341,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager' 
             }),
-                       knex('beertypes').insert(
+     knex('beertypes').insert(
        {
            id: 13,
            name: 'American Pale Ale',
@@ -368,8 +368,8 @@ exports.seed = function(knex, Promise) {
            maltingr:'Pale, Caramel, Munich' ,
            water:'Sulfite content may vary, but carbonate content should be relatively low' ,
            yeast:'Ale' 
-            }),
-                         knex('beertypes').insert(
+            }), 
+   knex('beertypes').insert(
        {
            id: 14,
            name: 'American Sour',
@@ -397,7 +397,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale, Brettanomyces possible' 
             }),
-                           knex('beertypes').insert(
+ knex('beertypes').insert(
        {
            id: 15,
            name: 'American Stout',
@@ -425,7 +425,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 16,
            name: 'American-Style Wheat Wine Ale',
@@ -453,7 +453,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 17,
            name: 'American Wheat',
@@ -481,7 +481,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 18,
            name: 'Baltic-Style Porter',
@@ -509,7 +509,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 19,
            name: 'Barrel-Aged Beer',
@@ -537,7 +537,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale. May have Brettanomyces character' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 20,
            name: 'Belgian-Style Blonde Ale',
@@ -565,7 +565,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 21,
            name: 'Belgian-Style Dubbel',
@@ -593,7 +593,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 22,
            name: 'Belgian-Style Flanders',
@@ -621,7 +621,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Brettanomyces' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 23,
            name: 'Belgian-Style Fruit Lambic',
@@ -649,7 +649,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale, Brettanomyces possible' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 24,
            name: 'Belgian-Style Golden Strong Ale',
@@ -677,7 +677,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 25,
            name: 'Belgian-Style Lambic / Gueuze',
@@ -705,7 +705,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale, Brettanomyces possible' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 26,
            name: 'Belgian-Style Pale Ale',
@@ -733,7 +733,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 27,
            name: 'Belgian-Style Quadrupel',
@@ -761,7 +761,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 28,
            name: 'Belgian-Style Saison',
@@ -789,7 +789,7 @@ exports.seed = function(knex, Promise) {
            water:'High sulfate content' ,
            yeast:'Ale, Brettanomyces possible' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 29,
            name: 'Belgian-Style Tripel',
@@ -817,7 +817,7 @@ exports.seed = function(knex, Promise) {
            water:'Soft Water' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 30,
            name: 'Belgian-Style Witbier',
@@ -845,7 +845,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 31,
            name: 'Berliner-Style Weisse',
@@ -873,7 +873,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 32,
            name: 'French-Style Biere De Garde',
@@ -901,7 +901,7 @@ exports.seed = function(knex, Promise) {
            water:'Soft Water' ,
            yeast:'Ale, Brettanomyces possible' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 33,
            name: 'English-Style Bitter',
@@ -929,7 +929,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 34,
            name: 'Blonde Ale',
@@ -959,7 +959,7 @@ exports.seed = function(knex, Promise) {
             }),
 
                              //bohemian-style pilsener is supposed to be spelled with an extra "e" don't change it
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 35,
            name: 'Bohemian-Style Pilsener',
@@ -987,7 +987,7 @@ exports.seed = function(knex, Promise) {
            water:'Low Mineral Content' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 36,
            name: 'British-Style Barley Wine Ale',
@@ -1015,7 +1015,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 37,
            name: 'California Common',
@@ -1043,7 +1043,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 38,
            name: 'Chocolate Beer',
@@ -1071,7 +1071,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 39,
            name: 'Coffee Beer',
@@ -1099,7 +1099,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 40,
            name: 'Contemporary Gose',
@@ -1127,7 +1127,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 41,
            name: 'English-Style Brown Ale',
@@ -1155,7 +1155,7 @@ exports.seed = function(knex, Promise) {
            water:'Moderate carbonate water' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 42,
            name: 'English-Style Brown Porter',
@@ -1183,7 +1183,7 @@ exports.seed = function(knex, Promise) {
            water:'Moderate carbonate water' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 43,
            name: 'English-Style Mild',
@@ -1211,7 +1211,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 44,
            name: 'English-Style India Pale Ale / IPA',
@@ -1239,7 +1239,7 @@ exports.seed = function(knex, Promise) {
            water:'High mineral content. May include subtle sulfur content' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 45,
            name: 'English-Style Oatmeal Stout',
@@ -1267,7 +1267,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 46,
            name: 'English-Style Old Ale',
@@ -1295,7 +1295,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale, Brettanomyces possible' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 47,
            name: 'English-Style Pale Ale / ESB',
@@ -1323,7 +1323,7 @@ exports.seed = function(knex, Promise) {
            water:'Some versions use medium to high sulfate' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 48,
            name: 'English-Style Sweet Stout (Milk Stout)',
@@ -1351,7 +1351,7 @@ exports.seed = function(knex, Promise) {
            water:'High carbonate water' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 49,
            name: 'European-Style Export',
@@ -1379,7 +1379,7 @@ exports.seed = function(knex, Promise) {
            water:'Gypsum, Chalk' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 50,
            name: 'Fruit and Field Beer',
@@ -1407,7 +1407,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 51,
            name: 'German-Style Bock',
@@ -1435,7 +1435,7 @@ exports.seed = function(knex, Promise) {
            water:'Moderate Carbonate' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 52,
            name: 'German-Style Brown / Altbier',
@@ -1463,7 +1463,7 @@ exports.seed = function(knex, Promise) {
            water:'Moderate Carbonate' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 53,
            name: 'German-Style Dopplebock',
@@ -1491,7 +1491,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 54,
            name: 'German-Style Dunkel',
@@ -1519,7 +1519,7 @@ exports.seed = function(knex, Promise) {
            water:'Moderate Carbonate' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 55,
            name: 'German-Style DunkelWeizen',
@@ -1547,7 +1547,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Weizen Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 56,
            name: 'German-Style Hefeweizen',
@@ -1575,7 +1575,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Weizen Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 57,
            name: 'German-Style Maibock',
@@ -1603,7 +1603,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 58,
            name: 'German-Style Helles',
@@ -1631,7 +1631,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 59,
            name: 'German-Style Kolsch',
@@ -1659,7 +1659,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 60,
            name: 'German-Style Marzen / Oktoberfest',
@@ -1687,7 +1687,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 61,
            name: 'German-Style Pilsener',
@@ -1715,7 +1715,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 62,
            name: 'German-Style Schwarzbier',
@@ -1743,7 +1743,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 63,
            name: 'German-Style Weizenbock',
@@ -1771,7 +1771,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Weizen Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 64,
            name: 'Gluten Free',
@@ -1799,7 +1799,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 65,
            name: 'Herb and Spice Beer',
@@ -1827,7 +1827,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 66,
            name: 'Honey Beer',
@@ -1855,7 +1855,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 67,
            name: 'Imperial India Pale Ale',
@@ -1883,7 +1883,7 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 68,
            name: 'Irish-Style Dry Stout',
@@ -1911,7 +1911,7 @@ exports.seed = function(knex, Promise) {
            water:'Moderate Carbonate' ,
            yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 69,
            name: 'Irish-Style Red',
@@ -1939,313 +1939,285 @@ exports.seed = function(knex, Promise) {
            water:'Varies' ,
            yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 70,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Pumpkin Beer',
+           description: 'One of the most popular seasonal beers, this is a lager or ale that is brewed with fresh or processed pumpkin or winter squash. Since the fruit does not have much of a taste by itself, many craft brewers have taken to adding spices typically found in pumpkin pie, like cinnamon and clove. However, these flavors should not overpower the final product. Pumpkin can be found in everything from stouts, to pale ales and pilseners.',
+           colornum: '5 - 50 SRM',
+           bitterness: '5 - 70 IBU',
+           alcoholnum: '2.3% - 12.0% ABV',
+           foodpairings: 'Roasted Turkey, Camembert, Coffee Ice Cream',
+           glassware: 'Tulip',
+           servingtemp: '50 - 55 °F',
+           colortxt: 'Any range of color depending on the underlying style',
+           clarity:'Varies' ,
+           carbonationvisual:'Varies' ,
+           alcoholtxt:'Varies' ,
+           hop:'Hop bitterness is low to medium-low' ,
+           malt:'Malt sweetness is low to medium-high' ,
+           esters:'Can be Present' ,
+           phenols:'Can be Present' ,
+           body:'Varies' ,
+           carbonationtaste:'Low to High' ,
+           finishlength:'Varies' ,
+           attenuation:'Medium-high' ,
+           hopsingr:'Varies' ,
+           maltingr:'Varies' ,
+           water:'Varies' ,
+           yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 71,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Robust Porter',
+           description: 'Often features more bitter and roasted malt flavor than a brown porter, but not quite as much as a stout. Robust porters have a roast malt flavor, often reminiscent of cocoa, but no roast barley flavor. Their caramel and malty sweetness is in harmony with the sharp bitterness of black malt. Hop bitterness is evident. With U.S. craft brewers doing so much experimentation in beer styles and ingredients, the lines between certain stouts and porters are often blurred. Yet many deliberate examples of these styles do exist. Diacetyl is acceptable at very low levels.',
+           colornum: '30 - 35 SRM',
+           bitterness: '25 - 40 IBU',
+           alcoholnum: '5.0% - 6.5% ABV',
+           foodpairings: 'Roasted or Grilled Meats, Gruyere, Chocolate Peanut Butter Cookies',
+           glassware: 'Nonic Pint',
+           servingtemp: '50 - 55 °F',
+           colortxt: 'Very Dark to Black',
+           clarity:'Opaque' ,
+           carbonationvisual:'Slow to Fast Rising Bubbles' ,
+           alcoholtxt:'Mild' ,
+           hop:'Hop aroma and flavor are very low to medium. Hop bitterness is medium to high' ,
+           malt:'Grainy, Bready, Toffee, Caramel, Chocolate, Coffee. Caramel and other malty sweetness is in harmony with the sharp bitterness of black malt, without a highly burnt/charcoal flavor' ,
+           esters:'Fruity esters should be evident, balanced with all other characters' ,
+           phenols:'Not Common' ,
+           body:'Mouth-Coating' ,
+           carbonationtaste:'Low to High' ,
+           finishlength:'Medium' ,
+           attenuation:'Medium-high' ,
+           hopsingr:'Kent Goldings, Fuggles' ,
+           maltingr:'Munich, Crystal, Chocolate, Black Patent' ,
+           water:'Varies' ,
+           yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 72,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Rye Beer',
+           description: 'In darker versions, malt flavor can optionally include low roasted malt characters (evident as cocoa/chocolate or caramel) and/or aromatic toffee-like, caramel, or biscuit-like characters. Low-level roasted malt astringency is acceptable when balanced with low to medium malt sweetness. Hop flavor is low to medium-high. Hop bitterness is low to medium. These beers can be made using either ale or lager yeast. The addition of rye to a beer can add a spicy or pumpernickel character to the flavor and finish. Color can also be enhanced and may become more red from the use of rye. The ingredient has come into vogue in recent years in everything from stouts to lagers, but is especially popular with craft brewers in India pale ales. To be considered an example of the style, the grain bill should include sufficient rye such that rye character is evident in the beer.',
+           colornum: 'Varies',
+           bitterness: 'Varies',
+           alcoholnum: 'Varies',
+           foodpairings: 'Jerk Chicken, Wensleydale, Savory Bread Pudding',
+           glassware: 'Vase',
+           servingtemp: '45 - 55 °F',
+           colortxt: 'Inclusion of rye can create a wide range of color. Lighter versions: Straw to Copper. Darker versions: Dark Amber to Dark Brown',
+           clarity:'Varies' ,
+           carbonationvisual:'Varies' ,
+           alcoholtxt:'Varies' ,
+           hop:'Hop flavor and aroma are low to medium-high. Hop bitterness is low to medium' ,
+           malt:'In darker versions, malt aromas can optionally include low roasted malt characters evident as cocoa/chocolate or caramel, and/or aromatic toffee-like, caramel, or biscuit-like characters' ,
+           esters:'Low level fruity-ester flavors are typical' ,
+           phenols:'Not Common' ,
+           body:'Varies' ,
+           carbonationtaste:'Low to High' ,
+           finishlength:'Varies' ,
+           attenuation:'Varies' ,
+           hopsingr:'Varies' ,
+           maltingr:'Varies' ,
+           water:'Varies' ,
+           yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 73,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Scotch Ale / Wee Heavy',
+           description: 'Scotch ales are overwhelmingly malty, with a rich and dominant sweet malt flavor and aroma. A caramel character is often part of the profile. Some examples feature a light smoked peat flavor. This style could be considered the Scottish version of an English-style barley wine. Overly smoked versions would be considered speciality examples.',
+           colornum: '15 - 30 SRM',
+           bitterness: '25 - 35 IBU',
+           alcoholnum: '6.2% - 8.0% ABV',
+           foodpairings: 'Roasted or Grilled Meats, Pungent Cheeses, Creamy Desserts with Fruit',
+           glassware: 'Thistle',
+           servingtemp: '50 - 55 °F',
+           colortxt: 'Light Reddish Brown to Very Dark',
+           clarity:'Clear' ,
+           carbonationvisual:'Medium Rising Bubbles' ,
+           alcoholtxt:'Noticeable to Hot' ,
+           hop:'Hop aroma and flavor are not perceived. Hop bitterness is low but perceptible' ,
+           malt:'Dominated by a smooth, balanced sweet maltiness. Will also have a medium degree of malty, caramel-like aroma and flavor' ,
+           esters:'Plums, Raisin, Dried Fruit. A peaty/smoky character may be evident at low levels' ,
+           phenols:'Not Common' ,
+           body:'Mouth-Coating' ,
+           carbonationtaste:'Medium' ,
+           finishlength:'Medium' ,
+           attenuation:'Medium' ,
+           hopsingr:'Kent Goldings' ,
+           maltingr:'British Pale Ale, Crystal, Honey, Pale Chocolate, Munich and even Roasted Barley' ,
+           water:'Soft Water (occasionally)' ,
+           yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 74,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Scottish-Style Ale',
+           description: 'Scottish-style ales vary depending on strength and flavor, but in general retain a malt-forward character with some degree of caramel-like malt flavors and a soft and chewy mouthfeel. Some examples feature a light smoked peat flavor. Hops do not play a huge role in this style. The numbers commonly associated with brands of this style (60/70/80 and others) reflect the Scottish tradition of listing the cost, in shillings, of a hogshead (large cask) of beer. Overly smoked versions would be considered speciality examples. Smoke or peat should be restrained. The numbers commonly associated with brands of this style (60/70/80 and others) reflect the Scottish tradition of listing the cost, in shillings, of a hogshead (large cask) of beer. Overly smoked versions would be considered speciality examples. Smoke or peat should be restrained.',
+           colornum: '6 - 19 SRM',
+           bitterness: '9 - 25 IBU',
+           alcoholnum: '2.8% - 5.3% ABV',
+           foodpairings: 'Roasted or Grilled Meats, Pungent Cheeses, Creamy Desserts with Fruit',
+           glassware: 'Thistle',
+           servingtemp: '50 - 55 °F',
+           colortxt: 'Golden to Dark Chestnut or Brown',
+           clarity:'Clear' ,
+           carbonationvisual:'Slow to Medium Rising Bubbles' ,
+           alcoholtxt:'Not Detectable to Mild' ,
+           hop:'Hop aroma and flavor are not perceived. Hop bitterness is low.' ,
+           malt:'Caramel, Toffee' ,
+           esters:'Not Common' ,
+           phenols:'Peaty, Earthy, Smoky' ,
+           body:'Soft' ,
+           carbonationtaste:'Low to Medium' ,
+           finishlength:'Short' ,
+           attenuation:'Medium' ,
+           hopsingr:'Kent Goldings' ,
+           maltingr:'British Pale Ale, Crystal, Honey, Pale Chocolate, Munich and even Roasted Barley' ,
+           water:'High Carbonate' ,
+           yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 75,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Session Beer',
+           description: 'This beer style is not defined by flavors or aromas, which can place it in almost any style category. Instead, what makes a session beer is primarily refreshment and drinkability. Any style of beer can be made lower in strength than described in the classic style guidelines. The goal should be to reach a balance between the style’s character and the lower alcohol content. Drinkability is a factor in the overall balance of these beers. Beer should not exceed 5 percent ABV.',
+           colornum: 'Varies',
+           bitterness: '10 - 35 IBU',
+           alcoholnum: '3.5% - 5.0% ABV',
+           foodpairings: 'Varies',
+           glassware: 'Varies',
+           servingtemp: 'Varies',
+           colortxt: 'Varies',
+           clarity:'Varies' ,
+           carbonationvisual:'Varies' ,
+           alcoholtxt:'Not Detectable to Mild' ,
+           hop:'Varies' ,
+           malt:'Varies' ,
+           esters:'Can be Present' ,
+           phenols:'Can be Present' ,
+           body:'Varies' ,
+           carbonationtaste:'Low to High' ,
+           finishlength:'Varies' ,
+           attenuation:'Medium-high' ,
+           hopsingr:'Varies' ,
+           maltingr:'Varies' ,
+           water:'Varies' ,
+           yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 76,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Smoke Beer',
+           description: 'When malt is kilned over an open flame, the smoke flavor becomes infused into the beer, leaving a taste that can vary from dense campfire, to slight wisps of smoke. This style is open to interpretation by individual brewers. Any style of beer can be smoked; the goal is to reach a balance between the styles character and the smoky properties. Originating in Germany as rauchbier, this style is open to interpretation by U.S. craft brewers. Classic base styles include German-style Marzen/Oktoberfest, German-style bock, German-style dunkel, Vienna-style lager and more. Smoke flavors dissipate over time.',
+           colornum: 'Varies',
+           bitterness: 'Varies',
+           alcoholnum: 'Varies',
+           foodpairings: 'Grilled Vegetables, Parmesean, Gingerbread Cookies',
+           glassware: 'Vase',
+           servingtemp: '45 - 55 °F',
+           colortxt: 'Varies',
+           clarity:'Varies' ,
+           carbonationvisual:'Varies' ,
+           alcoholtxt:'Varies' ,
+           hop:'Varies' ,
+           malt:'Varies' ,
+           esters:'Can be Present' ,
+           phenols:'Can be Present' ,
+           body:'Varies' ,
+           carbonationtaste:'Low to High' ,
+           finishlength:'Varies' ,
+           attenuation:'Varies' ,
+           hopsingr:'Varies' ,
+           maltingr:'Varies' ,
+           water:'Varies' ,
+           yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 77,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Smoke Porter',
+           description: 'Typically the base for this style is a robust porter that is given smoky depth thanks to wood-smoked malt. Traditionally, brewers will cite the specific wood used to smoke the malt, and different woods will lend different flavors to the finished product. Smoke flavors dissipate over time.',
+           colornum: '19 - 20 SRM',
+           bitterness: '20 - 40 IBU',
+           alcoholnum: '5.1% - 8.9% ABV',
+           foodpairings: 'Grilled Sausage, Red Dragon Cheddar, Smores',
+           glassware: 'Tulip',
+           servingtemp: '50 - 55 °F',
+           colortxt: 'Dark Brown to Black',
+           clarity:'Varies' ,
+           carbonationvisual:'Varies' ,
+           alcoholtxt:'Varies' ,
+           hop:'Hop aroma and flavor are not perceived to medium. Hop bitterness is medium to medium-high' ,
+           malt:'Black malt character can be perceived in some porters, while others may be absent of strong roasted character. Medium to high malt sweetness, caramel and chocolate are acceptable' ,
+           esters:'Fruity-ester aroma is acceptable. A mild to assertive smoke malt aroma will be in balance with other aroma characters' ,
+           phenols:'Not Common' ,
+           body:'Soft' ,
+           carbonationtaste:'Low to High' ,
+           finishlength:'Medium to Long' ,
+           attenuation:'Medium-high' ,
+           hopsingr:'Kent Goldings, Willamette' ,
+           maltingr:'Crystal, Chocolate, Black Patent' ,
+           water:'Varies' ,
+           yeast:'Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 78,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Specialty Beer',
+           description: 'Special ingredients used in this style should be distinctive and evident in either the aroma, flavor or overall balance of the beer. This style category is a catch-all. Any speciality beer that does not fit other speciality beer styles would be appropriately considered here. Examples can include sahti, roggenbier, steinbier, white IPA, session IPA and more.',
+           colornum: 'Varies',
+           bitterness: 'Varies',
+           alcoholnum: 'Varies',
+           foodpairings: 'Varies',
+           glassware: 'Varies',
+           servingtemp: 'Varies',
+           colortxt: 'Varies',
+           clarity:'Varies' ,
+           carbonationvisual:'Varies' ,
+           alcoholtxt:'Varies' ,
+           hop:'Varies' ,
+           malt:'Varies' ,
+           esters:'Varies' ,
+           phenols:'Varies' ,
+           body:'Varies' ,
+           carbonationtaste:'Varies' ,
+           finishlength:'Varies' ,
+           attenuation:'Varies' ,
+           hopsingr:'Varies' ,
+           maltingr:'Varies' ,
+           water:'Varies' ,
+           yeast:'Lager or Ale' 
             }),
-                             knex('beertypes').insert(
+   knex('beertypes').insert(
        {
            id: 79,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
-            }),
-                             knex('beertypes').insert(
-       {
-           id: 80,
-           name: '',
-           description: '',
-           colornum: '',
-           bitterness: '',
-           alcoholnum: '',
-           foodpairings: '',
-           glassware: '',
-           servingtemp: '',
-           colortxt: '',
-           clarity:'' ,
-           carbonationvisual:'' ,
-           alcoholtxt:'' ,
-           hop:'' ,
-           malt:'' ,
-           esters:'' ,
-           phenols:'' ,
-           body:'' ,
-           carbonationtaste:'' ,
-           finishlength:'' ,
-           attenuation:'' ,
-           hopsingr:'' ,
-           maltingr:'' ,
-           water:'' ,
-           yeast:'' 
+           name: 'Vienna-Style Lager',
+           description: 'Ranges from copper to reddish brown in color. The beer is characterized by malty aroma and slight malt sweetness. The malt aroma and flavor should have a notable degree of toasted and/or slightly roasted malt character. Hop bitterness is low to medium-low.',
+           colornum: '12 - 16 SRM',
+           bitterness: '22 - 28 IBU',
+           alcoholnum: '4.5% - 5.5% ABV',
+           foodpairings: 'Grilled Meats and Grilled Vegetables, Mild Cheeses, Almond Biscotti',
+           glassware: 'Flute',
+           servingtemp: '45 - 50 °F',
+           colortxt: 'Copper to Reddish Brown',
+           clarity:'Brilliant to Clear' ,
+           carbonationvisual:'Medium Rising Bubbles' ,
+           alcoholtxt:'Mild' ,
+           hop:'Hop aroma, flavor and bitterness are very low to low' ,
+           malt:'Aroma should have a notable degree of toasted and/or slightly roasted malt character. Malt flavor is slightly sweet' ,
+           esters:'Not Common' ,
+           phenols:'Not Common' ,
+           body:'Soft' ,
+           carbonationtaste:'Medium' ,
+           finishlength:'Short to Medium' ,
+           attenuation:'Medium' ,
+           hopsingr:'German Noble' ,
+           maltingr:'Vienna' ,
+           water:'High Carbonate' ,
+           yeast:'Lager' 
             })
 
    );

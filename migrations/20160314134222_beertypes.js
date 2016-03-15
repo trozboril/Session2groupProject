@@ -1,7 +1,8 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('beertypes', function(table) {
-    table.increments();
+    table.increments('id').unique();
+    table.string('description');
     table.string('colornum');
     table.string('bitterness');
     table.string('alcoholnum');
