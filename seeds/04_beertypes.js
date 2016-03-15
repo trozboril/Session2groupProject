@@ -8,6 +8,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 1,
+           symbol:'Aaa',
            name: 'American Amber Ale',
            description: 'American-style amber ales have medium-high to high maltiness with medium to low caramel character. They are characterized by American-variety hops, which produce medium hop bitterness, flavor and aroma. American ambers are usually darker in color, have more caramel flavor and less hop aromatics, and may have more body. This style was first made popular by brewers from California and the Pacific Northwest.',
            colornum: '11 - 18 SRM',
@@ -36,6 +37,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 2,
+           symbol:'Aal',
            name: 'American Amber Lager',
            description: 'A widely available, sessionable craft beer style that showcases both malt and hops. Amber Lagers are a medium bodied lager with a toasty or caramel-like malt character. Hop bitterness can range from very low to medium-high. Brewers may use decoction mash and dry-hopping to achieve advanced flavors.',
            colornum: '6 - 14 SRM',
@@ -64,6 +66,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 3,
+           symbol:'Abw',
            name: 'American Barley Wine',
            description: 'These ales range from amber to deep red/copper-garnet in color. A caramel and/or toffee aroma and flavor are often part of the malt character along with high residual malty sweetness. Complexity of alcohols is evident. Fruity-ester character is often high. As with many American versions of a style, this barley wine ale is typically more hop-forward and bitter than its U.K. counterpart. Low levels of age-induced oxidation can harmonize with other flavors and enhance the overall experience. Sometimes sold as vintage releases.',
            colornum: '11 - 22 SRM',
@@ -92,6 +95,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 4,
+           symbol:'Aba',
            name: 'American Black Ale',
            description: 'Characterized by the perception of caramel malt and dark roasted malt flavor and aroma. Hop bitterness is perceived to be medium-high to high. Hop flavor and aroma are medium-high. Fruity, floral and herbal character from hops of all origins may contribute to the overall experience. This beer is often called a black IPA or Cascadian dark ale.',
            colornum: '34 - 38 SRM',
@@ -120,6 +124,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 5,
+           symbol:'Ab',
            name: 'American Brett',
            description: 'These unique beers vary in color and can take on the hues of added fruits or other ingredients.The evolution of natural acidity develops balanced complexity. Horsey, goaty, leathery, phenolic and some fruity acidic character derived from Brettanomyces organisms may be evident, but in balance with other components of the beer. Brett beer and sour beer are not synonymous. Brett beer may contain acidic components, but the presence of acidity in all Brettanomyces beers should not be assumed or dominate. Horsey, goaty, leathery, and phenolic characteristics derived from Brettanomyces organisms may be evident, not dominant and in balance with other character.',
            colornum: 'Varies',
@@ -148,6 +153,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 6,
+           symbol:'Abra',
            name: 'American Brown Ale',
            description: 'Roasted malt, caramel-like and chocolate-like characters should be of medium intensity in both flavor and aroma. American-style brown ales have evident low to medium hop flavor and aroma and medium to high hop bitterness. The history of this style dates back to U.S. homebrewers who were inspired by English-style brown ales and porters. It sits in flavor between those British styles and is more bitter than both.',
            colornum: '15 - 26 SRM',
@@ -176,6 +182,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 7,
+           symbol:'Aca',
            name: 'American Cream Ale',
            description: 'This is a mild, pale, light-bodied ale, made using a warm fermentation (top or bottom fermenting yeast) and cold lagering. Despite being called an ale, when being judged in competitions it is acceptable for brewers to use lager yeast.',
            colornum: '2 - 5 SRM',
@@ -204,6 +211,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 8,
+           symbol:'Aip',
            name: 'American Imperial Porter',
            description: 'Definitively American, these porters should have no roasted barley flavors or strong burnt/black malt character. Medium caramel and cocoa-like sweetness is present, with complementing hop character and malt-derived sweetness.',
            colornum: '39 - 40 SRM',
@@ -232,6 +240,7 @@ exports.seed = function(knex, Promise) {
      knex('beertypes').insert(
        {
            id: 9,
+           symbol:'Aira',
            name: 'American Imperial Red Ale',
            description: 'The use of American hops in this ale lends to the perception of medium hop bitterness, flavor and aroma. Coupled with a solid malt profile, this should be a beer with balance between hop bitterness and malt sweetness. Some breweries will choose to bottle-condition this style, leading to possible fruity esters and some haze in their appearance. This is another example of modern American brewers taking an established style and boosting the flavor. California brewers are credited with creating this innovative style.',
            colornum: '10 - 17 SRM',
@@ -260,6 +269,7 @@ exports.seed = function(knex, Promise) {
      knex('beertypes').insert(
        {
            id: 10,
+           symbol:'Ais',
            name: 'American Imperial Stout',
            description: 'American-style imperial stouts are the strongest in alcohol and body of the stouts. Black in color, these beers typically have an extremely rich malty flavor and aroma with full, sweet malt character. Bitterness can come from roasted malts or hop additions.',
            colornum: '39 - 40 SRM',
@@ -288,6 +298,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 11,
+           symbol:'Aipa',
            name: 'American India Pale Ale / IPA',
            description: 'Characterized by floral, fruity, citrus-like, piney or resinous American-variety hop character, this style is all about hop flavor, aroma and bitterness. This has been the most-entered category at the Great American Beer Festival for more than a decade, and is the top-selling craft beer style in supermarkets and liquor stores across the U.S.',
            colornum: '6 - 15 SRM',
@@ -316,6 +327,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 12,
+           symbol:'Al',
            name: 'American Lager',
            description: 'American lager has little in the way of hop and malt character. A straw to gold, very clean and crisp, highly carbonated lager.',
            colornum: '2 - 6 SRM',
@@ -344,6 +356,7 @@ exports.seed = function(knex, Promise) {
      knex('beertypes').insert(
        {
            id: 13,
+           symbol:'Apa',
            name: 'American Pale Ale',
            description: 'An American interpretation of a classic English style. Characterized by floral, fruity, citrus-like, piney, resinous, or sulfur-like American-variety hop character, producing medium to medium-high hop bitterness, flavor and aroma. American-style pale ales have medium body and low to medium maltiness that may include low caramel malt character.',
            colornum:'3 - 14 SRM',
@@ -372,6 +385,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 14,
+           symbol:'As',
            name: 'American Sour',
            description: 'The acidity present in these beers is usually in the form of lactic, acetic and other organic acids naturally developed with acidified malt in the mash, or produced during fermentation by the use of various microorganisms. These beers may derive their sour flavor from pure cultured forms of souring agents or from the influence of barrel aging.',
            colornum: 'Varies',
@@ -400,6 +414,7 @@ exports.seed = function(knex, Promise) {
  knex('beertypes').insert(
        {
            id: 15,
+           symbol:'Ast',
            name: 'American Stout',
            description: 'A coffee- and chocolate-forward ale, but with a hop aroma and flavor, often from a citrus-forward variety. American stouts are bold, with a distinctive dry-roasted bitterness in the finish. Fruity esters should be low, but head retention high. The addition of oatmeal is acceptable in this style and lends to the body and head retention.',
            colornum: '39 - 40 SRM',
@@ -428,6 +443,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 16,
+           symbol:'Awwa',
            name: 'American-Style Wheat Wine Ale',
            description: 'Part of the “strong ale” category, this ale is not derived from grapes as its name might suggest. Made with at least 50 percent wheat malt, this full-bodied beer features bready and candy flavors, and finishes with a great deal of malty sweetness. These beers may be oak-aged and sometimes have small amounts of darker malts added.',
            colornum: '5 - 15 SRM',
@@ -456,6 +472,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 17,
+           symbol:'Aw',
            name: 'American Wheat',
            description: 'Color is pale to light amber. This beer can be made using either ale or lager yeast. Generally brewed with at least 30 percent malted wheat. These beers are typically served with the yeast in the bottle, and pour cloudy. Traditionally more hoppy than a German hefeweizen, American wheat beer differs in that it should not offer flavors of banana or clove. it is a refreshing summer style. Darker versions of this style also exist but are not as common.',
            colornum: '2 - 10 SRM',
@@ -484,6 +501,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 18,
+           symbol:'Bp',
            name: 'Baltic-Style Porter',
            description: 'A smooth, cold-fermented and cold-lagered beer brewed with lager yeast. Because of its alcoholic strength, it may include very low to low complex alcohol flavors and/or lager fruitiness such as berries, grapes and plums (but not banana; ale-like fruitiness from warm-temperature fermentation is not appropriate). This style has the malt flavors of a brown porter and the roast of a schwarzbier, but is bigger in alcohol and body.',
            colornum: '39 - 40 SRM',
@@ -512,6 +530,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 19,
+           symbol:'Bb',
            name: 'Barrel-Aged Beer',
            description: 'A wood- or barrel-aged beer is any lager, ale or hybrid beer, either a traditional style or a unique experimental beer, that has been aged for a period of time in a wooden barrel or in contact with wood. This beer is aged with the intention of imparting the unique character of the wood and/or the flavor of what has previously been in the barrel. Today’s craft brewers are using wood (mostly oak) to influence flavor, and aromatics. Beer may be aged in wooden barrels (new or previously used to age wine or spirits), or chips, spirals and cubes may be added to the conditioning tanks that normally house beer. A variety of types of wood are used including oak, apple, alder, hickory and more. The interior of most barrels is charred or toasted to further enhance the flavor of the wood.',
            colornum: 'Varies',
@@ -540,6 +559,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 20,
+           symbol:'Bba',
            name: 'Belgian-Style Blonde Ale',
            description: 'Typically easy-drinking, with a low but pleasing hop bitterness. This is a light- to medium-bodied ale, with a low malt aroma that has a spiced and sometimes fruity-ester character. Sugar is sometimes added to lighten the perceived body. This style is medium in sweetness and not as bitter as Belgian-style tripels or golden strong ales. It is usually brilliantly clear. The overall impression is balance between light sweetness, spice and low to medium fruity ester flavors.',
            colornum: '4 - 7 SRM',
@@ -568,6 +588,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 21,
+           symbol:'Bd',
            name: 'Belgian-Style Dubbel',
            description: 'Belgian-style dubbels range from brown to very dark in color. They have a malty sweetness and can have chocolate-like caramel aroma and flavor. Hop bitterness is medium-low to medium. Yeast-generated fruity esters (especially banana) can be apparent. Often bottle-conditioned, a slight yeast haze and flavor may be evident. ‘Dubbel’ meaning “double,” this beer is still not so big in intensity as to surpass the Belgian-style quadrupel that is often considered its sibling.',
            colornum: '16 - 36 SRM',
@@ -596,6 +617,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 22,
+           symbol:'Bf',
            name: 'Belgian-Style Flanders',
            description: 'An ale with character and balance, thanks to lactic sourness and acetic acid. Cherry-like flavors are acceptable, as is malt sweetness that can lend bitterness and a cocoa-like character. Oak or other wood-like flavors may be present, even if the beer was not aged in barrels. Overall, the style is characterized by slight to strong lactic sourness, and Flanders “reds” sometimes include a balanced degree of acetic acid. Brettanomyces-produced flavors may be absent or very low. This style is a marvel in flavor complexity, combining malt, yeast, microorganisms, acidity and low astringency from barrel aging.',
            colornum: '12 - 25 SRMM',
@@ -624,6 +646,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 23,
+           symbol:'Bfl',
            name: 'Belgian-Style Fruit Lambic',
            description: 'Often known as cassis, framboise, kriek, or peche, a fruit lambic takes on the color and flavor of the fruit it is brewed with. It can be dry or sweet, clear or cloudy, depending on the ingredients. Notes of Brettanomyces yeast are often present at varied levels. Sourness is an important part of the flavor profile, though sweetness may compromise the intensity. These flavored lambic beers may be very dry or mildly sweet.',
            colornum: 'Varies',
@@ -652,6 +675,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 24,
+           symbol:'Bgsa',
            name: 'Belgian-Style Golden Strong Ale',
            description: 'These beers are fruity, complex and often on the higher end of the ABV spectrum, yet are approachable to many different palates. Look for a characteristic spiciness from Belgian yeast and a highly attenuated dry finish. This style is traditionally drier and lighter in color than a Belgian-style tripel.',
            colornum: '9 - 35 SRM',
@@ -680,6 +704,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 25,
+           symbol:'Blg',
            name: 'Belgian-Style Lambic / Gueuze',
            description: 'Naturally and spontaneously fermented beers with high to very high levels of esters, plus bacterial and yeast-derived sourness that sometimes includes acetic flavors. Lambics are not blended, while the gueuze style blends old and new lambics which are re-fermented in the bottle. Historically, they are dry and completely attenuated, exhibiting no residual sweetness either from malt, sugar or artificial sweeteners. Sweet versions may be created through the addition of sugars or artificial sweeteners. Many examples of this style are made to resemble the the gueuze lambic beers of the Brussels area, where it originated.',
            colornum: '6 - 13 SRM',
@@ -708,6 +733,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 26,
+           symbol:'Bpa',
            name: 'Belgian-Style Pale Ale',
            description: 'These pale ales are gold to copper in color and can have caramel or toasted malt flavor. The style is characterized by low but noticeable hop bitterness, flavor and aroma. These beers were inspired by British pale ales. They are very sessionable.',
            colornum: '6 - 12 SRM',
@@ -736,6 +762,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 27,
+           symbol:'Bq',
            name: 'Belgian-Style Quadrupel',
            description: 'These beers are amber to dark brown in color. Caramel, dark sugar and malty sweet flavors dominate, with medium-low to medium-high hop bitterness. Quads have a relatively light body compared to their alcoholic strength. If aged, oxidative qualities should be mild and not distracting. Sometimes referred to as Belgian strong dark.',
            colornum: '8 - 20 SRM',
@@ -764,6 +791,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 28,
+           symbol:'Bs',
            name: 'Belgian-Style Saison',
            description: 'Beers in this category are pale to deep light brown in color. Often bottle-conditioned, with some yeast character and high carbonation. Belgian-style saison may have Brettanomyces or lactic character, and fruity, horsey, goaty and/or leather-like. aromas and flavors. Specialty ingredients, including spices, may contribute a unique and signature character. Commonly called ‘farmhouse ales’ and originating as summertime beers in Belgium, these are not just warm-weather treats. U.S. craft brewers brew them year-round and have taken to adding a variety of additional ingredients.',
            colornum: '4 - 14 SRM',
@@ -792,6 +820,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 29,
+           symbol:'Bt',
            name: 'Belgian-Style Tripel',
            description: 'Complex, sometimes mild spicy flavor characterizes this style. Yeast-driven complexity is common. Tripels are often on the higher end of the ABV spectrum, yet are approachable to many different palates. These beers are commonly bottle-conditioned and finish dry. Tripels are similar to Belgian-style golden strong ales, but are generally darker and have a more noticeable malt sweetness.',
            colornum: '4 - 7 SRM',
@@ -820,6 +849,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 30,
+           symbol:'Bw',
            name: 'Belgian-Style Witbier',
            description: 'Belgian-style wits are brewed using unmalted wheat, sometimes oats and malted barley. Witbiers are spiced with coriander and orange peel. A style that dates back hundreds of years, it fell into relative obscurity until it was revived by Belgian brewer Pierre Celis in the 1960s. This style is currently enjoying a renaissance, especially in the American market. ‘Wit’ means “white.”',
            colornum: '2 - 4 SRM',
@@ -848,6 +878,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 31,
+           symbol:'Bsw',
            name: 'Berliner-Style Weisse',
            description: 'Low in alcohol and refreshingly tart, and often served with a flavored syrup like Woodruff or raspberry, this German-style wheat ale presents a harmony between yeast and lactic acid. These beers are very pale in color, and may be cloudy as they are often unfiltered. Hops are not a feature of this style, but these beers often do showcase esters. Traditional versions often showcase Brettanomyces yeast. Growing in popularity in the U.S., where many brewers are now adding traditional and exotic fruits to the recipe, resulting in flavorful finishes with striking, colorful hues. These beers are incredible when pairing. Bitterness, alcohol and residual sugar are very low, allowing the beer’s acidity, white bread and graham cracker malt flavors to shine. Carbonation is very high, adding to the refreshment factor this style delivers. Many examples of this style contain no hops and thus no bitterness at all.',
            colornum: '2 - 4 SRM',
@@ -876,6 +907,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 32,
+           symbol:'Fbdg',
            name: 'French-Style Biere De Garde',
            description: 'The name translates as “beer for keeping.” This style is popping up more and more from U.S. producers. Blond, amber and brown versions exist. Bier de garde examples are light amber to chestnut brown or red in color. This style is characterized by a toasted malt aroma and slight malt sweetness. Flavor of alcohol is evident. Often bottle-conditioned, with some yeast character.',
            colornum: '7 - 16 SRM',
@@ -904,6 +936,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 33,
+           symbol:'Eb',
            name: 'English-Style Bitter',
            description: 'A very sessionable, lower-alcohol, malt-driven style. Broad style description commonly associated with cask-conditioned beers. The light- to medium-bodied ordinary bitter is gold to copper in color, with a low residual malt sweetness. Hop bitterness is medium.',
            colornum: '5 - 12 SRM',
@@ -932,6 +965,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 34,
+           symbol:'Bla',
            name: 'Blonde Ale',
            description: 'One of the most approachable styles, a golden or blonde ale is an easy-drinking beer that is visually appealing and has no particularly dominating malt or hop characteristics. Rounded and smooth, it is an American classic known for its simplicity. Sometimes referred to as ‘golden ale.’ These beers can have honey, spices and fruit added, and may be fermented with lager or ale yeast.',
            colornum: '3 - 7 SRM',
@@ -962,6 +996,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 35,
+           symbol:'Bpil',
            name: 'Bohemian-Style Pilsener',
            description: 'Bohemian-style pilseners have a slightly sweet and evident malt character and a toasted, biscuit-like, bready malt character. Hop bitterness is perceived as medium with a low to medium-low level of noble-type hop aroma and flavor. This style originated in 1842, with ‘pilsener’ originally indicating an appellation in the Czech Republic. Classic examples of this style used to be conditioned in wooden tanks and had a less sharp hop bitterness despite the similar IBU ranges to German-style pilsener. Low-level diacetyl is acceptable. Bohemian-style pilseners are darker in color and bigger in final gravity that their German counterparts.',
            colornum: '3 - 7 SRM',
@@ -990,6 +1025,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 36,
+           symbol:'Bbwa',
            name: 'British-Style Barley Wine Ale',
            description: 'A strong ale that leans heavily on malt characteristics for flavor. With a wide color range and typically high in alcohol, this is a style that is often aged and will evolve well over time. As they advance in age, these beers develop oxidative characteristics including honey and toffee flavors and aromas, darker colors, lessened bitterness and more.',
            colornum: '14 - 22 SRM',
@@ -1018,6 +1054,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 37,
+           symbol:'Cc',
            name: 'California Common',
            description: 'This beer style is brewed with lager yeasts but fermented at ale fermentation temperatures. There is a noticeable degree of toasted malt and/or caramel-like malt character in flavor and often in aroma. Often referred to as ‘steam beer’ and made famous by San Francisco’s Anchor Brewing Company. Seek out woody and mint flavor from the Northern Brewer hops.',
            colornum: '8 - 15 SRM',
@@ -1046,6 +1083,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 38,
+           symbol:'Cb',
            name: 'Chocolate Beer',
            description: 'This is an ale or lager that benefits from the addition of dark chocolate or cocoa. More common in porters, stouts and brown ales, where the grain bill better complements the confectionery ingredient, it can be added to other styles as well. Overt bitterness is not acceptable in this style. Little hop character is desired and the chocolate flavor does not need to be overwhelming. The style can vary greatly in approach and flavor profile depending on the brewer.',
            colornum: '12 - 50 SRM',
@@ -1074,6 +1112,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 39,
+           symbol:'Cofb',
            name: 'Coffee Beer',
            description: 'As the name suggests, this can be either a lager or ale with coffee added to boost flavor. While stouts and porters are popular base styles for coffee beer, many craft breweries are experimenting with other styles, like cream ales and India pale ales. Brewers may steep the beans in either water or beer to impart java flavor without adding acidity. While stouts and porters are popular base styles for coffee beer, many craft breweries are experimenting with other styles, like cream ales and India pale ales. Barrel-aged or wood-influenced versions may show signs of oxidation, including sherry notes and other advanced flavors.',
            colornum: '4 - 50 SRM',
@@ -1102,6 +1141,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 40,
+           symbol:'Cg',
            name: 'Contemporary Gose',
            description: 'Straw to medium amber, gose is cloudy from suspended yeast. A wide variety of herbal, spice, floral or fruity aromas other than found in traditional Leipzig-Style Gose are present, in harmony with other aromas. Salt (table salt) character is traditional in low amounts, but may vary from absent to present. Body is low to medium-low. Low to medium lactic acid character is evident in all examples as sharp, refreshing sourness.',
            colornum: '3 - 9 SRM',
@@ -1130,6 +1170,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 41,
+           symbol:'Eba',
            name: 'English-Style Brown Ale',
            description: 'English-style brown ales range from dryer (Northern English) to sweeter (Southern English) maltiness. Roast malt tones (chocolate, nutty) may sometimes contribute to the flavor and aroma profile. Hop bitterness is very low to low, with very little hop flavor and aroma. Known for rich and advanced malt aroma and flavor without centering too much on hops, this style is extremely sessionable and food-friendly.',
            colornum: '12 - 25 SRM',
@@ -1158,6 +1199,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 42,
+           symbol:'Ebp',
            name: 'English-Style Brown Porter',
            description: 'Brown porters have no roasted barley or strong burnt/black malt character. Low to medium malt sweetness, caramel and chocolate is acceptable. Hop bitterness is medium. Softer, sweeter and more caramel-like than a robust porter, with less alcohol and body. Porters are the precursor style to stouts.',
            colornum: '20 - 35 SRM',
@@ -1186,6 +1228,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 43,
+           symbol:'Em',
            name: 'English-Style Mild',
            description: 'Malt and caramel are part of the flavor and aroma profile, while licorice and roast malt tones may sometimes contribute as well. Hop bitterness is very low to low. U.S. brewers are known to make lighter-colored versions as well as the more common ‘dark mild.’ These beers are very low in alcohol, yet often are still medium-bodied due to increased dextrin malts.',
            colornum: '17 - 34 SRM',
@@ -1214,6 +1257,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 44,
+           symbol:'Eipa',
            name: 'English-Style India Pale Ale / IPA',
            description: 'Steeped in lore (and extra hops), the IPA is a stronger version of a pale ale. Characterized by stiff English-style hop character (earthy, floral) and increased alcohol content. English yeast lends a fruity flavor and aroma. Different from its American counterparts, this style strikes a balance between malt and hops for a more rounded flavor. There is also a lot of mythology surrounding the creation of this style, which is still debated today.',
            colornum: '6 - 14 SRM',
@@ -1242,6 +1286,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 45,
+           symbol:'Eos',
            name: 'English-Style Oatmeal Stout',
            description: 'The addition of oatmeal adds a smooth, rich body to these beers. Oatmeal stouts are dark brown to black in color. Roasted malt character is caramel-like and chocolate-like, and should be smooth and not bitter. Coffee-like roasted barley and malt aromas are prominent. This low- to medium-alcohol style is packed with darker malt flavors and a rich and oily body from oatmeal.',
            colornum: '20 - 50 SRM',
@@ -1270,6 +1315,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 46,
+           symbol:'Eoa',
            name: 'English-Style Old Ale',
            description: 'A distinctive quality of these ales is that their yeast undergoes an aging process (often for years) in bulk storage or through bottle conditioning, which contributes to a rich, wine-like and often sweet oxidation character.Old ales are copper-red to very dark in color. Complex estery character may emerge.',
            colornum: '12 - 30 SRM',
@@ -1298,6 +1344,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 47,
+           symbol:'Esb',
            name: 'English-Style Pale Ale / ESB',
            description: 'ESB stands for “extra special bitter.” This style is known for its balance and the interplay between malt and hop bitterness. English pale ales display earthy, herbal English-variety hop character. Medium to high hop bitterness, flavor and aroma should be evident. The yeast strains used in these beers lend a fruitiness to their aromatics and flavor, referred to as esters. The residual malt and defining sweetness of this richly flavored, full-bodied bitter is medium to medium-high.',
            colornum: '5.5 - 16 SRM',
@@ -1326,6 +1373,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 48,
+           symbol:'Ms',
            name: 'English-Style Sweet Stout (Milk Stout)',
            description: 'Sweet stout, also referred to as cream stout or milk stout, is black in color. Malt sweetness, chocolate and caramel should dominate the flavor profile and contribute to the aroma. It also should have a low to medium-low roasted malt/barley-derived bitterness. Milk sugar (lactose) lends the style more body. This beer does use lactose sugar, so people with an intolerance should probably avoid this style.',
            colornum: '40 - 45 SRM',
@@ -1354,6 +1402,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 49,
+           symbol:'Ee',
            name: 'European-Style Export',
            description: 'Sometimes referred to as a ‘Dortmunder export,’ this beer has the malt-forward flavor and sweetness of a German-style helles, but the bitter base of a German-style pilsener.This lager is all about balance, with medium hop character and firm but low malt sweetness. Look for toasted malt flavors and spicy floral hop aromas.',
            colornum: '3 - 6 SRM',
@@ -1382,6 +1431,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 50,
+           symbol:'Ffb',
            name: 'Fruit and Field Beer',
            description: 'Fruit beers are made with fruit, or fruit extracts are added during any portion of the brewing process, providing obvious yet harmonious fruit qualities. This idea is expanded to ‘field beers’ that utilize vegetables and herbs.',
            colornum: '5 - 50 SRM',
@@ -1410,6 +1460,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 51,
+           symbol:'Gb',
            name: 'German-Style Bock',
            description: 'Traditional bocks are all-malt brews and are high in malt sweetness. Malt character should be a balance of sweetness and toasted or nut-like malt. ‘Bock’ translates as “goat!”',
            colornum: '20 - 30 SRM',
@@ -1438,6 +1489,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 52,
+           symbol:'Gba',
            name: 'German-Style Brown / Altbier',
            description: 'Originally from the Düsseldorf area of Germany, these ales strike a balance between hop and malt flavors and aromas, but can have low fruity esters and some peppery and floral hop aromas. Before Germany had lager beer, it had ales. Alt, meaning “old,” pays homage to one rebel region in Germany which did not lean into lagering. U.S. producers celebrate the ale revolution beautifully with this top-fermented German beer style.',
            colornum: '11 - 19 SRM',
@@ -1466,6 +1518,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 53,
+           symbol:'Gdpp',
            name: 'German-Style Dopplebock',
            description: 'Doppel meaning “double,” this style is a bigger and stronger version of the lower-gravity German-style bock beers. Originally made by monks in Munich, this style is very food-friendly and rich in mellanoidins reminiscent of toasted bread. Color is copper to dark brown. Malty sweetness is dominant but should not be cloying. Malt character is more reminiscent of fresh and lightly toasted Munich-style malt, more so than caramel or toffee malt. Doppelbocks are full-bodied, and alcoholic strength is on the higher end.',
            colornum: '12 - 30 SRM',
@@ -1494,6 +1547,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 54,
+           symbol:'Gdnk',
            name: 'German-Style Dunkel',
            description: 'A German-style dunkel, sometimes referred to as a Munchner dunkel, should have chocolate-like, roast malt, bread-like or biscuit-like aromas that comes from the use of Munich dark malt.This beer does not offer an overly sweet impression, but rather a mild balance between malt sweetness and hop character.',
            colornum: '15 - 20 SRM',
@@ -1522,6 +1576,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 55,
+           symbol:'Gdw',
            name: 'German-Style DunkelWeizen',
            description: 'Could be considered a cross between a German-style dunkel and a hefeweizen. Distinguished by its sweet maltiness and chocolate-like character, it can also have banana and clove (and occasionally vanilla or bubblegum) esters from weizen ale yeast.',
            colornum: '10 - 25 SRM',
@@ -1550,6 +1605,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 56,
+           symbol:'Gh',
            name: 'German-Style Hefeweizen',
            description: 'German-style hefeweizens are straw to amber in color and made with at least 50 percent malted wheat. The aroma and flavor of a weissbier comes largely from the yeast and is decidedly fruity (banana) and phenolic (clove). Weizen means “wheat” and hefe means “yeast.” There are multiple variations to this style. Filtered versions are known as, kristal weizen, and darker versions are referred to as dunkels, with a stronger, bock-like version called ‘weizenbock. This is commonly a very highly carbonated style with a long-lasting collar of foam.',
            colornum: '3 - 9 SRM',
@@ -1578,6 +1634,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 57,
+           symbol:'Gmai',
            name: 'German-Style Maibock',
            description: 'Sometimes also called heller bock (meaning “pale bock”), this style is paler in color and more hop-centric than traditional bock beers. A lightly toasted and/or bready malt character is often evident.',
            colornum: '4 - 9 SRM',
@@ -1606,6 +1663,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 58,
+           symbol:'Ghel',
            name: 'German-Style Helles',
            description: 'Helles means “pale in color,” as these beers are often golden. They are similar in flavor to adjunct-influenced lagers, but posses more advanced pilsner malt flavor and have a touch more sweetness, and are less dry in the finish.A full-bodied lager that puts pilsner malt flavors forward and can be perceived as bready. A slight sweetness permeates with just a hint of hop spiciness. Clean and crisp, this is a refreshing beer with substance. Low levels of yeast-produced sulfur aromas and flavors may be common.',
            colornum: '4 - 5.5 SRM',
@@ -1634,6 +1692,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 59,
+           symbol:'Gk',
            name: 'German-Style Kolsch',
            description: 'Light in color and malt character, this styles fermentation process yields a light vinous character which is accompanied by a slightly dry, crisp finish. Ale yeast is used for fermentation, though lager yeast is sometimes used in the bottle or final cold-conditioning process.',
            colornum: '3 - 6 SRM',
@@ -1662,6 +1721,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 60,
+           symbol:'Okt',
            name: 'German-Style Marzen / Oktoberfest',
            description: 'A beer rich in malt with a balance of clean, hop bitterness. Bread or biscuit-like malt aroma and flavor is common. Originating in Germany, this style used to be seasonally available in the spring (Marzen meaning “March”), with the fest-style versions tapped in October.',
            colornum: '4 - 15 SRM',
@@ -1690,6 +1750,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 61,
+           symbol:'Gpil',
            name: 'German-Style Pilsener',
            description: 'A classic German-style pilsener is straw to pale in color. A malty residual sweetness can be perceived in aroma and flavor. Perception of hop bitterness is medium to high. Noble-type hop aroma and flavor are moderate and quite obvious. Distinctly different from Bohemian-style pilsener, this style is lighter in color and body and has a lower perceived hop bitterness.',
            colornum: '3 - 4 SRM',
@@ -1718,6 +1779,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 62,
+           symbol:'Gsw',
            name: 'German-Style Schwarzbier',
            description: 'Sometimes called black lagers, they may remind some of German-style dunkels; but schwarzbiers are drier, darker and more roast-oriented.These very dark brown to black beers have a surprisingly pale-colored foam head (not excessively brown) with good cling quality. They have a mild roasted malt character without the associated bitterness. Malt flavor and aroma is at low to medium levels of sweetness. Sometimes called black lagers, they may remind some of German-style dunkels; but schwarzbiers are drier, darker and more roast-oriented.',
            colornum: '25 - 30 SRM',
@@ -1746,6 +1808,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 63,
+           symbol:'Gwez',
            name: 'German-Style Weizenbock',
            description: 'This beer is a wheat version of a German-style bock, or a bigger and beefier dunkelweizen. Malt mellanoidins and weizen ale yeast are the star ingredients. If served with yeast, the appearance may appropriately be very cloudy.With flavors of bready malt and dark fruits like plum, raisin, and grape, this style is low on bitterness and high on carbonation. Balanced clove-like phenols and fruity, banana-like esters produce a well-rounded aroma.',
            colornum: '4.5 - 30 SRM',
@@ -1774,6 +1837,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 64,
+           symbol:'Gf',
            name: 'Gluten Free',
            description: 'Barley, wheat, oats, rye and spelt commonly contain gluten, so look for other fermentatbles to be featured in these beers. A beer (lager, ale or other) that is made from fermentable sugars, grains and converted carbohydrates. Ingredients do not contain gluten.',
            colornum: '1 - 40 SRM',
@@ -1802,6 +1866,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 65,
+           symbol:'Hsb',
            name: 'Herb and Spice Beer',
            description: 'This is a lager or ale that contains flavors derived from flowers, roots, seeds or certain fruits or vegetables. Typically the hop character is low, allowing the added ingredient to shine through. The appearance, mouthfeel and aromas vary depending on the herb or spice used. This beer style encompasses innovative examples as well as traditional holiday and winter ales.',
            colornum: '5 - 50 SRM',
@@ -1830,6 +1895,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 66,
+           symbol:'Hb',
            name: 'Honey Beer',
            description: 'Both lagers and ales can be brewed with honey. Some brewers will choose to experiment with ingredients, while others will add honey to traditional styles. Overall the character of honey should be evident but not totally overwhelming. A wide variety of honey beers are available. U.S. brewers may add honey to the boil kettle (as a sugar source) or post-boil (to preserve more volatile aromatics).',
            colornum: 'Varies',
@@ -1858,6 +1924,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 67,
+           symbol:'Iipa',
            name: 'Imperial India Pale Ale',
            description: 'High hop bitterness, flavor and aroma. Hop character is fresh and evident from utilization of any variety of hops. Alcohol content is medium-high to high and notably evident with a medium-high to full body. The intention of this style is to exhibit the fresh and evident character of hops.',
            colornum: '5 - 15 SRM',
@@ -1886,6 +1953,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 68,
+           symbol:'Ids',
            name: 'Irish-Style Dry Stout',
            description: 'Dry stouts are black. These beers achieve a dry-roasted character through the use of roasted barley. The emphasis on coffee-like roasted barley and a moderate degree of roasted malt aromas define much of the character. Hop bitterness is medium to medium high. This beer is often dispensed via nitrogen gas taps that lend a smooth, creamy body to the palate.',
            colornum: '35 - 40 SRM',
@@ -1914,6 +1982,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 69,
+           symbol:'Ir',
            name: 'Irish-Style Red',
            description: 'This is a balanced beer that uses a moderate amount of kilned malts and roasted barley to give the color for which it’s named. With a medium hop characteristic on the palate, this typically amber-colored beer is brewed as a lager or ale and can have a medium candy-like caramel malt sweetness. This style may contain adjuncts such as corn, rice and sugar, which help dry out the finish and lessen the body. It also often contains roasted barley, lending low roasted notes, darker color and possibly creating a tan collar of foam. With notes of caramel, toffee and sometimes low-level diacetyl (butter), think of this beer style as a cousin to lightly-toasted and buttered bread.',
            colornum: '11 - 18 SRM',
@@ -1942,6 +2011,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 70,
+           symbol:'Pb',
            name: 'Pumpkin Beer',
            description: 'One of the most popular seasonal beers, this is a lager or ale that is brewed with fresh or processed pumpkin or winter squash. Since the fruit does not have much of a taste by itself, many craft brewers have taken to adding spices typically found in pumpkin pie, like cinnamon and clove. However, these flavors should not overpower the final product. Pumpkin can be found in everything from stouts, to pale ales and pilseners.',
            colornum: '5 - 50 SRM',
@@ -1970,6 +2040,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 71,
+           symbol:'Rp',
            name: 'Robust Porter',
            description: 'Often features more bitter and roasted malt flavor than a brown porter, but not quite as much as a stout. Robust porters have a roast malt flavor, often reminiscent of cocoa, but no roast barley flavor. Their caramel and malty sweetness is in harmony with the sharp bitterness of black malt. Hop bitterness is evident. With U.S. craft brewers doing so much experimentation in beer styles and ingredients, the lines between certain stouts and porters are often blurred. Yet many deliberate examples of these styles do exist. Diacetyl is acceptable at very low levels.',
            colornum: '30 - 35 SRM',
@@ -1998,6 +2069,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 72,
+           symbol:'Rb',
            name: 'Rye Beer',
            description: 'In darker versions, malt flavor can optionally include low roasted malt characters (evident as cocoa/chocolate or caramel) and/or aromatic toffee-like, caramel, or biscuit-like characters. Low-level roasted malt astringency is acceptable when balanced with low to medium malt sweetness. Hop flavor is low to medium-high. Hop bitterness is low to medium. These beers can be made using either ale or lager yeast. The addition of rye to a beer can add a spicy or pumpernickel character to the flavor and finish. Color can also be enhanced and may become more red from the use of rye. The ingredient has come into vogue in recent years in everything from stouts to lagers, but is especially popular with craft brewers in India pale ales. To be considered an example of the style, the grain bill should include sufficient rye such that rye character is evident in the beer.',
            colornum: 'Varies',
@@ -2026,6 +2098,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 73,
+           symbol:'Wh',
            name: 'Scotch Ale / Wee Heavy',
            description: 'Scotch ales are overwhelmingly malty, with a rich and dominant sweet malt flavor and aroma. A caramel character is often part of the profile. Some examples feature a light smoked peat flavor. This style could be considered the Scottish version of an English-style barley wine. Overly smoked versions would be considered speciality examples.',
            colornum: '15 - 30 SRM',
@@ -2054,6 +2127,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 74,
+           symbol:'Sa',
            name: 'Scottish-Style Ale',
            description: 'Scottish-style ales vary depending on strength and flavor, but in general retain a malt-forward character with some degree of caramel-like malt flavors and a soft and chewy mouthfeel. Some examples feature a light smoked peat flavor. Hops do not play a huge role in this style. The numbers commonly associated with brands of this style (60/70/80 and others) reflect the Scottish tradition of listing the cost, in shillings, of a hogshead (large cask) of beer. Overly smoked versions would be considered speciality examples. Smoke or peat should be restrained. The numbers commonly associated with brands of this style (60/70/80 and others) reflect the Scottish tradition of listing the cost, in shillings, of a hogshead (large cask) of beer. Overly smoked versions would be considered speciality examples. Smoke or peat should be restrained.',
            colornum: '6 - 19 SRM',
@@ -2082,6 +2156,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 75,
+           symbol:'Ssb',
            name: 'Session Beer',
            description: 'This beer style is not defined by flavors or aromas, which can place it in almost any style category. Instead, what makes a session beer is primarily refreshment and drinkability. Any style of beer can be made lower in strength than described in the classic style guidelines. The goal should be to reach a balance between the style’s character and the lower alcohol content. Drinkability is a factor in the overall balance of these beers. Beer should not exceed 5 percent ABV.',
            colornum: 'Varies',
@@ -2110,6 +2185,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 76,
+           symbol:'Smb',
            name: 'Smoke Beer',
            description: 'When malt is kilned over an open flame, the smoke flavor becomes infused into the beer, leaving a taste that can vary from dense campfire, to slight wisps of smoke. This style is open to interpretation by individual brewers. Any style of beer can be smoked; the goal is to reach a balance between the styles character and the smoky properties. Originating in Germany as rauchbier, this style is open to interpretation by U.S. craft brewers. Classic base styles include German-style Marzen/Oktoberfest, German-style bock, German-style dunkel, Vienna-style lager and more. Smoke flavors dissipate over time.',
            colornum: 'Varies',
@@ -2138,6 +2214,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 77,
+           symbol:'Smp',
            name: 'Smoke Porter',
            description: 'Typically the base for this style is a robust porter that is given smoky depth thanks to wood-smoked malt. Traditionally, brewers will cite the specific wood used to smoke the malt, and different woods will lend different flavors to the finished product. Smoke flavors dissipate over time.',
            colornum: '19 - 20 SRM',
@@ -2166,6 +2243,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 78,
+           symbol: 'Specb',
            name: 'Specialty Beer',
            description: 'Special ingredients used in this style should be distinctive and evident in either the aroma, flavor or overall balance of the beer. This style category is a catch-all. Any speciality beer that does not fit other speciality beer styles would be appropriately considered here. Examples can include sahti, roggenbier, steinbier, white IPA, session IPA and more.',
            colornum: 'Varies',
@@ -2194,6 +2272,7 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 79,
+           symbol: 'Vl',
            name: 'Vienna-Style Lager',
            description: 'Ranges from copper to reddish brown in color. The beer is characterized by malty aroma and slight malt sweetness. The malt aroma and flavor should have a notable degree of toasted and/or slightly roasted malt character. Hop bitterness is low to medium-low.',
            colornum: '12 - 16 SRM',

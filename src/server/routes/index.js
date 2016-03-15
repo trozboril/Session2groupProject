@@ -78,6 +78,10 @@ router.get('/user/:id/brewery/owner/:shopID', function (req, res, next) {
 	
 });
 
+router.get('/beers/:id/', function (req, res, next) {
+	
+});
+
 router.post('/createbeer', function (req, res, next) {
 
 });

@@ -4,19 +4,20 @@
 
 
 {% block content %}
-
+<br><br><br>
 <div class="container">
-
+{% for beer in american %}
     <div class="american">
-     {% for beer in american %}
+     
       <div class="element">
         
-          <h5>Symbol which will consist of the first letter of Each word in the name string</h5>
-          <ul>
-            <li>{{beer.alcoholnum}}</li>
-            <li>{{beer.colornum}}</li>
-            <li>{{beer.bitternessnum}}</li>
-          </ul>
+          <h5>{{beer.symbol}}</h5>
+          <h5>{{beer.id}}</h5>
+          
+            <p>{{beer.alcoholnum}}<br>
+            {{beer.colornum}}<br>
+            {{beer.bitterness}}</p>
+          
 
       </div>
 
@@ -31,9 +32,9 @@
 
       </div>
       
-    {% endfor %}
+    
     </div>
-
+{% endfor %}
 
    
 
@@ -42,12 +43,11 @@
     {% for beer in bohemian %}
        <div class="element">
         
-          <h5>Symbol which will consist of the first letter of Each word in the name string</h5>
-          <ul>
-            <li>{{beer.alcoholnum}}</li>
-            <li>{{beer.colornum}}</li>
-            <li>{{beer.bitternessnum}}</li>
-          </ul>
+          <h5>{{beer.symbol}}</h5>
+          <h5>{{beer.id}}</h5>
+         <p>{{beer.alcoholnum}}<br>
+            {{beer.colornum}}<br>
+            {{beer.bitterness}}</p>
 
       </div>
 
@@ -74,12 +74,11 @@
     {% for beer in belgian %}
        <div class="element">
         
-          <h5>Symbol which will consist of the first letter of Each word in the name string</h5>
-          <ul>
-            <li>{{beer.alcoholnum}}</li>
-            <li>{{beer.colornum}}</li>
-            <li>{{beer.bitternessnum}}</li>
-          </ul>
+          <h5>{{beer.symbol}}</h5>
+          <h5>{{beer.id}}</h5>
+          <p>{{beer.alcoholnum}}<br>
+            {{beer.colornum}}<br>
+            {{beer.bitterness}}</p>
 
       </div>
 
@@ -107,12 +106,11 @@
    {% for beer in french %}
        <div class="element">
         
-          <h5>Symbol which will consist of the first letter of Each word in the name string</h5>
-          <ul>
-            <li>{{beer.alcoholnum}}</li>
-            <li>{{beer.colornum}}</li>
-            <li>{{beer.bitternessnum}}</li>
-          </ul>
+          <h5>{{beer.symbol}}</h5>
+          <h5>{{beer.id}}</h5>
+          <p>{{beer.alcoholnum}}<br>
+            {{beer.colornum}}<br>
+            {{beer.bitterness}}</p>
 
       </div>
 
@@ -140,12 +138,11 @@
    {% for beer in german %}
        <div class="element">
         
-          <h5>Symbol which will consist of the first letter of Each word in the name string</h5>
-          <ul>
-            <li>{{beer.alcoholnum}}</li>
-            <li>{{beer.colornum}}</li>
-            <li>{{beer.bitternessnum}}</li>
-          </ul>
+          <h5>{{beer.symbol}}</h5>
+          <h5>{{beer.id}}</h5>
+         <p>{{beer.alcoholnum}}<br>
+            {{beer.colornum}}<br>
+            {{beer.bitterness}}</p>
 
       </div>
 
@@ -174,12 +171,11 @@
 {% for beer in english %}
        <div class="element">
         
-          <h5>Symbol which will consist of the first letter of Each word in the name string</h5>
-          <ul>
-            <li>{{beer.alcoholnum}}</li>
-            <li>{{beer.colornum}}</li>
-            <li>{{beer.bitternessnum}}</li>
-          </ul>
+          <h5>{{beer.symbol}}</h5>
+          <h5>{{beer.id}}</h5>
+          <p>{{beer.alcoholnum}}<br>
+            {{beer.colornum}}<br>
+            {{beer.bitterness}}</p>
 
       </div>
 
@@ -208,12 +204,11 @@
 {% for beer in others %}
        <div class="element">
         
-          <h5>Symbol which will consist of the first letter of Each word in the name string</h5>
-          <ul>
-            <li>{{beer.alcoholnum}}</li>
-            <li>{{beer.colornum}}</li>
-            <li>{{beer.bitternessnum}}</li>
-          </ul>
+          <h5>{{beer.symbol}}</h5>
+          <h5>{{beer.id}}</h5>
+          <p>{{beer.alcoholnum}}<br>
+            {{beer.colornum}}<br>
+            {{beer.bitterness}}</p>
 
       </div>
 
