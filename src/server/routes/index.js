@@ -74,17 +74,6 @@ router.get('/user/owner/:id', function (req, res, next) {
 	res.redirect('/owner/' + req.params.id);
 });
 
-
-// *** get all beers *** //
-router.get('/beers', function (req, res, next) {
-	res.render('beers');
-});
-
-// *** get beer by id *** //
-router.get('/beer/:id', function (req, res, next) {
-	res.reirect('/beer' + req.params.id);
-});
-
 // *** logout user *** //
 router.get('/logout', function (req, res, next) {
 	res.render('logout');
@@ -112,30 +101,34 @@ router.get('/breweries/new', function (req, res, next) {
 router.post('/breweries/new', function (req, res, next) {
 	// routes should be the resource and then the "action"
 	// eg => breweries
-	var zipper = parseInt(req.body.zip);
-	console.log('body', req.body);
-	console.log('user:', req.user);
+	if( !req.user ){
+		res.redirect('/');
+	} else {
+		var zipper = parseInt(req.body.zip);
+		console.log('body', req.body);
+		console.log('user:', req.user);
 
-	// table names should be plural
-	// e.g. breweries
+		// table names should be plural
+		// e.g. breweries
 
-	knex('breweries').insert({
-		name: req.body.name,
-		address: req.body.address,
-		city: req.body.city,
-		state: req.body.state,
-		zip: zipper,
-		description: req.body.description,
-		image: req.body.image
-	}, 'id').then(function (breweryId) {
-		knex('brewery_owner').insert({
-			brewery_id: parseInt(breweryId),
-			user_id: parseInt(req.user.id)
-		}).then(function () {
-			res.redirect('/breweries');
+		knex('breweries').insert({
+			name: req.body.name,
+			address: req.body.address,
+			city: req.body.city,
+			state: req.body.state,
+			zip: zipper,
+			description: req.body.description,
+			image: req.body.image
+		}, 'id').then(function (breweryId) {
+			knex('brewery_owner').insert({
+				brewery_id: parseInt(breweryId),
+				user_id: parseInt(req.user.id)
+			}).then(function () {
+				res.redirect('/breweries');
+			});
+
 		});
-
-	});
+	}
 });
 
 // *** basic contact page *** //
