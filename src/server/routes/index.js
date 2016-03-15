@@ -33,10 +33,14 @@ router.get('/brewery/:id', function (req, res, next) {
 	// for an individual brewery,
 	// breweries/1
 	knex.select('*').from('breweries').where('id', req.params.id)
-	.then(
-		res.redirect('/brewery')
-		);
+	.then(function (brewery) {
+		console.log(brewery);
+		res.render('brewery', {
+			name: brewery[0].name,
+			});
+	});
 });
+
 
 // *** get user by ID (user page after login) *** //
 router.get('/user/:id', function (req, res, next) {
@@ -58,16 +62,11 @@ router.get('/pubcrawl', function (req, res, next) {
 
 // *** get brewery owner render brewery update page *** //
 router.get('/user/owner/:id', function (req, res, next) {
-	res.redirect('/owner/' + req.params.id);
-});
-
-// *** logout user *** //
-router.get('/logout', function (req, res, next) {
-	res.render('logout');
+	res.redirect('/owner');
 });
 
 //*** create a beer *** //
-router.get('/user/owner/:id/createbeer', function (req, res, next) {
+router.get('/user/:id/owner/brewery/:shopID', function (req, res, next) {
 	
 });
 
@@ -78,11 +77,7 @@ router.post('/createbeer', function (req, res, next) {
 // *** user after logged in can create a new brewery *** //
 
 router.get('/breweries/new', function (req, res, next) {
-	// breweries/new
-
-
-	res.render('newBrewery');
-
+	res.render('newBrewery', {id: req.user.id});
 });
 
 router.post('/breweries/new', function (req, res, next) {
@@ -120,12 +115,12 @@ router.post('/breweries/new', function (req, res, next) {
 
 // *** basic contact page *** //
 
-router.get('/contact_tapt', function (req, res, next) {
-	res.render('contact');
+router.get('/contact', function (req, res, next) {
+	res.render('contact', {id: req.user.id});
 
 });
 
-router.post('/contact_tapt', function (req, res, next) {
+router.post('/contact', function (req, res, next) {
 
 });
 
