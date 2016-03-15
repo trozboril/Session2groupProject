@@ -8,7 +8,7 @@ router.get('/beers', function (req, res, next) {
   knex.select('*').from('beertypes')
   .then(function (beers) {
       // our standard beers
-      var typesOfBeers = ["american", "bohemian", "belgian", "german", "english"];
+      var typesOfBeers = ["american", "bohemian", "belgian", "german", "english", "french"];
       
       var sortedBeers = beers.reduce(function (accumulator, beer) {
         var beerType = beer.name.replace("-", " ").split(" ")[0].toLowerCase();
