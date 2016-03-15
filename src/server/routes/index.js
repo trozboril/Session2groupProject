@@ -70,6 +70,10 @@ router.get('/user/:id/owner/brewery/:shopID', function (req, res, next) {
 	
 });
 
+router.get('/beers/:id/', function (req, res, next) {
+	
+});
+
 router.post('/createbeer', function (req, res, next) {
 
 });

@@ -2243,7 +2243,8 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 78,
-           name: 'Specb',
+           symbol: 'Specb',
+           name: 'Specialty Beer',
            description: 'Special ingredients used in this style should be distinctive and evident in either the aroma, flavor or overall balance of the beer. This style category is a catch-all. Any speciality beer that does not fit other speciality beer styles would be appropriately considered here. Examples can include sahti, roggenbier, steinbier, white IPA, session IPA and more.',
            colornum: 'Varies',
            bitterness: 'Varies',
@@ -2271,7 +2272,8 @@ exports.seed = function(knex, Promise) {
    knex('beertypes').insert(
        {
            id: 79,
-           name: 'Vl',
+           symbol: 'Vl',
+           name: 'Vienna-Style Lager',
            description: 'Ranges from copper to reddish brown in color. The beer is characterized by malty aroma and slight malt sweetness. The malt aroma and flavor should have a notable degree of toasted and/or slightly roasted malt character. Hop bitterness is low to medium-low.',
            colornum: '12 - 16 SRM',
            bitterness: '22 - 28 IBU',
