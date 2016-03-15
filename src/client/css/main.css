@@ -13,6 +13,10 @@ body {
   color: #292929;
 }
 
+strong {
+  font-weight: 700;
+}
+
 a {
   color: #00B7FF;
 }
@@ -109,7 +113,7 @@ a {
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center center;
   height: 350px;
 }
 #streets h2 {
@@ -129,4 +133,9 @@ footer {
   color: #ebe8e8;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+#breweryHeader {
+  margin-top: 50px;
+  padding-bottom: 20px;
 }
