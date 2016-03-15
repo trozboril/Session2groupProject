@@ -36,7 +36,7 @@ router.get('/brewery/:id', function (req, res, next) {
 	.then(function (brewery) {
 		console.log(brewery);
 		res.render('brewery', {
-			name: brewery[0].name,
+			brewery: brewery,
 			});
 	});
 });
@@ -48,9 +48,17 @@ router.get('/user/:id', function (req, res, next) {
 		res.redirect('/');
 	} else {
 		knex.select('*').from('users').where('id', req.params.id)
-		.then(function (userInfo) {
-			console.log(userInfo);
-			res.render('user', {name: userInfo[0].name});
+		.then(function () {
+			knex.select('*').from('brewery_owner').where('user_id', req.params.id)
+		.then(function () {
+			knex.select('*').from('saved_brewery').where('user_id', req.params.id)
+		.then(function () {
+			knex.select('*').from('saved_beers').where('user_id', req.params.id)
+		.then(function () {
+			knex.select('*').from('breweries').where('')
+		});
+		});
+		});
 		});
 	}
 });
@@ -66,7 +74,7 @@ router.get('/user/owner/:id', function (req, res, next) {
 });
 
 //*** create a beer *** //
-router.get('/user/:id/owner/brewery/:shopID', function (req, res, next) {
+router.get('/user/:id/brewery/owner/:shopID', function (req, res, next) {
 	
 });
 
