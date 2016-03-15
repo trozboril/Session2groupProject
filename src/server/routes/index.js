@@ -5,9 +5,9 @@ var knex = require('../db/knex');
 // *** root route *** //
 router.get('/', function (req, res, next) {
 	if( !req.user ){
-  		res.render('index', { title: 'Tapt' });
+  		res.render('index', { title: 'Tapt!' });
 	} else {
-		res.render('index', { title: 'Tapt', name: req.user.name});
+		res.render('index', { title: 'Tapt,', name: req.user.name});
 	}
 });
 
@@ -32,14 +32,20 @@ router.post('/register', function (req, res, next) {
 
 // *** get all breweries route *** //
 router.get('/breweries', function (req, res, next) {
-	if( !req.user ) {
-		res.render('breweries');
-	  } else {
-	  	knex('users').where('id', req.user.id)
-	  	.then(function (user) {
-	  		res.render('breweries', {name: user[0].name});
+	knex.select('*').from('breweries')
+	.then(function (breweries) {
+		console.log(breweries);
+		if( !req.user ) {
+			res.render('breweries', {breweries: breweries});
+	 	} else {
+	  		knex('users').where('id', req.user.id)
+	  		.then(function (user) {
+	  		res.render('breweries', {name: user[0].name, breweries: breweries});
 	  	});
 	  }
+
+	});
+	
 });
 
 
@@ -47,8 +53,10 @@ router.get('/breweries', function (req, res, next) {
 router.get('/brewery/:id', function (req, res, next) {
 	// for an individual brewery,
 	// breweries/1
-
-	res.redirect('/brewery/' + req.params.id);
+	knex.select('*').from('breweries').where('id', req.params.id)
+	.then(
+		res.redirect('/brewery/' + req.params.id)
+		);
 });
 
 // *** get user by ID (user page after login) *** //
@@ -101,11 +109,12 @@ router.get('/breweries/new', function (req, res, next) {
 
 });
 
-router.post('/newbrewery', function (req, res, next) {
+router.post('/breweries/new', function (req, res, next) {
 	// routes should be the resource and then the "action"
 	// eg => breweries
 	var zipper = parseInt(req.body.zip);
-	console.log(req.body);
+	console.log('body', req.body);
+	console.log('user:', req.user);
 
 	// table names should be plural
 	// e.g. breweries
@@ -118,8 +127,11 @@ router.post('/newbrewery', function (req, res, next) {
 		zip: zipper,
 		description: req.body.description,
 		image: req.body.image
-	}).then(function () {
-		knex('brewery_owner').insert({}).then(function () {
+	}, 'id').then(function (breweryId) {
+		knex('brewery_owner').insert({
+			brewery_id: parseInt(breweryId),
+			user_id: parseInt(req.user.id)
+		}).then(function () {
 			res.redirect('/breweries');
 		});
 

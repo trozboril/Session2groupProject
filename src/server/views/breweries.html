@@ -7,8 +7,19 @@
 
 <div class="container">
 
-    <h3>Brewweries</h3>
+    <h2>Breweries</h2>
     <p>Welcome {{ name }}</p>
+
+    <div class="populateBrew">
+    {% for brewery in breweries %}
+    <div class='indBrewery'>
+    	<img src='{{brewery.image}}'>
+    	<h3>{{brewery.name}}</h3>
+    	<h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
+    	<p>{{brewery.description}}</p>
+    </div>
+    {% endfor %}
+    </div>
 
     <h5>Create a new brewery <a href='/breweries/new'>here</a></h5>
 
