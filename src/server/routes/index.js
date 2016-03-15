@@ -34,13 +34,21 @@ router.get('/brewery/:id', function (req, res, next) {
 	// breweries/1
 	knex.select('*').from('breweries').where('id', req.params.id)
 	.then(
-		res.redirect('/brewery/' + req.params.id)
+		res.redirect('/brewery')
 		);
 });
 
 // *** get user by ID (user page after login) *** //
 router.get('/user/:id', function (req, res, next) {
-	res.redirect('/user/' + req.params.id);
+	if (!req.user) {
+		res.redirect('/');
+	} else {
+		knex.select('*').from('users').where('id', req.params.id)
+		.then(function (userInfo) {
+			console.log(userInfo);
+			res.render('user', {name: userInfo[0].name});
+		});
+	}
 });
 
 // *** serve up pubcrawl app *** ///
