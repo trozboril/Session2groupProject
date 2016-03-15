@@ -7,26 +7,8 @@ router.get('/', function (req, res, next) {
 	if( !req.user ){
   		res.render('index', { title: 'Tapt!' });
 	} else {
-		res.render('index', { title: 'Tapt,', name: req.user.name});
+		res.render('index', { title: 'Tapt,', name: req.user.name, id: req.user.id});
 	}
-});
-
-// *** login route *** //
-router.get('/login', function (req, res, next) {
-	res.render('login');
-});
-
-router.post('/login', function (req, res, next) {
-
-});
-
-// *** register route *** //
-router.get('/register', function (req, res, next) {
-	res.render('register');
-});
-
-router.post('/register', function (req, res, next) {
-
 });
 
 
@@ -34,18 +16,15 @@ router.post('/register', function (req, res, next) {
 router.get('/breweries', function (req, res, next) {
 	knex.select('*').from('breweries')
 	.then(function (breweries) {
-		console.log(breweries);
 		if( !req.user ) {
 			res.render('breweries', {breweries: breweries});
 	 	} else {
 	  		knex('users').where('id', req.user.id)
 	  		.then(function (user) {
-	  		res.render('breweries', {name: user[0].name, breweries: breweries});
+	  		res.render('breweries', {name: user[0].name, breweries: breweries, id: req.user.id});
 	  	});
 	  }
-
 	});
-	
 });
 
 
@@ -55,13 +34,21 @@ router.get('/brewery/:id', function (req, res, next) {
 	// breweries/1
 	knex.select('*').from('breweries').where('id', req.params.id)
 	.then(
-		res.redirect('/brewery/' + req.params.id)
+		res.redirect('/brewery')
 		);
 });
 
 // *** get user by ID (user page after login) *** //
 router.get('/user/:id', function (req, res, next) {
-	res.redirect('/user/' + req.params.id);
+	if (!req.user) {
+		res.redirect('/');
+	} else {
+		knex.select('*').from('users').where('id', req.params.id)
+		.then(function (userInfo) {
+			console.log(userInfo);
+			res.render('user', {name: userInfo[0].name});
+		});
+	}
 });
 
 // *** serve up pubcrawl app *** ///

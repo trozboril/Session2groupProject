@@ -12,7 +12,7 @@ router.get('/facebook/callback',
   function(req, res) {
   	knex('users').where('id', req.user)
   	.then(function (user) {
-  		res.render('breweries', {name: user[0].name});
+  		res.redirect('/breweries');
   	});
 
     // Successful authentication, redirect home.
