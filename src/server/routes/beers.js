@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
-var queries = require('../../client/js/beers');
+var knex = require('../db/knex');
 
-router.get('/', function(request, response, next) {
-    // Query for beers here
-    queries.getBeers().then(function(result){
-      var beers = result;
+
+router.get('/beers', function (req, res, next) {
+  
+  knex.select('*').from('beertypes')
+  .then(function (beers) {
     console.log(beers);
-    response.render('beers', {beers: beers});
-  });
+        res.render('beers', {beers: beers});
+      });
+
 });
 
 module.exports = router;

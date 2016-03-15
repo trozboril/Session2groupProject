@@ -10,6 +10,7 @@
 body {
   font-family: 'Oswald', sans-serif;
   background: #ebe8e8;
+  color: #292929;
 }
 
 a {
@@ -19,6 +20,29 @@ a {
   display: block;
 }
 
+.navbar-brand {
+  padding-left: 20px;
+}
+/*.navbar .navbar-default {*/
+  /*opacity: 0.8;*/
+/*}*/
+
+#indexHeader {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url('../images/tapt2.jpg');
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  height: 450px;
+}
+
+#indexHeader h1 {
+  vertical-align: middle;
+  color: #ebe8e8;
+  font-size: 100px;
+  text-shadow: 1px 1px black;
+  padding-top: 60px;
+}
 .taptHeader {
   margin-top: 40px;
 }
@@ -28,14 +52,81 @@ a {
   color: #ebe8e8;
   border: #157342;
 }
-
+.btn-default {
+  background: #ebe8e8;
+  border: #ebe8e8 ;
+  color: #292929;
+}
 .btn-danger {
   background: #C63D0F;
   color: #ebe8e8;
   border: #C63D0F;
 }
 
-.navbar-brand {
-  padding-left: 20px;
+#about {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
+#about h1 {
+  padding-bottom: 15px;
+  font-size: 48px;
+}
+
+#breweryImg {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/brewery.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 0 0;
+  height: 400px;
+  background-attachment: fixed;
+}
+#breweryImg h1 {
+  color: #ebe8e8;
+  font-variant: small-caps;
+  vertical-align: middle;
+  text-shadow: 1px 1px black;
+  padding-top: 20px;
+}
+#breweryImg p {
+  color: #ebe8e8;
+  text-shadow: 1px 1px black;
+}
+
+#goTo {
+  background: #FFFFFF;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#goTo img {
+  height: 200px;
+}
+
+#streets {
+  background: url("../images/street.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  height: 350px;
+}
+#streets h2 {
+  padding-top: 20px;
+}
+#streets h2, #streets p{
+  color: #ebe8e8;
+}
+
+#contactSect {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer {
+  background: #292929;
+  color: #ebe8e8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

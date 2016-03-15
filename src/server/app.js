@@ -16,6 +16,7 @@ if ( !process.env.NODE_ENV ) { require('dotenv').config(); }
 // *** routes *** //
 var routes = require('./routes/index.js');
 var authRoutes = require('./routes/auth.js');
+var beers = require('./routes/beers.js');
 
 
 // *** express instance *** //
@@ -100,6 +101,7 @@ passport.deserializeUser(function(userId, done) {
 // *** main routes *** //
 app.use('/', routes);
 app.use('/auth', authRoutes);
+app.use('/', beers);
 
 
 // catch 404 and forward to error handler
