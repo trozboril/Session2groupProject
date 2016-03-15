@@ -10,7 +10,6 @@ router.get('/facebook/callback',
   	failureRedirect: '/login' 
   }),
   function(req, res) {
-  	console.log(req.user);
   	knex('users').where('id', req.user)
   	.then(function (user) {
   		res.render('breweries', {name: user[0].name});
