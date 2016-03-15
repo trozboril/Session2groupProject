@@ -5,11 +5,89 @@
 
 {% block content %}
 
-  <div class="container">
+<div class="row">
+  <div class="container-fluid" id="indexHeader">
+    <!--<h1 class="text-center">tapt</h1>-->
+  </div>
+</div>
+<div class="row" id="about">
+  <div class="container-fluid">
+    <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+      <h1 class="text-center">We are <strong>tapt.</strong></h1>
+      <p>A social media web ap that combines the power of combining owners of bars serving craft beers
+      to the people who love to drink them.  The app allows for an owner of an establishment the power
+      to change their inventory and let the masses know what is currently on tap.</p>
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}, {{ name }}</p>
+      <p>The general user of the app is allowed to rank beers tehy have come across
+      on their travels, rank the establishment itself, and tag beers they are interest in and be notified
+      when the beer is back on tap. Users can also find terrific resources on the site
+      to educate them about all of the terrific beers types that actually exist in the world.</p>
+
+      <p>Did we also mention that you can create a customized pub crawl for you and your
+      friends to share with the world? Yeah, we did it. You're welcome.</p>
+    </div>
+  </div>
+</div>
+<div class="row" >
+  <div class="container-fluid" id="breweryImg">
+
+    <div class="col-md-3 col-md-offset-2 text-center">
+      <h1>Breweries</h1>
+      <p>Check out the breweries and the brews</p>
+      <a href="/breweries" class="btn btn-default">Click here</a>
+    </div>
+  </div>
+</div>
+<div class="row" id="goTo">
+  <div class="container-fluid">
+    <div class="col-sm-6 col-md-6">
+      <div class="col-md-6 col-sm-6 wow fadeInUp text-center">
+        <h3>Beer types</h3>
+        <p>Become Tapt educated. Learn all of the wonderful beer types there are out there </p>
+        <a href="/beers" class="btn btn-primary">click here</a>
+      </div>
+      <div class="col-md-6 col-sm-6 wow bounceInLeft">
+        <img class="img-responsive" src="../images/pint1.jpg">
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 wow bounceInRight">
+      <div class="col-md-6 col-sm-6">
+        <img class="img-responsive wow bounceInRight" src="../images/stein.jpg">
+      </div>
+      <div class="col-md-6 col-sm-6 text-center">
+        <h3>Become a Member</h3>
+        <p>Get your tapt on! Become a member of your local beer community </p>
+        <a href="/auth/ogin" class="btn btn-primary">Sign Up here</a>
+      </div>
+    </div> <!-- end of goTo -->
 
   </div>
+</div>
+<div class="row">
+  <div class="container-fluid" id="streets">
+    <div class="col-md-5 col-md-offset-6 text-center">
+      <h2>Pub Crawl</h2>
+      <p>Create your own customizable pub crawl and share it with your friends</p>
+      <a href="/pubcrawl" class="btn btn-default">Get crawling</a>
+    </div>
+  </div>
+</div>
+<div class="row" id="contactSect">
+  <div class="container-fluid">
+    <div class="col-md-8 col-sm-8 col-sm-offset-2 col-md-offset-2 text-center">
+      <h2 class="text-center">Contact</h2>
+      <p>You want to give us a shout? No Problem. We would love to ehar from you</p>
+      <a href="/contact" class="btn btn-primary text-center">Contact</a>
+    </div>
+  </div>
+</div>
+<footer class="row">
+  <div class="container">
+    <div class="col-md-4 col-sm-4">
+        <h3><strong>tapt</strong></h3>
+      <p>Proudly serving the beer community since last week</p>
+    </div>
 
+  </div>
+</footer>
 {% endblock %}
