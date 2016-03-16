@@ -47,7 +47,10 @@ router.get('/beers', function (req, res, next) {
       // console.log(sortedBeers);
       res.render('beers', sortedBeers); 
     });
+
 });
+
+
 
 
 router.get('/beers/:id',function(req, res, next) {
