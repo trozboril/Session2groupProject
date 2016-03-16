@@ -5,13 +5,8 @@ $(document).on('ready', function() {
   new WOW().init();
 
 
+$('[data-toggle="popover"]').popover();
 
-$('.element').mouseover(function(){
-  
-    $('.').toggleClass('show');
-    $('.american').toggleClass('highlight');
- 
-});
 
 
 $('.americanbtn').on('click', function(body){
