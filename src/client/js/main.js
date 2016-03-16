@@ -6,61 +6,65 @@ $(document).on('ready', function() {
 
 
 
-
-
-
-
-
 $('.americanbtn').on('click', function(body){
   
-
-
-
     $('.americans').toggleClass('show');
-    $('.english').toggleClass('hide');
-    $('.german').toggleClass('hide');
-    $('.bohemian').toggleClass('hide');
-    $('.french').toggleClass('hide');
-    $('.belgian').toggleClass('hide');
-    $('.others').toggleClass('hide');
+    $('.american').toggleClass('highlight');
+ 
+});
+
+
+
+$('.germanbtn').on('click', function(body){
+  
+    $('.germans').toggleClass('show');
+    $('.german').toggleClass('highlight');
+    
+});
+
+
+
+
+$('.bohemianbtn').on('click', function(body){
+  
+    $('.bohemians').toggleClass('show');
+    $('.bohemian').toggleClass('highlight');
+    
+});
+
+
+
+$('.belgianbtn').on('click', function(body){
+
+    $('.belgians').toggleClass('show');
+    $('.belgian').toggleClass('highlight');
+     
+});
+
+$('.englishbtn').on('click', function(body){
+  
+    $('.englishs').toggleClass('show');
+    $('.english').toggleClass('highlight');
+    
+});
+
+
+
+$('.frenchbtn').on('click', function(body){
+  
+    $('.frenchs').toggleClass('show');
+    $('.french').toggleClass('highlight');  
   
 });
 
-// $('.bohemianbtn').on('click', function(body){
- 
-//     $('.bohemians').toggleClass('show');
-//     $('.english').toggleClass('hide');
-//     $('.german').toggleClass('hide');
-//     $('.american').toggleClass('hide');
-//     $('.french').toggleClass('hide');
-//     $('.belgian').toggleClass('hide');
-//     $('.others').toggleClass('hide');
-  
-// });
 
-// $('.germanbtn').on('click', function(body){
- 
-//     $('.germans').toggleClass('show');
-//     $('.english').toggleClass('hide');
-//     $('.bohemian').toggleClass('hide');
-//     $('.american').toggleClass('hide');
-//     $('.french').toggleClass('hide');
-//     $('.belgian').toggleClass('hide');
-//     $('.others').toggleClass('hide');
-  
-// });
 
-// $('.belgianbtn').on('click', function(body){
- 
-//     $('.belgians').toggleClass('show');
-//     $('.english').toggleClass('hide');
-//     $('.german').toggleClass('hide');
-//     $('.american').toggleClass('hide');
-//     $('.french').toggleClass('hide');
-//     $('.bohemian').toggleClass('hide');
-//     $('.others').toggleClass('hide');
+$('.othersbtn').on('click', function(body){
+
+    $('.others1').toggleClass('show');
+    $('.others').toggleClass('highlight');
   
-// });
+});
 
 
 

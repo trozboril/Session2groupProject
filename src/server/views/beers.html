@@ -23,7 +23,7 @@
 
   <ul>
   
-   <li class="americans hidden">American Amber Ale</li>
+   <li class="americans">American Amber Ale</li>
    <li class="americans">American Amber Lager</li>
    <li class="americans">American Barley Wine</li>
    <li class="americans">American Black Ale</li>
@@ -121,9 +121,9 @@
 
    
         {% for beer in american %}
-          <div class="american">
+          <div class="not">
      <a href="/beers/{{beer.id}}">
-              <div class="element">
+              <div class="american element">
 
               
         
@@ -152,10 +152,10 @@
    
 
 
-    <div class="bohemian">
+    <div class="not">
     {% for beer in bohemian %}
      <a href="/beers/{{beer.id}}">
-       <div class="element">
+       <div class="bohemian element">
         
           <h5>{{beer.symbol}}</h5>
           <h5>{{beer.id}}</h5>
@@ -184,10 +184,10 @@
     
 
 
-    <div class="belgian">
+    <div class="not">
     {% for beer in belgian %}
     <a href="/beers/{{beer.id}}">
-       <div class="element">
+       <div class="belgian element">
         
           <h5>{{beer.symbol}}</h5>
           <h5>{{beer.id}}</h5>
@@ -217,10 +217,10 @@
 
 
 
-    <div class="french">
+    <div class="not">
    {% for beer in french %}
    <a href="/beers/{{beer.id}}">
-       <div class="element">
+       <div class="french element">
         
           <h5>{{beer.symbol}}</h5>
           <h5>{{beer.id}}</h5>
@@ -250,10 +250,10 @@
 
 
 
-    <div class="german">
+    <div class="not">
    {% for beer in german %}
    <a href="/beers/{{beer.id}}">
-       <div class="element">
+       <div class="german element">
         
           <h5>{{beer.symbol}}</h5>
           <h5>{{beer.id}}</h5>
@@ -284,11 +284,11 @@
 
 
 
-    <div class="english">
+    <div class="not">
 
 {% for beer in english %}
 <a href="/beers/{{beer.id}}">
-       <div class="element">
+       <div class="english element">
         
           <h5>{{beer.symbol}}</h5>
           <h5>{{beer.id}}</h5>
@@ -318,11 +318,11 @@
 
 
 
-    <div class="others">
+    <div class="not">
 
 {% for beer in others %}
 <a href="/beers/{{beer.id}}">
-       <div class="element">
+       <div class="others element">
         
           <h5>{{beer.symbol}}</h5>
           <h5>{{beer.id}}</h5>
