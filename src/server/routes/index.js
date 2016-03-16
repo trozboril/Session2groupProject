@@ -134,10 +134,6 @@ router.get('/user/:id', function (req, res, next) {
 	}
 });
 
-// *** serve up pubcrawl app *** ///
-router.get('/pubcrawl', function (req, res, next) {
-	res.render('pubCrawl');
-});
 
 // *** get brewery owner render brewery update page *** //
 router.get('/brewery/:id/owner/edit', function (req, res, next) {
