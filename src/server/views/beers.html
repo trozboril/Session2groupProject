@@ -138,18 +138,10 @@
               
               </div>
               </a>
-      <div class="longpopup">
-          
-            <h1>{{beer.name}}</h1>
-          
-            <p>{{beer.description}}</p>
-
-      </div>
-    </div>
-
+    
 {% endfor %}
 
-   
+      </div>
 
 
     <div class="not">
@@ -165,16 +157,6 @@
 
       </div>
 </a>
-      <div class="longpopup">
-          
-          <h1>{{beer.name}}</h1>
-          
-            <p>{{beer.description}}</p>
-
-          
-
-
-      </div>
       
     {% endfor %}
 
@@ -197,16 +179,6 @@
 
       </div>
 </a>
-      <div class="longpopup">
-          
-          <h1>{{beer.name}}</h1>
-          
-            <p>{{beer.description}}</p>
-
-          
-
-
-      </div>
       
     {% endfor %}
 
@@ -230,17 +202,7 @@
 
       </div>
 </a>
-      <div class="longpopup">
-          
-          <h1>{{beer.name}}</h1>
-          
-            <p>{{beer.description}}</p>
 
-          
-
-
-      </div>
-      
     {% endfor %}
 
     </div>
@@ -263,17 +225,6 @@
 
       </div>
       </a>
-
-      <div class="longpopup">
-          
-          <h1>{{beer.name}}</h1>
-          
-            <p>{{beer.description}}</p>
-
-          
-
-
-      </div>
       
     {% endfor %}
 
@@ -299,16 +250,6 @@
       </div>
       </a>
 
-      <div class="longpopup">
-          
-          <h1>{{beer.name}}</h1>
-          
-          <p>{{beer.description}}</p>
-
-          
-
-
-      </div>
           {% endfor %}
 
 
@@ -333,6 +274,15 @@
       </div>
       </a>
 
+      
+    {% endfor %}
+
+    </div>
+
+
+<div class="row">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    {% for beer in others %}
       <div class="longpopup">
           
           <h1>{{beer.name}}</h1>
@@ -343,10 +293,90 @@
 
 
       </div>
-      
     {% endfor %}
 
+    {% for beer in american %}
+      <div class="longpopup">
+          
+          <h1>{{beer.name}}</h1>
+          
+          <p>{{beer.description}}</p>
+
+          
+
+
+      </div>
+    {% endfor %}
+
+    {% for beer in belgian %}
+      <div class="longpopup">
+          
+          <h1>{{beer.name}}</h1>
+          
+          <p>{{beer.description}}</p>
+
+          
+
+
+      </div>
+    {% endfor %}
+
+    {% for beer in english %}
+      <div class="longpopup">
+          
+          <h1>{{beer.name}}</h1>
+          
+          <p>{{beer.description}}</p>
+
+          
+
+
+      </div>
+    {% endfor %}
+
+    {% for beer in german %}
+      <div class="longpopup">
+          
+          <h1>{{beer.name}}</h1>
+          
+          <p>{{beer.description}}</p>
+
+          
+
+
+      </div>
+    {% endfor %}
+
+    {% for beer in french %}
+      <div class="longpopup">
+          
+          <h1>{{beer.name}}</h1>
+          
+          <p>{{beer.description}}</p>
+
+          
+
+
+      </div>
+    {% endfor %}
+
+    {% for beer in bohemian %}
+      <div class="longpopup">
+          
+          <h1>{{beer.name}}</h1>
+          
+          <p>{{beer.description}}</p>
+
+          
+
+
+      </div>
+    {% endfor %}
     </div>
+</div>
+
+
+
 
 </div>
 </div>

@@ -11,20 +11,14 @@
   margin: 1%;
   padding:;
   text-align: center;
-  border: 1px solid black;
+  
   font-size: 6px; 
 }
 .longpopup{
   display: none;
   clear: both;
 }
-.american .element{
-  background: green;
-  border:2px solid green;
 
-
-
-}
 .highlight{
   border: 2px solid yellow;
 }
@@ -40,6 +34,7 @@
 }
 .belgians{
   display:none;
+
 }
 .others1{
   display:none;
@@ -56,34 +51,34 @@
 .show{
   display: block;
 }
-.belgian .element{
+.not .american{
+  background: green;
+}
+ .not .belgian {
   background: red; 
-  border:2px solid red;
+}
+.not .english{
+  background: blue; 
+ 
+
+}
+.not .german{
+  background: yellow; 
   
 
 }
-.english .element{
-  background: blue; 
-  border:2px solid blue;
-
-}
-.german .element{
-  background: yellow; 
-  border:2px solid yellow;
-
-}
-.french .element{
+.not .french{
   background: purple; 
-  border:2px solid purple;
+  
 
 }
-.others .element{
+.not .others{
   background: grey; 
-  border:2px solid grey;
+ 
 
 }
-.bohemian .element{
+.not .bohemian{
   background: orange; 
-  border:2px solid orange;
+ 
 
 }

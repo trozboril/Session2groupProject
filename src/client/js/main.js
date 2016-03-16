@@ -6,6 +6,14 @@ $(document).on('ready', function() {
 
 
 
+$('.element').mouseover(function(){
+  
+    $('.').toggleClass('show');
+    $('.american').toggleClass('highlight');
+ 
+});
+
+
 $('.americanbtn').on('click', function(body){
   
     $('.americans').toggleClass('show');
