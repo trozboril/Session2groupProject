@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
 	if( !req.user ){
   		res.render('index', { title: 'Tapt!' });
 	} else {
-		res.render('index', { title: 'Tapt,', name: req.user.name, id: req.user.id});
+		res.render('index', { maintitle: 'Tapt', title: 'Tapt,', name: req.user.name, id: req.user.id});
 	}
 });
 
