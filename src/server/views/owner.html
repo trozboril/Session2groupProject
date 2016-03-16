@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<div class="container">
+
 <br>
 <br>
 <br>
@@ -157,12 +157,71 @@
 	    <div class="form-group ">
 	    	<label for="description" class="control-label col-md-3">Description: </label>
                 <div class="col-md-3">
-                    <textarea rows="4"  name="description" id="description" placeholder="Describe your brewery" class="form-control"></textarea>
+                    <textarea rows="4"  name="description" id="description" placeholder="Describe your brew." class="form-control"></textarea>
                 </div>
         </div>
 		<button type="submit" class="btn btn-primary">Put Beer on Tap</button>
 	</form>
 </div>
-</div>
+	<form class="form-horizontal" role="form" method="post" action="/breweries/:id/edit">
+	<div class='col-md-4 push-right'>
+		<h3>Brewery Info</h3>
+		<div class='breweryInfo'>
+			<div class="form-group ">
+	    		<label for='name' class="col-md-3 control-label">Name: </label>
+	    		<div class="col-md-3">
+	    			<input id="name" class="form-control" name='name' value='{{brewery.name}}' required>
+	    		</div>
+			</div>
+
+			<div class="form-group ">
+	    		<label for='address' class="col-md-3 control-label">Address: </label>
+	    		<div class="col-md-3">
+	    			<input id="address" class="form-control" name='address' value='{{brewery.address}}' required>
+	    		</div>
+	    	</div>
+
+	    	<div class="form-group ">
+	    		<label for='city' class="col-md-3 control-label">City: </label>
+	    		<div class="col-md-3">
+	    			<input id="city" class="form-control" name='city' value='{{brewery.city}}' required>
+	    		</div>
+	    	</div>
+
+	    	<div class="form-group ">
+	    		<label for='state' class="col-md-3 control-label">State: </label>
+	    		<div class="col-md-3">
+	    			<input id="state" class="form-control" name='state' value='{{brewery.state}}' required>
+	    		</div>
+	    	</div>
+
+	    	<div class="form-group ">
+	    		<label for='zip' class="col-md-3 control-label">Zip: </label>
+	    		<div class="col-md-3">
+	    			<input id="zip" class="form-control" name='zip' value='{{brewery.zip}}' required>
+	    		</div>
+	    	</div>
+
+	    	<div class="form-group ">
+	    		<label for='description' class="col-md-3 control-label">Description: </label>
+	    		<div class="col-md-8">
+	    			<input rows="4"  name="description" id="description" value='{{brewery.description}}' class="form-control">
+	    		</div>
+	    	</div>
+
+	    	<div class="form-group">
+	    		<label for='image' class='col-md-3 control-label'>Image: </label>
+	    		<div class="col-md-6">
+	    		<input type='file' name="image" id='image' class='form-control' value='{{brewery.image}}'>
+	    		</div>
+		</div>
+		<button type="submit" class="btn btn-primary">Update Brewery</button>
+	</div>
+	</form>
+	<a href='/brewery/{{brewery.id}}/owner/edit' class="btn btn-primary">Cancel</a>
+
+	<form class="form-horizontal" role="form" method="post" action="/breweries/:id/delete">
+	<button type="submit" class="btn btn-primary">Delete Brewery</button>
+	</form>
 
 {% endblock %}
