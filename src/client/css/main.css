@@ -185,3 +185,7 @@ footer {
 .red {
   color: #C63D0F;
 }
+
+#map_canvas {
+  height: 70%;
+}
