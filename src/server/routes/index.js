@@ -33,12 +33,12 @@ router.get('/brewery/:id', function (req, res, next) {
 	// for an individual brewery,
 	// breweries/1
 	knex.select('*').from('breweries').where('id', req.params.id)
-	.then(function (brewery) {
-		console.log(brewery);
-		res.render('brewery', {
-			brewery: brewery,
+		.then(function (brewery) {
+			console.log(brewery);
+			res.render('brewery', {
+				brewery: brewery,
 			});
-	});
+		});
 });
 
 
