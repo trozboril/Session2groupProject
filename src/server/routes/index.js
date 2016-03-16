@@ -87,7 +87,6 @@ router.post('/beer/:id/save', function (req, res, next) {
 
 // *** remove a saved beer *** //
 router.post('/beer/:id/remove', function (req, res, next) {
-	console.log(req.params.id);
 	knex('saved_beer').where('beer_id', req.params.id).del()
 	.then(function () {
 		res.redirect('/user/' + req.user.id);
@@ -114,7 +113,6 @@ router.get('/user/:id', function (req, res, next) {
 		.then(function (beer) {
 			knex.from('beers').innerJoin('saved_beer', 'beers.id', 'beer_id')
 		.then(function (savedBeers) {
-			console.log(brewery);
 			res.render('user', {
 				id: req.user.id,
 				user: user[0],
@@ -147,7 +145,6 @@ router.get('/brewery/:id/owner/edit', function (req, res, next) {
 	.then(function (beers) {
 		knex.select('*').from('breweries').where('id', req.params.id)
 		.then(function (brewery) {
-			console.log(brewery);
 			res.render('owner', {brewery: brewery[0], beers: beers, id: req.user.id});
 		});
 	});
@@ -159,7 +156,6 @@ router.get('/brewery/:id/owner/edit', function (req, res, next) {
 router.post('/brewery/:id/beer/add', function (req, res, next) {
 	var numABV = parseInt(req.body.abv);
 	var numIBU = parseInt(req.body.ibu);
-	console.log(req.body.brewery_id);
 	knex('beers').insert({
 			type: req.body.type,
 			name: req.body.name,
@@ -172,6 +168,36 @@ router.post('/brewery/:id/beer/add', function (req, res, next) {
 			res.redirect('/brewery/' + req.body.brewery_id + '/owner/edit');
 		});
 });
+
+
+//*** remove a beer from a brewery *** //
+
+router.post('/breweries/:breweryID/beer/:beerID/remove', function (req, res, next) {
+	knex('beers').where('id', req.params.beerID).del()
+	.then(function () {
+		res.redirect('/brewery/'+ req.params.breweryID +'/owner/edit');
+	});
+});
+
+// *** edit a brewery *** //
+router.post('/breweries/:id/edit', function (req, res, next) {
+	console.log(req.body);
+	knex('breweries')
+  		.where('id', '=', req.params.id)
+  		.update({
+    	name: req.body.name,
+    	address: req.body.address,
+    	city: req.body.city,
+    	state: req.body.state,
+    	zip: req.body.zip,
+    	description: req.body.description,
+    	image: req.body.image
+  }).then(function() {
+  	res.redirect('/breweries/:id/owner/edit');
+  });
+
+});
+
 
 // *** user after logged in can create a new brewery *** //
 
@@ -186,8 +212,6 @@ router.post('/breweries/new', function (req, res, next) {
 		res.redirect('/');
 	} else {
 		var zipper = parseInt(req.body.zip);
-		console.log('body', req.body);
-		console.log('user:', req.user);
 
 		// table names should be plural
 		// e.g. breweries
@@ -221,6 +245,13 @@ router.get('/contact', function (req, res, next) {
 
 router.post('/contact', function (req, res, next) {
 
+});
+
+router.get('/pubcrawl/breweries/:id', function (req, res, next) {
+	knex.select('*').from('breweries').where('id', req.params.id)
+	.then(function (info) {
+		res.render('pubCrawl', {info: info});
+	});
 });
 
 module.exports = router;
