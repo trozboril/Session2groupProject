@@ -4,11 +4,26 @@
 
 
 {% block content %}
+<br>
+<br>
+<div class="row taptHeader">
+   <div class="container">
+       <div class="col-md-4 col-sm-6 ">
 
-<div class="container">
+       {% for brewery in breweries %}
+       <div id="brewery{{brewery.id}}"style="border: 1px solid black">
+           <p id='name{{brewery.id}}'>{{brewery.name}}</p>
+           <p id='address{{brewery.id}}'>{{brewery.address}}, {{brewery.city}}, {{brewery.state}} </p>
+           <p id="zip{{brewery.id}}">{{brewery.zip}}</p>
+           <p id="description{{brewery.id}}">{{brewery.description}}</p>
+       </div>
+       {% endfor %}
 
-    <h3>Pub Crawl</h3>
 
+       </div>
+   </div>
 </div>
+
+<div id="map_canvas"></div>
 
 {% endblock %}
