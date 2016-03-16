@@ -21,21 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.777778">
-              <caret line="131" column="8" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.7581152">
+              <caret line="189" column="12" selection-start-line="189" selection-start-column="12" selection-end-line="189" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="breweries.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/server/views/breweries.html">
+      <file leaf-file-name="brewery.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/views/brewery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36808512">
-              <caret line="32" column="55" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="55" />
+            <state vertical-scroll-proportion="-15.714286">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,16 +66,16 @@
         <option value="$PROJECT_DIR$/src/server/views/contact.html" />
         <option value="$PROJECT_DIR$/src/client/js/main.js" />
         <option value="$PROJECT_DIR$/src/server/views/user.html" />
-        <option value="$PROJECT_DIR$/src/server/views/brewery.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/server/routes/index.js" />
         <option value="$PROJECT_DIR$/src/server/routes/beers.js" />
         <option value="$PROJECT_DIR$/info" />
         <option value="$PROJECT_DIR$/src/server/views/beer.html" />
-        <option value="$PROJECT_DIR$/src/client/css/main.css" />
         <option value="$PROJECT_DIR$/src/server/views/layout.html" />
         <option value="$PROJECT_DIR$/src/server/views/index.html" />
         <option value="$PROJECT_DIR$/src/server/views/breweries.html" />
+        <option value="$PROJECT_DIR$/src/server/views/brewery.html" />
+        <option value="$PROJECT_DIR$/src/client/css/main.css" />
       </list>
     </option>
   </component>
@@ -532,26 +532,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/views/user.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/views/brewery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5968085">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -588,18 +572,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/css/main.css">
+    <entry file="file://$PROJECT_DIR$/src/server/views/breweries.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.777778">
-          <caret line="131" column="8" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.6138298">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/views/breweries.html">
+    <entry file="file://$PROJECT_DIR$/src/server/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36808512">
-          <caret line="32" column="55" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.92041886">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/views/brewery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.714286">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7581152">
+          <caret line="189" column="12" selection-start-line="189" selection-start-column="12" selection-end-line="189" selection-end-column="12" />
           <folding />
         </state>
       </provider>
