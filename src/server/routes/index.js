@@ -92,13 +92,6 @@ router.get('/user/owner/:id/:breweryId', function (req, res, next) {
 });
 
 //*** create a beer *** //
-router.get('/brewery/:id/', function (req, res, next) {
-	
-});
-
-router.get('/beers/:id/', function (req, res, next) {
-	
-});
 
 router.post('/createbeer', function (req, res, next) {
 
