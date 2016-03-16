@@ -34,9 +34,14 @@ router.get('/brewery/:id', function (req, res, next) {
 	// breweries/1
 	knex.select('*').from('breweries').where('id', req.params.id)
 		.then(function (brewery) {
-			console.log(brewery);
-			res.render('brewery', {
-				brewery: brewery,
+			knex.from('breweries').innerJoin('beers', 'breweries.id', 'brewery_id')
+				.then(function (beers) {
+					console.log('bresery: ' + brewery + ' beers: ' + beers);
+					res.render('brewery', 
+					{
+					brewery: brewery[0],
+					beers: beers
+			});
 			});
 		});
 });
@@ -82,7 +87,7 @@ router.get('/user/:id', function (req, res, next) {
 		.then(function (beer) {
 			knex.from('beers').innerJoin('saved_beer', 'beers.id', 'beer_id')
 		.then(function (savedBeers) {
-			console.log(savedBrewery);
+			console.log(brewery);
 			res.render('user', {
 				id: req.user.id,
 				user: user[0],
@@ -110,11 +115,11 @@ router.get('/pubcrawl', function (req, res, next) {
 
 // *** get brewery owner render brewery update page *** //
 router.get('/brewery/:id/owner/edit', function (req, res, next) {
-	knex('breweries').where('id', req.params.id)
-	.then(function (brewery) {
-		knex.from('beers').innerJoin('breweries', 'beers.id', 'beer_id')
-		.then(function (beers) {
-			console.log('brewery: ' + brewery + ' beers: ' + beers);
+	knex('beers').where('brewery_id', req.params.id)
+	.then(function (beers) {
+		knex.select('*').from('breweries').where('id', req.params.id)
+		.then(function (brewery) {
+			console.log(brewery);
 			res.render('owner', {brewery: brewery[0], beers: beers});
 		});
 	});
@@ -122,24 +127,20 @@ router.get('/brewery/:id/owner/edit', function (req, res, next) {
 
 //*** create a beer *** //
 
-router.post('/breweries/:id/beer/add', function (req, res, next) {
+router.post('/brewery/:id/beer/add', function (req, res, next) {
 	var numABV = parseInt(req.body.abv);
 	var numIBU = parseInt(req.body.ibu);
-	knex('breweries').insert({
+	console.log(req.body.brewery_id);
+	knex('beers').insert({
 			type: req.body.type,
 			name: req.body.name,
 			brewer: req.body.brewer,
 			abv: numABV,
 			ibu: numIBU,
+			brewery_id: req.body.brewery_id,
 			description: req.body.description
-		}, 'id').then(function (breweryId) {
-			knex('brewery_owner').insert({
-				brewery_id: parseInt(breweryId),
-				user_id: parseInt(req.user.id)
-			}).then(function () {
-				res.redirect('/breweries');
-			});
-
+		}).then(function () {
+			res.redirect('/brewery/' + req.body.brewery_id + '/owner/edit');
 		});
 });
 

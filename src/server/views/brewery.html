@@ -9,9 +9,28 @@
     <div class="container-fluid">
         <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 ">
             <div class="col-sm-8 col-md-8 col-md-offset-4 col-sm-offset-4">
-                <h1 class="text-center"><strong>Brewery:</strong> {{ brewery[0].name }} </h1>
-                <p><strong>&nbsp; Address:</strong> {{brewery[0].address}} &nbsp; {{brewery[0].city}}, {{brewery[0].state}} &nbsp; {{brewery[0].zip}}</p>
-                <p><strong>&nbsp; Description:</strong> {{brewery[0].description}}</p>
+                <h1 class="text-center"><strong>Brewery:</strong> {{ brewery.name }} </h1>
+                <p><strong>&nbsp; Address:</strong> {{brewery.address}} &nbsp; {{brewery.city}}, {{brewery.state}} &nbsp; {{brewery.zip}}</p>
+                <p><strong>&nbsp; Description:</strong> {{brewery.description}}</p>
+            </div>
+            <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+            	<h3>What's on tap at {{brewery.name}}?</h3>
+            	<div class='tapcontainer' style="border: 1px solid black">
+            		{% if beers.length > 0 %}
+            		{% for beer in beers %}
+            		<div class='indBeer'>
+                  		<h4><em>{{beer.name}}</em></h3>
+                   		<p><strong>Type: </strong> {{beer.type}}
+                   		<p><strong>Brewer: </strong> {{beer.brewer}}</p>
+                   		<p><strong>ABV: </strong> {{beer.abv}}</p>
+                   		<p><strong>IBU: </strong> {{beer.ibu}}</p>
+                   		<p><strong>Description: </strong> {{beer.description}}</p>
+                  		 <a href='/beer/{{beer.beer_id}}' class="btn btn-primary">Learn more here</a>
+               		</div>
+            		{% endfor %}
+            		{% else %}
+            		<h5>There are no beers on tap at {{brewery.name}}</h5>
+            		{% endif %}
             </div>
         </div>
     </div>
