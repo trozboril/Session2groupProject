@@ -5,10 +5,16 @@
 
 {% block content %}
 
-<div class="container">
-
-    <h2>{{ name }}</h2>
-
+<div class="row" id="breweriesHeader">
+    <div class="container-fluid">
+        <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 ">
+            <div class="col-sm-8 col-md-8 col-md-offset-4 col-sm-offset-4">
+                <h1 class="text-center"><strong>Brewery:</strong> {{ brewery[0].name }} </h1>
+                <p><strong>&nbsp; Address:</strong> {{brewery[0].address}} &nbsp; {{brewery[0].city}}, {{brewery[0].state}} &nbsp; {{brewery[0].zip}}</p>
+                <p><strong>&nbsp; Description:</strong> {{brewery[0].description}}</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
