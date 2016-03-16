@@ -14,6 +14,7 @@
       <div class="col-md-6 col-sm-6">
          <h2 class="text-center">Saved Beers</h2>
          <div id="savedBeers">
+         {% if savedBeers.length > 0 %}
          {% for beer in savedBeers %}
                <div class='indBeer'>
                   <h4>{{beer.name}}</h3>
@@ -25,9 +26,13 @@
                    <a href='/beer/{{beer.beer_id}}' class="btn btn-primary">Learn more here</a>
                </div>
             {% endfor %}
+            {% else %}
+            <h5>You have no saved beers... so go get TAPT!</h5>
+            {% endif %}
          </div>
          <h2 id="brewTitle" class="text-center">Saved Breweries</h2>
          <div id="savedBreweries">
+          {% if savedBrewery.length > 0 %}
             {% for brewery in savedBrewery %}
                <div class='indBrew'>
                   <h3>{{brewery.name}}</h3>
@@ -41,6 +46,9 @@
                   </form>
                </div>
             {% endfor %}
+            {% else %}
+            <h5>You have no saved breweries... get on it!</h5>
+            {% endif %}
          </div>
 
       </div><!-- end of middle contaienr -->
