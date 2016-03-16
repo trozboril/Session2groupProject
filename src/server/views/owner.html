@@ -6,10 +6,163 @@
 {% block content %}
 
 <div class="container">
+<br>
+<br>
+<br>
+<br>
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+<img src='{{brewery.image}}' class='col-md-4'>
+<h1 class='col-md-8'>{{brewery.name}}</h1>
 
+<div class='menu' class='col-md-4 push-left'>
+<h3>Menu</h3>
+{% if beers.length > 0 %}
+	{% for beer in beers %}
+		<p><strong>Type:</strong> {{beer.type}}</p>
+		<p><strong>Name:</strong> {{beer.name}}</p>
+		<p><strong>Brewer:</strong> {{beer.brewer}}</p>
+		<p><strong>ABV:</strong> {{beer.abv}}</p>
+		<p><strong>IBU:</strong> {{beer.ibu}}</p>
+		<p><strong>Description:</strong> {{beer.description}}</p>
+		<form class="form-horizontal" role="form" method="post" action="/breweries/{{brewery.brewery_id}}/beer/{{beer.id}}/remove">
+		    <input class="hidden" name="id" value="{{brewery.brewery_id}}">
+		    <button type="submit" class="btn btn-primary">Remove Beer</button>
+		</form>
+	{% endfor %}
+{% else %}
+	<h5>You have no beers on tap in your brewery!</h5>
+{% endif %}
+</div>
+<h3>Add a beer!</h3>
+<div class='addbeer'>
+	<form class="form-horizontal" role="form" method="post" action="/breweries/{{berewery.berewey_id}}/beer/add">
+		<div class="form-group ">
+	        <label for="type" class="control-label col-md-3">Type: </label>
+                <div class="col-md-3">
+                    <select name="type" id="type" class="form-control" required>
+                          <option value="#">Select a Type</option>
+                          <option value="american">American Amber Ale</option>
+						  <option value="american">American Amber Lager</option>
+						  <option value="american">American Barley Wine</option>
+						  <option value="american">American Black Ale</option>
+						  <option value="american">American Brett</option>
+						  <option value="american">American Brown Ale</option>
+						  <option value="american">American Cream Ale</option>
+						  <option value="american">American Imperial Porter</option>
+						  <option value="american">American Imperial Red Ale</option>
+						  <option value="american">American Imperial Stout</option>
+						  <option value="american">American India Pale Ale / IPA</option>
+						  <option value="american">American Lager</option>
+						  <option value="american">American Pale Ale</option>
+						  <option value="american">American Sour</option>
+						  <option value="american">American Stout</option>
+						  <option value="american">American-Style Wheat Wine Ale</option>
+						  <option value="american">American Wheat</option>
+						  <option value="others">Baltic-Style Porter</option>
+						  <option value="others">Barrel-Aged Beer</option>
+						  <option value="belgian">Belgian-Style Blonde Ale</option>
+						  <option value="belgian">Belgian-Style Dubbel</option>
+						  <option value="belgian">Belgian-Style Flanders</option>
+						  <option value="belgian">Belgian-Style Fruit Lambic</option>
+						  <option value="belgian">Belgian-Style Golden Strong Ale</option>
+						  <option value="belgian">Belgian-Style Lambic / Gueuze</option>
+						  <option value="belgian">Belgian-Style Pale Ale</option>
+						  <option value="belgian">Belgian-Style Quadrupel</option>
+						  <option value="belgian">Belgian-Style Saison</option>
+						  <option value="belgian">Belgian-Style Tripel</option>
+						  <option value="belgian">Belgian-Style Witbier</option>
+						  <option value="others">Berliner-Style Weisse</option>
+						  <option value="french">French-Style Biere De Garde</option>
+						  <option value="english">English-Style Bitter</option>
+						  <option value="others">Blonde Ale</option>
+						  <option value="bohemian">Bohemian-Style Pilsener</option>
+						  <option value="english">British-Style Barley Wine Ale</option>
+						  <option value="american">California Common</option>
+						  <option value="others">Chocolate Beer</option>
+						  <option value="others">Coffee Beer</option>
+						  <option value="others">Contemporary Gose</option>
+						  <option value="english">English-Style Brown Ale</option>
+						  <option value="english">English-Style Brown Porter</option>
+						  <option value="english">English-Style Mild</option>
+						  <option value="english">English-Style India Pale Ale / IPA</option>
+						  <option value="english">English-Style Oatmeal Stout</option>
+						  <option value="english">English-Style Old Ale</option>
+						  <option value="english">English-Style Pale Ale / ESB</option>
+						  <option value="english">English-Style Sweet Stout (Milk Stout)</option>
+						  <option value="others">European-Style Export</option>
+						  <option value="others">Fruit and Field Beer</option>
+						  <option value="german">German-Style Bock</option>
+						  <option value="german">German-Style Brown / Altbier</option>
+						  <option value="german">German-Style Dopplebock</option>
+						  <option value="german">German-Style Dunkel</option>
+						  <option value="german">German-Style DunkelWeizen</option>
+						  <option value="german">German-Style Hefeweizen</option>
+						  <option value="german">German-Style Maibock</option>
+						  <option value="german">German-Style Helles</option>
+						  <option value="german">German-Style Kolsch</option>
+						  <option value="german">German-Style Marzen / Oktoberfest</option>
+						  <option value="german">German-Style Pilsener</option>
+						  <option value="german">German-Style Schwarzbier</option>
+						  <option value="german">German-Style Weizenbock</option>
+						  <option value="others">Gluten Free</option>
+						  <option value="others">Herb and Spice Beer</option>
+						  <option value="others">Honey Beer</option>
+						  <option value="others">Imperial India Pale Ale</option>
+						  <option value="others">Irish-Style Dry Stout</option>
+						  <option value="others">Irish-Style Red</option>
+						  <option value="others">Pumpkin Beer</option>
+						  <option value="others">Robust Porter</option>
+						  <option value="others">Rye Beer</option>
+						  <option value="others">Scotch Ale / Wee Heavy</option>
+						  <option value="others">Scottish-Style Ale</option>
+						  <option value="others">Session Beer</option>
+						  <option value="others">Smoke Beer</option>
+						  <option value="others">Smoke Porter</option>
+						  <option value="others">Specialty Beer</option>
+						  <option value="others">Vienna-Style Lager</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group ">
+				<div class="col-md-3">
+	        		<input class="hidden" name="id" value="{{brewery.brewery_id}}">
+	        	</div>
+	        </div>
+	    <div class="form-group ">
+	        <label for="name" class="col-md-3 control-label">Name: </label>
+	        	<div class="col-md-3">
+	        		<input id="name" class="form-control" name="name" placeholder="Name of Beer" required>
+	        	</div>
+
+	    </div>
+	    <div class="form-group ">
+	    	<label for='brewery' class="col-md-3 control-label">Brewer: </label>
+	    		<div class="col-md-3">
+	    			<input id="brewery" class="form-control" name='brewer' placeholder='Name of Brewer' required>
+	    		</div>
+	    </div>
+	    <div class="form-group ">
+	    	<lable for='abv' class="col-md-3 control-label">ABV: </lable>
+	    		<div class="col-md-3">
+	    			<input id="abv" class="form-control" name="abv" placeholder="ABV">
+	    		</div>
+	    </div>
+	    <div class="form-group ">
+	    	<label for='ibu' class='col-md-3 control-label'>IBU: </label>
+	    		<div class="col-md-3">
+	    			<input id="ibu" class="form-control" name="ibu" placeholder="IBU"
+	    			>
+	    		</div>
+	    </div>
+	    <div class="form-group ">
+	    	<label for="description" class="control-label col-md-3">Description: </label>
+                <div class="col-md-3">
+                    <textarea rows="4"  name="description" id="description" placeholder="Describe your brewery" class="form-control"></textarea>
+                </div>
+        </div>
+		<button type="submit" class="btn btn-primary">Put Beer on Tap</button>
+	</form>
+</div>
 </div>
 
 {% endblock %}
