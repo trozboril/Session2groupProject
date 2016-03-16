@@ -6,7 +6,6 @@ exports.up = function(knex, Promise) {
     table.string('city');
     table.string('state');
     table.integer('zip');
-    table.integer('beer_id');
     table.string('description');
     table.string('image');
     table.timestamp('created_at').defaultTo(knex.fn.now());

@@ -9,6 +9,7 @@
     <div class="container">
         <h2>Breweries</h2>
         <p>Welcome {{ name }}</p>
+
         {% if id %}
         <h5>Create a new brewery <a href='/breweries/new'>here</a>
         </h5>
@@ -28,6 +29,11 @@
                 <h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
                 <p><strong>Description: </strong> {{brewery.description}}</p>
                 <a href="/brewery/{{brewery.id}}" class="btn btn-primary">Learn more here</a>
+
+                <form class="form-horizontal" role="form" method="post" action="/brewery/{{brewery.id}}/save">
+                <input class="hidden" name="id" value="{{brewery.id}}">
+                <button type="submit" class="btn btn-primary">Save Brewery</button>
+                </form>
             </div>
         </div>
         <hr>

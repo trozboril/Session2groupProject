@@ -7,6 +7,7 @@ exports.up = function(knex, Promise) {
     table.float('abv');
     table.float('ibu');
     table.string('description');
+    table.integer('brewery_id');
     table.timestamp('created_at').defaultTo(knex.fn.now());
   });
 };

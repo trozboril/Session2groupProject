@@ -50,7 +50,15 @@ router.get('/beers', function (req, res, next) {
 });
 
 
+router.get('/beers/:id',function(req, res, next) {
+    knex.select('*').from('beertypes').where('id', req.params.id)
+        .then(function (beertypes) {
+            console.log(beertypes);
+            res.render('beer', {
+                beertypes: beertypes
+            });
+        });
+});
 
-     
 
 module.exports = router;

@@ -6,10 +6,163 @@
 {% block content %}
 
 <div class="container">
+<br>
+<br>
+<br>
+<br>
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+<img src='{{brewery.image}}' class='col-md-4'>
+<h1 class='col-md-8'>{{brewery.name}}</h1>
 
+<div class='menu' class='col-md-4 push-left'>
+<h3>Menu</h3>
+{% if beers.length > 0 %}
+	{% for beer in beers %}
+		<p><strong>Name:</strong> {{beer.name}}</p>
+		<p><strong>Type:</strong> {{beer.type}}</p>
+		<p><strong>Brewer:</strong> {{beer.brewer}}</p>
+		<p><strong>ABV:</strong> {{beer.abv}}</p>
+		<p><strong>IBU:</strong> {{beer.ibu}}</p>
+		<p><strong>Description:</strong> {{beer.description}}</p>
+		<form class="form-horizontal" role="form" method="post" action="/breweries/{{brewery.id}}/beer/{{beer.id}}/remove">
+		    <input class="hidden" name="id" value="{{brewery.brewery_id}}">
+		    <button type="submit" class="btn btn-primary">Remove Beer</button>
+		</form>
+	{% endfor %}
+{% else %}
+	<h5>You have no beers on tap in your brewery!</h5>
+{% endif %}
+</div>
+<h3>Add a beer!</h3>
+<div class='addbeer'>
+	<form class="form-horizontal" role="form" method="post" action="/brewery/{{brewery.id}}/beer/add">
+		<div class="form-group ">
+	        <label for="type" class="control-label col-md-3">Type: </label>
+                <div class="col-md-3">
+                    <select name="type" id="type" class="form-control" required>
+                          <option value="#">Select a Type</option>
+                          <option value="American Amber Ale">American Amber Ale</option>
+						  <option value="American Amber Lager">American Amber Lager</option>
+						  <option value="American Barley Wine">American Barley Wine</option>
+						  <option value="American Black Ale">American Black Ale</option>
+						  <option value="American Brett">American Brett</option>
+						  <option value="American Brown Ale">American Brown Ale</option>
+						  <option value="American Cream Ale">American Cream Ale</option>
+						  <option value="American Imperial Porter">American Imperial Porter</option>
+						  <option value="American Imperial Red Ale">American Imperial Red Ale</option>
+						  <option value="American Imperial Stout">American Imperial Stout</option>
+						  <option value="American India Pale Ale">American India Pale Ale / IPA</option>
+						  <option value="American Lager">American Lager</option>
+						  <option value="American Pale Ale">American Pale Ale</option>
+						  <option value="American Sour">American Sour</option>
+						  <option value="American Stout">American Stout</option>
+						  <option value="American-Style Wheat Wine Ale">American-Style Wheat Wine Ale</option>
+						  <option value="American Wheat">American Wheat</option>
+						  <option value="Baltic-Style Porter">Baltic-Style Porter</option>
+						  <option value="Barrel-Aged Beer">Barrel-Aged Beer</option>
+						  <option value="Belgian-Style Blonde Ale">Belgian-Style Blonde Ale</option>
+						  <option value="Belgian-Style Dubbel">Belgian-Style Dubbel</option>
+						  <option value="Belgian-Style Flanders">Belgian-Style Flanders</option>
+						  <option value="Belgian-Style Fruit Lambic">Belgian-Style Fruit Lambic</option>
+						  <option value="Belgian-Style Golden Strong Ale">Belgian-Style Golden Strong Ale</option>
+						  <option value="Belgian-Style Lambic / Gueuze">Belgian-Style Lambic / Gueuze</option>
+						  <option value="Belgian-Style Pale Ale">Belgian-Style Pale Ale</option>
+						  <option value="Belgian-Style Quadrupel">Belgian-Style Quadrupel</option>
+						  <option value="Belgian-Style Saison">Belgian-Style Saison</option>
+						  <option value="Belgian-Style Tripel">Belgian-Style Tripel</option>
+						  <option value="Belgian-Style Witbier">Belgian-Style Witbier</option>
+						  <option value="Berliner-Style Weisse">Berliner-Style Weisse</option>
+						  <option value="French-Style Biere De Garde">French-Style Biere De Garde</option>
+						  <option value="English-Style Bitter">English-Style Bitter</option>
+						  <option value="Blonde Ale">Blonde Ale</option>
+						  <option value="Bohemian-Style Pilsener">Bohemian-Style Pilsener</option>
+						  <option value="British-Style Barley Wine Ale">British-Style Barley Wine Ale</option>
+						  <option value="California Common">California Common</option>
+						  <option value="Chocolate Beer">Chocolate Beer</option>
+						  <option value="Coffee Beer">Coffee Beer</option>
+						  <option value="Contemporary Gose">Contemporary Gose</option>
+						  <option value="English-Style Brown Ale">English-Style Brown Ale</option>
+						  <option value="English-Style Brown Porter">English-Style Brown Porter</option>
+						  <option value="English-Style Mild">English-Style Mild</option>
+						  <option value="English-Style India Pale Ale/IPA">English-Style India Pale Ale / IPA</option>
+						  <option value="English-Style Oatmeal Stout">English-Style Oatmeal Stout</option>
+						  <option value="English-Style Old Ale">English-Style Old Ale</option>
+						  <option value="English-Style Pale Ale / ESB">English-Style Pale Ale / ESB</option>
+						  <option value="English-Style Sweet Stout (Milk Stout)">English-Style Sweet Stout (Milk Stout)</option>
+						  <option value="European-Style Export">European-Style Export</option>
+						  <option value="Fruit and Field Beer">Fruit and Field Beer</option>
+						  <option value="German-Style Bock">German-Style Bock</option>
+						  <option value="German-Style Brown/Altbier">German-Style Brown / Altbier</option>
+						  <option value="German-Style Dopplebock">German-Style Dopplebock</option>
+						  <option value="German-Style Dunkel">German-Style Dunkel</option>
+						  <option value="German-Style DunkelWeizen">German-Style DunkelWeizen</option>
+						  <option value="German-Style Hefeweizen">German-Style Hefeweizen</option>
+						  <option value="German-Style Maibock">German-Style Maibock</option>
+						  <option value="German-Style Helles">German-Style Helles</option>
+						  <option value="German-Style Kolsch">German-Style Kolsch</option>
+						  <option value="German-Style Marzen/Oktoberfest">German-Style Marzen / Oktoberfest</option>
+						  <option value="German-Style Pilsener">German-Style Pilsener</option>
+						  <option value="German-Style Schwarzebier">German-Style Schwarzbier</option>
+						  <option value="German-Style Weizenbock">German-Style Weizenbock</option>
+						  <option value="Gluten Free">Gluten Free</option>
+						  <option value="Herb and Spice Beer">Herb and Spice Beer</option>
+						  <option value="Honey Beer">Honey Beer</option>
+						  <option value="Imperial India Pale Ale">Imperial India Pale Ale</option>
+						  <option value="Irish-Style Dry Stout">Irish-Style Dry Stout</option>
+						  <option value="Irish-Style Red">Irish-Style Red</option>
+						  <option value="Pumpkin Beer">Pumpkin Beer</option>
+						  <option value="Robust Porter">Robust Porter</option>
+						  <option value="Rye Beer">Rye Beer</option>
+						  <option value="Scotch Ale">Scotch Ale / Wee Heavy</option>
+						  <option value="Scottish-Style Ale">Scottish-Style Ale</option>
+						  <option value="Session Beer">Session Beer</option>
+						  <option value="Smoke Beer">Smoke Beer</option>
+						  <option value="Smoke Porter">Smoke Porter</option>
+						  <option value="Specialty Beer">Specialty Beer</option>
+						  <option value="Vienna-Style Lager">Vienna-Style Lager</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group ">
+				<div class="col-md-3">
+	        		<input class="hidden" name="brewery_id" value="{{brewery.id}}">
+	        	</div>
+	        </div>
+	    <div class="form-group ">
+	        <label for="name" class="col-md-3 control-label">Name: </label>
+	        	<div class="col-md-3">
+	        		<input id="name" class="form-control" name="name" placeholder="Name of Beer" required>
+	        	</div>
+
+	    </div>
+	    <div class="form-group ">
+	    	<label for='brewery' class="col-md-3 control-label">Brewer: </label>
+	    		<div class="col-md-3">
+	    			<input id="brewery" class="form-control" name='brewer' placeholder='Name of Brewer' required>
+	    		</div>
+	    </div>
+	    <div class="form-group ">
+	    	<lable for='abv' class="col-md-3 control-label">ABV: </lable>
+	    		<div class="col-md-3">
+	    			<input id="abv" class="form-control" name="abv" placeholder="ABV">
+	    		</div>
+	    </div>
+	    <div class="form-group ">
+	    	<label for='ibu' class='col-md-3 control-label'>IBU: </label>
+	    		<div class="col-md-3">
+	    			<input id="ibu" class="form-control" name="ibu" placeholder="IBU"
+	    			>
+	    		</div>
+	    </div>
+	    <div class="form-group ">
+	    	<label for="description" class="control-label col-md-3">Description: </label>
+                <div class="col-md-3">
+                    <textarea rows="4"  name="description" id="description" placeholder="Describe your brewery" class="form-control"></textarea>
+                </div>
+        </div>
+		<button type="submit" class="btn btn-primary">Put Beer on Tap</button>
+	</form>
+</div>
 </div>
 
 {% endblock %}

@@ -5,10 +5,32 @@
 
 {% block content %}
 
-<div class="container">
-
-   <h>inidivual beer type</h>
-
+<div class="row" id="indHeader">
+   <div class="container">
+      <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+         <h1 class="text-center">{{beertypes[0].name}}</h1>
+         <div class="line"></div>
+         <p id="bDesc"><strong>Description:</strong> {{beertypes[0].description}}</p>
+         <p><strong>Alcohol Content:</strong>{{beertypes[0].alcoholnum}}</p>
+         <p><strong>Appropriate Glassware: </strong>{{ beertypes[0].glassware }}</p>
+         <p><strong>Hops: </strong>{{beertypes[0].hop}}</p>
+         <p><strong>Malt: </strong>{{beertypes[0].malt}} </p>
+         <p><strong>Bitterness</strong> {{beertypes[0].bitterness}} </p>
+         <p><strong>Clarity: </strong> {{beertypes[0].clarity}} </p>
+         <p><strong>Best food Parings: </strong>{{beertypes[0].foodpairings}}</p>
+         <p><strong>Best Temp to serve at: </strong>{{beertypes[0].servingtemp }}</p>
+         <p><strong>Appropriate Glassware: </strong>{{beertypes[0].glassware}}</p>
+         <p><strong>SRM (color)</strong>{{beertypes[0].colornum}}</p>
+         <p><strong>Malt Ingredients: </strong>{{beertypes[0].maltingr}}</p>
+         <p><strong>Hop Ingredients: </strong>{{beertypes[0].hopsingr}}</p>
+         <h3 class="text-center">Sensations</h3>
+         <p class="text-center">Sensation categories include flavor, body, aroma and head. </p>
+         <p><strong>Boddy: </strong> {{beertypes[0].body}}</p>
+         <p><strong>Carbonation Taste:</strong>{{beertypes[0].carbonationtaste}}</p>
+         <p><strong>Finish Length: </strong>{{beertypes[0].finishlength}} </p>
+         <p><strong>Attenuation</strong>{{beertypes[0].attenuation}}</p>
+      </div>
+   </div>
 </div>
 
 {% endblock %}

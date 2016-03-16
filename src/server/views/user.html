@@ -9,24 +9,69 @@
 <div class="row" id="userDash">
    <div class="container">
       <div class="col-sm-3 col-md-3">
-         <h3>Welcome to your profile page, {{name}}</h3>
+         <h3>Welcome to your tapt! dashboard, {{user.name}}.</h3>
       </div>
       <div class="col-md-6 col-sm-6">
          <h2 class="text-center">Saved Beers</h2>
          <div id="savedBeers">
+         {% if savedBeers.length > 0 %}
+         {% for beer in savedBeers %}
+               <div class='indBeer'>
+                  <h4>{{beer.name}}</h3>
+                   <p><strong>Type: </strong> {{beer.type}}
+                   <p><strong>Brewer: </strong> {{beer.brewer}}</p>
+                   <p><strong>ABV: </strong> {{beer.abv}}</p>
+                   <p><strong>IBU: </strong> {{beer.ibu}}</p>
+                   <p><strong>Description: </strong> {{beer.description}}</p>
+                   <a href='/beer/{{beer.beer_id}}' class="btn btn-primary">Learn more here</a>
 
+                   <form class="form-horizontal" role="form" method="post" action="/beer/{{beer.beer_id}}/remove">
+                    <input class="hidden" name="id" value="{{beer.id}}">
+                    <button type="submit" class="btn btn-primary">Remove Beer</button>
+                  </form>
+               </div>
+            {% endfor %}
+            {% else %}
+            <h5>You have no saved beers... so go get TAPT!</h5>
+            {% endif %}
          </div>
          <h2 id="brewTitle" class="text-center">Saved Breweries</h2>
          <div id="savedBreweries">
+          {% if savedBrewery.length > 0 %}
+            {% for brewery in savedBrewery %}
+               <div class='indBrew'>
+                  <h3>{{brewery.name}}</h3>
+                   <h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
+                   <p><strong>Description: </strong> {{brewery.description}}</p>
+                   <a href="/brewery/{{brewid.id}}" class="btn btn-primary">Learn more here</a>
 
+                  <form class="form-horizontal" role="form" method="post" action="/brewery/{{brewery.brewery_id}}/remove">
+                   <input class="hidden" name="id" value="{{brewery.id}}">
+                   <button type="submit" class="btn btn-primary">Remove Brewery</button>
+                  </form>
+               </div>
+            {% endfor %}
+            {% else %}
+            <h5>You have no saved breweries... get on it!</h5>
+            {% endif %}
          </div>
 
       </div><!-- end of middle contaienr -->
       <div class="col-md-3 col-sm-3">
          <h2>Add a brewery</h2>
-         <a href="/breweries" class="btn btn-primary">Create New Brewery</a>
+         <a href="/breweries/new" class="btn btn-primary">Create New Brewery</a>
          <div id="ownedBreweries">
-            <h3>List of owned breweries</h3>
+            <h2>Owned breweries</h3>
+            {% if owner %}
+               {% for brewery in breweries %}
+               <div class='indBrew'>
+                  <h3>{{brewery.name}}</h3>
+                   <h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
+                   <p><strong>About {{brewery.name}}: </strong> {{brewery.description}}</p>
+                   <a href="/brewery/{{brewery.id}}/owner/edit" class="btn btn-primary">Manage Brewery</a>
+               </div>
+            {% endfor %}
+            {% endif %}
          </div>
       </div> <!-- end of right container -->
    </div>
