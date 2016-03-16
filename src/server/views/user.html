@@ -24,6 +24,11 @@
                    <p><strong>IBU: </strong> {{beer.ibu}}</p>
                    <p><strong>Description: </strong> {{beer.description}}</p>
                    <a href='/beer/{{beer.beer_id}}' class="btn btn-primary">Learn more here</a>
+
+                   <form class="form-horizontal" role="form" method="post" action="/beer/{{beer.beer_id}}/remove">
+                    <input class="hidden" name="id" value="{{beer.id}}">
+                    <button type="submit" class="btn btn-primary">Remove Beer</button>
+                  </form>
                </div>
             {% endfor %}
             {% else %}
