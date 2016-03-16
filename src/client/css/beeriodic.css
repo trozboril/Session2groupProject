@@ -19,8 +19,8 @@
   clear: both;
 }
 
-.beertypeslist ul {
-  list-style: none;
+.beertypeslist h3 {
+  color: #157342;
 }
 
 .highlight{
