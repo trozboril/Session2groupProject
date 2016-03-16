@@ -109,7 +109,7 @@ a {
 }
 
 #streets {
-  background: url("../images/street.jpg");
+  background: url("../images/bars2.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -117,10 +117,11 @@ a {
   height: 350px;
 }
 #streets h2 {
-  padding-top: 20px;
+  padding-top: 70px;
 }
 #streets h2, #streets p{
   color: #ebe8e8;
+  text-shadow: 1px 1px black;
 }
 
 #contactSect {
@@ -156,3 +157,24 @@ footer {
 }
 
 /* TODO: merge all stylesheets when finished */
+
+#indHeader {
+  margin-top: 60px;
+}
+
+#indHeader h1 {
+  margin-bottom: 20px;
+  font-variant: small-caps;
+
+}
+
+#indHeader #bDesc {
+  padding-top: 20px;
+}
+
+.line {
+  margin: 0 auto;
+  background: #C63D0F;
+  height: 4px;
+  width: 60px;
+}
