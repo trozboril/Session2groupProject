@@ -25,7 +25,37 @@
 
 
 }
+.highlight{
+  border: 2px solid yellow;
+}
+.hide{
+  display:none;
+}
+.bohemians{
+  display:none;
+}
 
+.americans{
+  display:none;
+}
+.belgians{
+  display:none;
+}
+.others1{
+  display:none;
+}
+.frenchs{
+  display:none;
+}
+.englishs{
+  display:none;
+}
+.germans{
+  display:none;
+}
+.show{
+  display: block;
+}
 .belgian .element{
   background: red; 
   border:2px solid red;
