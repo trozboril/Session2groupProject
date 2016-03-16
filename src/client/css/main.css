@@ -134,6 +134,9 @@ footer {
   color: #ebe8e8;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-top: 20px;
+  bottom: 0;
+  position: static;
 }
 
 #breweryHeader {
@@ -177,4 +180,8 @@ footer {
   background: #C63D0F;
   height: 4px;
   width: 60px;
+}
+
+.red {
+  color: #C63D0F;
 }
