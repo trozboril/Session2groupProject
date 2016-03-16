@@ -84,6 +84,7 @@ router.get('/user/:id', function (req, res, next) {
 		.then(function (savedBeers) {
 			console.log(savedBrewery);
 			res.render('user', {
+				id: req.user.id,
 				user: user[0],
 				owner: owner,
 				breweries: breweries,
