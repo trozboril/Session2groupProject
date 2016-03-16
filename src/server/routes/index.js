@@ -41,6 +41,27 @@ router.get('/brewery/:id', function (req, res, next) {
 		});
 });
 
+// *** SAVE BREWERY *** //
+router.post('/brewery/:id/save', function (req, res, next) {
+	if( !req.user ){
+		res.redirect('/');
+	} else {
+		knex('saved_brewery').insert({
+			user_id: req.user.id,
+			brewery_id: req.body.id
+		}).then(function () {
+			res.redirect('/user/' + req.user.id);
+		});
+	}
+});
+
+router.post('/brewery/:id/remove', function (req, res, next) {
+	knex('saved_brewery').where('brewery_id', req.params.id).del()
+	.then(function () {
+		res.redirect('/user/' + req.user.id);
+	});
+});
+
 
 // *** get user by ID (user page after login) *** //
 router.get('/user/:id', function (req, res, next) {
@@ -61,7 +82,7 @@ router.get('/user/:id', function (req, res, next) {
 		.then(function (beer) {
 			knex.from('beers').innerJoin('saved_beer', 'beers.id', 'beer_id')
 		.then(function (savedBeers) {
-			console.log(breweries);
+			console.log(savedBrewery);
 			res.render('user', {
 				user: user[0],
 				owner: owner,

@@ -28,12 +28,17 @@
          </div>
          <h2 id="brewTitle" class="text-center">Saved Breweries</h2>
          <div id="savedBreweries">
-            {% for brewery in savedBreweries %}
+            {% for brewery in savedBrewery %}
                <div class='indBrew'>
                   <h3>{{brewery.name}}</h3>
                    <h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
                    <p><strong>Description: </strong> {{brewery.description}}</p>
                    <a href="/brewery/{{brewery.id}}" class="btn btn-primary">Learn more here</a>
+
+                  <form class="form-horizontal" role="form" method="post" action="/brewery/{{brewery.id}}/remove">
+                   <input class="hidden" name="id" value="{{brewery.id}}">
+                   <button type="submit" class="btn btn-primary">Remove Brewery</button>
+                  </form>
                </div>
             {% endfor %}
          </div>
@@ -43,14 +48,14 @@
          <h2>Add a brewery</h2>
          <a href="/breweries" class="btn btn-primary">Create New Brewery</a>
          <div id="ownedBreweries">
-            <h3>List of owned breweries</h3>
+            <h2>Owned breweries</h3>
             {% if owner %}
                {% for brewery in breweries %}
                <div class='indBrew'>
                   <h3>{{brewery.name}}</h3>
                    <h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
-                   <p><strong>Description: </strong> {{brewery.description}}</p>
-                   <a href="/brewery/{{brewery.id}}/owner/edit" class="btn btn-primary">Edit Brewery</a>
+                   <p><strong>About {{brewery.name}}: </strong> {{brewery.description}}</p>
+                   <a href="/brewery/{{brewery.id}}/owner/edit" class="btn btn-primary">Manage Brewery</a>
                </div>
             {% endfor %}
             {% endif %}
