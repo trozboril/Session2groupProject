@@ -26,13 +26,13 @@
             </div>
             <div class="col-md-8 col-sm-8">
                 <h3>{{brewery.name}}</h3>
-                <h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
+                <o>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
                 <p><strong>Description: </strong> {{brewery.description}}</p>
-                <a href="/brewery/{{brewery.id}}" class="btn btn-primary">Learn more here</a>
+                <a href="/brewery/{{brewery.id}}" class="btn btn-primary pull-left btn-sm">Learn more here</a>
 
-                <form class="form-horizontal" role="form" method="post" action="/brewery/{{brewery.id}}/save">
+                <form class="form-horizontal pull-right" role="form" method="post" action="/brewery/{{brewery.id}}/save">
                 <input class="hidden" name="id" value="{{brewery.id}}">
-                <button type="submit" class="btn btn-primary">Save Brewery</button>
+                <button type="submit" class="btn btn-danger btn-sm">Save Brewery</button>
                 </form>
             </div>
         </div>
