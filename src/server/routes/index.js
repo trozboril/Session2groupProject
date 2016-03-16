@@ -249,4 +249,11 @@ router.get('/pubcrawl/breweries/:id', function (req, res, next) {
 	});
 });
 
+router.get('/pubCrawl', function (req, res, next) {
+	knex.select('*').from('breweries')
+	.then(function (breweries) {
+		knex.render('pubCrawl', {breweries: breweries});
+	});
+});
+
 module.exports = router;
