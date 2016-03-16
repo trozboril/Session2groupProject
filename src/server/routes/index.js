@@ -100,16 +100,7 @@ router.get('/user/:id', function (req, res, next) {
 		res.redirect('/');
 	} else {
 		knex.select('*').from('users').where('id', req.params.id)
-<<<<<<< HEAD
-		.then(function () {
-			knex.select('*').from('brewery_owner').where('user_id', req.params.id)
-		.then(function () {
-			knex.select('*').from('saved_brewery').where('user_id', req.params.id)
-		.then(function () {
-			knex.select('*').from('saved_beers').where('user_id', req.params.id)
-		.then(function () {
-			knex.select('*').from('breweries').where('')
-=======
+
 		.then(function (user) {
 			knex.select('*').from('brewery_owner').where('user_id', req.params.id)
 		.then(function (owner) {
@@ -137,7 +128,7 @@ router.get('/user/:id', function (req, res, next) {
 		});
 		});
 		});
->>>>>>> upstream/master
+
 		});
 		});
 		});
@@ -163,18 +154,7 @@ router.get('/brewery/:id/owner/edit', function (req, res, next) {
 });
 
 //*** create a beer *** //
-<<<<<<< HEAD
-router.get('/user/:id/brewery/owner/:shopID', function (req, res, next) {
-	
-});
 
-router.get('/beers/:id/', function (req, res, next) {
-	
-});
-
-router.post('/createbeer', function (req, res, next) {
-=======
->>>>>>> upstream/master
 
 router.post('/brewery/:id/beer/add', function (req, res, next) {
 	var numABV = parseInt(req.body.abv);
