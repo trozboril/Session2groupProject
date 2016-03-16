@@ -22,7 +22,7 @@
                    <p><strong>ABV: </strong> {{beer.abv}}</p>
                    <p><strong>IBU: </strong> {{beer.ibu}}</p>
                    <p><strong>Description: </strong> {{beer.description}}</p>
-                   <a href='/beer/{{beer.id}}' class="btn btn-primary">Learn more here</a>
+                   <a href='/beer/{{beer.beer_id}}' class="btn btn-primary">Learn more here</a>
                </div>
             {% endfor %}
          </div>
@@ -46,7 +46,7 @@
       </div><!-- end of middle contaienr -->
       <div class="col-md-3 col-sm-3">
          <h2>Add a brewery</h2>
-         <a href="/breweries" class="btn btn-primary">Create New Brewery</a>
+         <a href="/breweries/new" class="btn btn-primary">Create New Brewery</a>
          <div id="ownedBreweries">
             <h2>Owned breweries</h3>
             {% if owner %}
