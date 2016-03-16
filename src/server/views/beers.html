@@ -4,6 +4,7 @@
 
 
 {% block content %}
+<div class="container">
 <br><br><br>
 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
   <div class="beertypeslist">
@@ -134,7 +135,7 @@
 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
 <div class="row">
 
-    <div class="container">
+    
 
    <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -160,10 +161,9 @@
 {% endfor %}
 
       </div>
-</div>
-</div>
 
-    <div class="not">
+
+ <div class="not">
     {% for beer in bohemian %}
      <a href="/beers/{{beer.id}}">
        <div class="bohemian element">
@@ -184,8 +184,7 @@
 
     
 
-
-    <div class="not">
+   <div class="not">
     {% for beer in belgian %}
     <a href="/beers/{{beer.id}}">
        <div class="belgian element">
@@ -297,6 +296,8 @@
     {% endfor %}
 
     </div>
+    </div>
+
 
 
 <div class="row">
@@ -398,7 +399,7 @@
 
 
 </div>
-</div>
-</div>
 
+</div>
+</div>
 {% endblock %}

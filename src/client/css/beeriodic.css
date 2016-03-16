@@ -6,7 +6,7 @@
 }
 .element{
   height:6%;
-  width: 8%;
+  width: 10%;
   float:right;
   margin: 1%;
   padding:;
@@ -20,7 +20,7 @@
 }
 
 .beertypeslist h3 {
-  color: #157342;
+  color: #C63D0F;
 }
 
 .highlight{
