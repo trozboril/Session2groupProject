@@ -5,35 +5,39 @@
 
 {% block content %}
 <br><br><br>
-<div class="container">
-{% for beer in american %}
-    <div class="american">
-     
-      <div class="element">
+<div class="beeriodicTable">
+<div class="row">
+
+    <div class="container">
+
+   
+        {% for beer in american %}
+          <div class="american">
+     <a href="/beers/{{beer.id}}">
+              <div class="element">
+
+              
         
-          <h5>{{beer.symbol}}</h5>
-          <h5>{{beer.id}}</h5>
+                <h5>{{beer.symbol}}</h5>
+                <h5>{{beer.id}}</h5>
           
-            <p>{{beer.alcoholnum}}<br>
-            {{beer.colornum}}<br>
-            {{beer.bitterness}}</p>
-          
-
-      </div>
-
+                <p>
+                    {{beer.alcoholnum}}<br>
+                    {{beer.colornum}}<br>
+                    {{beer.bitterness}}
+                </p>
+              
+              </div>
+              </a>
       <div class="longpopup">
           
-          <h3>{{beer.name}}</h3>
+            <h1>{{beer.name}}</h1>
           
             <p>{{beer.description}}</p>
 
-          
-
-
       </div>
-      
-    
     </div>
+
 {% endfor %}
 
    
@@ -41,6 +45,7 @@
 
     <div class="bohemian">
     {% for beer in bohemian %}
+     <a href="/beers/{{beer.id}}">
        <div class="element">
         
           <h5>{{beer.symbol}}</h5>
@@ -50,10 +55,10 @@
             {{beer.bitterness}}</p>
 
       </div>
-
+</a>
       <div class="longpopup">
           
-          <h3>{{beer.name}}</h3>
+          <h1>{{beer.name}}</h1>
           
             <p>{{beer.description}}</p>
 
@@ -72,6 +77,7 @@
 
     <div class="belgian">
     {% for beer in belgian %}
+    <a href="/beers/{{beer.id}}">
        <div class="element">
         
           <h5>{{beer.symbol}}</h5>
@@ -81,10 +87,10 @@
             {{beer.bitterness}}</p>
 
       </div>
-
+</a>
       <div class="longpopup">
           
-          <h3>{{beer.name}}</h3>
+          <h1>{{beer.name}}</h1>
           
             <p>{{beer.description}}</p>
 
@@ -95,8 +101,8 @@
       
     {% endfor %}
 
-    </div>
-
+    
+</div>
 
    
 
@@ -104,6 +110,7 @@
 
     <div class="french">
    {% for beer in french %}
+   <a href="/beers/{{beer.id}}">
        <div class="element">
         
           <h5>{{beer.symbol}}</h5>
@@ -113,10 +120,10 @@
             {{beer.bitterness}}</p>
 
       </div>
-
+</a>
       <div class="longpopup">
           
-          <h3>{{beer.name}}</h3>
+          <h1>{{beer.name}}</h1>
           
             <p>{{beer.description}}</p>
 
@@ -136,6 +143,7 @@
 
     <div class="german">
    {% for beer in german %}
+   <a href="/beers/{{beer.id}}">
        <div class="element">
         
           <h5>{{beer.symbol}}</h5>
@@ -145,10 +153,11 @@
             {{beer.bitterness}}</p>
 
       </div>
+      </a>
 
       <div class="longpopup">
           
-          <h3>{{beer.name}}</h3>
+          <h1>{{beer.name}}</h1>
           
             <p>{{beer.description}}</p>
 
@@ -159,9 +168,9 @@
       
     {% endfor %}
 
-    </div>
+    
 
-
+</div>
    
 
 
@@ -169,6 +178,7 @@
     <div class="english">
 
 {% for beer in english %}
+<a href="/beers/{{beer.id}}">
        <div class="element">
         
           <h5>{{beer.symbol}}</h5>
@@ -178,10 +188,11 @@
             {{beer.bitterness}}</p>
 
       </div>
+      </a>
 
       <div class="longpopup">
           
-          <h3>{{beer.name}}</h3>
+          <h1>{{beer.name}}</h1>
           
           <p>{{beer.description}}</p>
 
@@ -198,10 +209,10 @@
 
 
 
-
-    <div class="english">
+    <div class="others">
 
 {% for beer in others %}
+<a href="/beers/{{beer.id}}">
        <div class="element">
         
           <h5>{{beer.symbol}}</h5>
@@ -211,10 +222,11 @@
             {{beer.bitterness}}</p>
 
       </div>
+      </a>
 
       <div class="longpopup">
           
-          <h3>{{beer.name}}</h3>
+          <h1>{{beer.name}}</h1>
           
           <p>{{beer.description}}</p>
 
@@ -227,7 +239,8 @@
 
     </div>
 
-
+</div>
+</div>
 </div>
 
 {% endblock %}
