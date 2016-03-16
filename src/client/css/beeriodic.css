@@ -5,8 +5,8 @@
   min-height: 100vh;
 }
 .element{
-  height:5%;
-  width: 15%;
+  height:6%;
+  width: 8%;
   float:right;
   margin: 1%;
   padding:;
@@ -17,6 +17,10 @@
 .longpopup{
   display: none;
   clear: both;
+}
+
+.beertypeslist ul {
+  list-style: none;
 }
 
 .highlight{
