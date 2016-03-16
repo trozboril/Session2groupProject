@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
 	if( !req.user ){
   		res.render('index', { title: 'Tapt!' });
 	} else {
-		res.render('index', { maintitle: 'Tapt', title: 'Tapt,', name: req.user.name, id: req.user.id});
+		res.render('index', { maintitle: 'Tapt!', title: 'Tapt,', name: req.user.name, id: req.user.id});
 	}
 });
 
@@ -109,14 +109,38 @@ router.get('/pubcrawl', function (req, res, next) {
 });
 
 // *** get brewery owner render brewery update page *** //
-router.get('/user/owner/:id/:breweryId', function (req, res, next) {
-	res.redirect('/owner');
+router.get('/brewery/:id/owner/edit', function (req, res, next) {
+	knex('breweries').where('id', req.params.id)
+	.then(function (brewery) {
+		knex.from('beers').innerJoin('breweries', 'beers.id', 'beer_id')
+		.then(function (beers) {
+			console.log('brewery: ' + brewery + ' beers: ' + beers);
+			res.render('owner', {brewery: brewery[0], beers: beers});
+		});
+	});
 });
 
 //*** create a beer *** //
 
-router.post('/createbeer', function (req, res, next) {
+router.post('/breweries/:id/beer/add', function (req, res, next) {
+	var numABV = parseInt(req.body.abv);
+	var numIBU = parseInt(req.body.ibu);
+	knex('breweries').insert({
+			type: req.body.type,
+			name: req.body.name,
+			brewer: req.body.brewer,
+			abv: numABV,
+			ibu: numIBU,
+			description: req.body.description
+		}, 'id').then(function (breweryId) {
+			knex('brewery_owner').insert({
+				brewery_id: parseInt(breweryId),
+				user_id: parseInt(req.user.id)
+			}).then(function () {
+				res.redirect('/breweries');
+			});
 
+		});
 });
 
 // *** user after logged in can create a new brewery *** //
