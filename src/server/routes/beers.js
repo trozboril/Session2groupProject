@@ -4,7 +4,7 @@ var knex = require('../db/knex');
 
 
 router.get('/beers', function (req, res, next) {
-  
+  // req.query.filter => "american"
   knex.select('*').from('beertypes')
   .then(function (beers) {
       // our standard beers
@@ -44,10 +44,11 @@ router.get('/beers', function (req, res, next) {
       }, { others: [] });
 
 
-      console.log(sortedBeers);
+      // console.log(sortedBeers);
       res.render('beers', sortedBeers); 
     });
 });
+
 
 router.get('/beers/:id',function(req, res, next) {
     knex.select('*').from('beertypes').where('id', req.params.id)
@@ -58,5 +59,6 @@ router.get('/beers/:id',function(req, res, next) {
             });
         });
 });
+
 
 module.exports = router;
