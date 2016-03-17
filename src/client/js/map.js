@@ -1,8 +1,9 @@
 var locations = [
-    // ['Brewery Name', 'Address, City, State', 'Zip', 'description', 'image'],
-    ['Breckenridge Brewery', '10261 Macedonia St., Longmont, CO', '80503', 'Very nice and neat brewery', '/brewery/:id'],
-    ['Test Brewery', 'Lakewood, Ohio', '80503', 'Very nice and neat brewery', 'test.com']
+//     // ['Brewery Name', 'Address, City, State', 'Zip', 'description', 'image'],
+    // ['Tylers Brewery', '10261 Macedonia St., Longmont, CO', '80503', 'Very nice and neat brewery'],
 ];
+
+// console.log(locations);
 // exports.up = function(knex, Promise) {
 //   return knex.schema.createTable('breweries', function(table) {
 //     table.increments();
@@ -72,7 +73,7 @@ var bounds = new google.maps.LatLngBounds();
 function init() {
     map = new google.maps.Map(
     document.getElementById("map_canvas"), {
-        center: new google.maps.LatLng(37.4419, -122.1419),
+        center: new google.maps.LatLng(39.7392, -104.9903),
         zoom: 13,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         styles: styles
@@ -137,3 +138,24 @@ function createMarker(results) {
     infoWindow(marker, map, title, address, url);
     return marker;
 }
+
+$(document).ready(function () {
+    var numBreweries = $('.brewpub').length;
+
+    var breweryName;
+    var breweryAddress;
+    var breweryZip;
+    var breweryDescription;
+    var breweryLocation = [];
+
+    $('#brewery').on('click', function () {
+    var breweryName = $('p:eq(0)').text();
+    var breweryAddress = $('p:eq(1)').text();
+    var breweryZip = $('p:eq(2)').text();
+    var breweryDescription = $('p:eq(3)').text();
+    var breweryLocation = [breweryName, breweryAddress, breweryZip, breweryDescription];
+    locations.push(breweryLocation);
+    console.log(locations);
+    init();
+});
+});
