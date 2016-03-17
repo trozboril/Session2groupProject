@@ -1,7 +1,21 @@
+$('#brewery').on('click', function () {
+    console.log('JUICE!');
+    var breweryName = $('p:eq(0)').text();
+    var breweryAddress = $('p:eq(1)').text();
+    var breweryZip = $('p:eq(2)').text();
+    var breweryDescription = $('p:eq(3)').text();
+    var breweryLocation = [breweryName, breweryAddress, breweryZip, breweryDescription];
+    console.log(breweryAddress);
+});
+
+
+
+
+
 var locations = [
     // ['Brewery Name', 'Address, City, State', 'Zip', 'description', 'image'],
-    ['Breckenridge Brewery', '10261 Macedonia St., Longmont, CO', '80503', 'Very nice and neat brewery', '/brewery/:id'],
-    ['Test Brewery', 'Lakewood, Ohio', '80503', 'Very nice and neat brewery', 'test.com']
+    // ['Breckenridge Brewery', '10261 Macedonia St., Longmont, CO', '80503', 'Very nice and neat brewery', '/brewery/:id'],
+    // ['Test Brewery', 'Lakewood, Ohio', '80503', 'Very nice and neat brewery', 'test.com']
 ];
 // exports.up = function(knex, Promise) {
 //   return knex.schema.createTable('breweries', function(table) {

@@ -203,6 +203,10 @@
 	    	</div>
 
 	    	<div class="form-group ">
+	    			<input class='hidden form-control'  name="id" id="id" value='{{brewery.id}}'>
+	    	</div>
+
+	    	<div class="form-group ">
 	    		<label for='description' class="col-md-3 control-label">Description: </label>
 	    		<div class="col-md-8">
 	    			<input rows="4"  name="description" id="description" value='{{brewery.description}}' class="form-control">
@@ -220,7 +224,10 @@
 	</form>
 	<a href='/brewery/{{brewery.id}}/owner/edit' class="btn btn-primary">Cancel</a>
 
-	<form class="form-horizontal" role="form" method="post" action="/breweries/:id/delete">
+	<form class="form-horizontal" role="form" method="post" action="/breweries/{{brewery.id}}/delete">
+	<div class="form-group ">
+	    <input class='hidden form-control'  name="id" id="id" value='{{brewery.id}}'>
+	</div>
 	<button type="submit" class="btn btn-primary">Delete Brewery</button>
 	</form>
 
