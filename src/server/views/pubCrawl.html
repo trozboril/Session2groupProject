@@ -7,23 +7,23 @@
 <br>
 <br>
 <div class="row taptHeader">
-   <div class="container">
-       <div class="col-md-4 col-sm-6 ">
+   <div class="container-fluid">
+       <div class="col-md-4 col-sm-4 ">
 
        {% for brewery in breweries %}
-       <div class='brewpub'style="border: 1px solid black">
+       <div class='brewpub'style="border-bottom: 1px solid black">
            <p class='name'>{{brewery.name}}</p>
            <p class='address'>{{brewery.address}}, {{brewery.city}}, {{brewery.state}} </p>
            <p class="zip">{{brewery.zip}}</p>
            <p class="description">{{brewery.description}}</p>
            <button class='brewery btn btn-primary breweryBtn'>Find Brewery</button>
-           <button class='removebrewery btn btn-primary'>Unpin Brewery</button>
+           <button class='removebrewery btn btn-danger'>Unpin Brewery</button>
        </div>
        {% endfor %}
 
 
        </div>
-       <div class="col-md-8 col-sm-6 ">
+       <div class="col-md-8 col-sm-8 " id="">
           <div id="map"></div>
        </div>
    </div>
