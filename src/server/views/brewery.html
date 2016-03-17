@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+d{% extends 'layout.html' %}
 
 {% block title %}{% endblock %}
 
@@ -8,6 +8,7 @@
 <div class="row" id="breweriesHeader">
     <div class="container-fluid">
         <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 ">
+                <img src='{{brewery.image}}' style='height: 250px; width: 250px'>
                 <h1 class="text-center"><strong>Brewery:</strong> {{ brewery.name }} </h1>
 				<div class="col-md-offset-3">
 					<p><strong> Address:</strong> {{brewery.address}} &nbsp; {{brewery.city}}, {{brewery.state}} &nbsp; {{brewery.zip}}</p>
