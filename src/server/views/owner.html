@@ -170,7 +170,7 @@
 	</div><!-- end of middle -->
 		<div class="col-md-4">
 			<h3 class="text-center">Brewery Info</h3>
-			<form class="form-horizontal" role="form" method="post" action="/breweries/:id/edit">
+		<form enctype="multipart/form-data" class="form-horizontal" role="form" method="post" action="/breweries/:id/edit">
 		<div class='breweryInfo'>
 			<div class="form-group ">
 	    		<label for='name' class="col-md-3 control-label">Name: </label>
@@ -215,9 +215,13 @@
 	    	</div>
 
 	    	<div class="form-group">
+	    		<input class='hidden form-control' name='id' id="id"value='{{brewery.id}}'>
+	    	</div>
+
+	    	<div class="form-group">
 	    		<label for='image' class='col-md-3 control-label'>Image: </label>
 	    		<div class="col-md-6">
-	    		<input type='file' name="image" id='image' class='form-control' value='{{brewery.image}}'>
+	    		<input type='file' name="jpg" value="" id='image' class='form-control'accept=".jpg" value='{{brewery.image}}'>
 	    		</div>
 			</div>
 			<div class="text-center" style="margin: auto; padding-left: 20%;">
@@ -225,9 +229,8 @@
 	</div>
 	</form>
 	<a href='/brewery/{{brewery.id}}/owner/edit' class="btn btn-warning pull-left btn-sm">Cancel</a>
-
-	<form class="" role="form" method="post" action="/breweries/:id/delete">
-	<button type="submit" class="btn btn-danger btn-sm">Delete Brewery</button>
+	<form class="" role="form" method="post" action="/breweries/{{brewery.id}}/delete">
+		<button type="submit" class="btn btn-danger btn-sm">Delete Brewery</button>
 	</form>
 			</div>
 		</div>
