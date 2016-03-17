@@ -160,7 +160,9 @@ footer {
 }
 
 /* TODO: merge all stylesheets when finished */
-
+.headerPage {
+  margin-top: 60px;
+}
 #indHeader {
   margin-top: 60px;
 }
@@ -189,4 +191,23 @@ footer {
 #map_canvas {
   height: 400px;
   width: 400px;
+}
+
+
+.indBeer {
+  border: 1px solid #292929;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  /*margin-left: 10px;*/
+  margin-top: 10px;
+}
+#breweriesHeader h1 {
+  font-size: 48px;
+}
+
+.deleteBrew {
+  margin-bottom: 15px;
 }
