@@ -5,40 +5,42 @@
 
 {% block content %}
 
-
-<br>
-<br>
-<br>
-<br>
-
-<img src='{{brewery.image}}' class='col-md-4'>
-<h1 class='col-md-8'>{{brewery.name}}</h1>
-
-<div class='menu' class='col-md-4 push-left'>
+<div class="row headerPage">
+	<div class="container">
+		<img src='{{brewery.image}}' class='col-md-4'>
+		<h1 class='text-center'>{{brewery.name}}</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="container">
+<div class='col-md-4 '>
 <h3>Menu</h3>
 {% if beers.length > 0 %}
 	{% for beer in beers %}
-		<p><strong>Name:</strong> {{beer.name}}</p>
-		<p><strong>Type:</strong> {{beer.type}}</p>
-		<p><strong>Brewer:</strong> {{beer.brewer}}</p>
-		<p><strong>ABV:</strong> {{beer.abv}}</p>
-		<p><strong>IBU:</strong> {{beer.ibu}}</p>
-		<p><strong>Description:</strong> {{beer.description}}</p>
-		<form class="form-horizontal" role="form" method="post" action="/breweries/{{brewery.id}}/beer/{{beer.id}}/remove">
+	<ul style="list-style-type: none; padding-left: 0;">
+		<li><strong>Name:</strong> {{beer.name}}</li>
+		<li><strong>Type:</strong> {{beer.type}}</li>
+		<li><strong>Brewer:</strong> {{beer.brewer}}</li>
+		<li><strong>ABV:</strong> {{beer.abv}}</li>
+		<li><strong>IBU:</strong> {{beer.ibu}}</li>
+		<li><strong>Description:</strong> {{beer.description}}</li>
+		</ul>
+		<form class="deleteBrew" role="form" method="post" action="/breweries/{{brewery.id}}/beer/{{beer.id}}/remove">
 		    <input class="hidden" name="id" value="{{brewery.brewery_id}}">
-		    <button type="submit" class="btn btn-primary">Remove Beer</button>
+		    <button type="submit" class="btn btn-danger btn-sm">Remove Beer</button>
 		</form>
 	{% endfor %}
 {% else %}
 	<h5>You have no beers on tap in your brewery!</h5>
 {% endif %}
-</div>
-<h3>Add a beer!</h3>
+</div><!--end of left -->
+<div class="col-md-4">
+<h3 class="text-center">Add a beer!</h3>
 <div class='addbeer'>
 	<form class="form-horizontal" role="form" method="post" action="/brewery/{{brewery.id}}/beer/add">
 		<div class="form-group ">
 	        <label for="type" class="control-label col-md-3">Type: </label>
-                <div class="col-md-3">
+                <div class="col-md-8">
                     <select name="type" id="type" class="form-control" required>
                           <option value="#">Select a Type</option>
                           <option value="American Amber Ale">American Amber Ale</option>
@@ -130,80 +132,79 @@
 	        </div>
 	    <div class="form-group ">
 	        <label for="name" class="col-md-3 control-label">Name: </label>
-	        	<div class="col-md-3">
+	        	<div class="col-md-8">
 	        		<input id="name" class="form-control" name="name" placeholder="Name of Beer" required>
 	        	</div>
 
 	    </div>
 	    <div class="form-group ">
 	    	<label for='brewery' class="col-md-3 control-label">Brewer: </label>
-	    		<div class="col-md-3">
+	    		<div class="col-md-8">
 	    			<input id="brewery" class="form-control" name='brewer' placeholder='Name of Brewer' required>
 	    		</div>
 	    </div>
 	    <div class="form-group ">
-	    	<lable for='abv' class="col-md-3 control-label">ABV: </lable>
-	    		<div class="col-md-3">
+	    	<label for='abv' class="col-md-3 control-label">ABV: </label>
+	    		<div class="col-md-8">
 	    			<input id="abv" class="form-control" name="abv" placeholder="ABV">
 	    		</div>
 	    </div>
 	    <div class="form-group ">
 	    	<label for='ibu' class='col-md-3 control-label'>IBU: </label>
-	    		<div class="col-md-3">
+	    		<div class="col-md-8">
 	    			<input id="ibu" class="form-control" name="ibu" placeholder="IBU"
 	    			>
 	    		</div>
 	    </div>
 	    <div class="form-group ">
 	    	<label for="description" class="control-label col-md-3">Description: </label>
-                <div class="col-md-3">
+                <div class="col-md-8">
                     <textarea rows="4"  name="description" id="description" placeholder="Describe your brew." class="form-control"></textarea>
                 </div>
         </div>
-		<button type="submit" class="btn btn-primary">Put Beer on Tap</button>
+		<div class="text-center">
+			<button type="submit" class="btn btn-primary">Put Beer on Tap</button>
+		</div>
 	</form>
 </div>
-	<form class="form-horizontal" role="form" method="post" action="/breweries/:id/edit">
-	<div class='col-md-4 push-right'>
-		<h3>Brewery Info</h3>
+	</div><!-- end of middle -->
+		<div class="col-md-4">
+			<h3 class="text-center">Brewery Info</h3>
+			<form class="form-horizontal" role="form" method="post" action="/breweries/:id/edit">
 		<div class='breweryInfo'>
 			<div class="form-group ">
 	    		<label for='name' class="col-md-3 control-label">Name: </label>
-	    		<div class="col-md-3">
+	    		<div class="col-md-8">
 	    			<input id="name" class="form-control" name='name' value='{{brewery.name}}' required>
 	    		</div>
 			</div>
 
 			<div class="form-group ">
 	    		<label for='address' class="col-md-3 control-label">Address: </label>
-	    		<div class="col-md-3">
+	    		<div class="col-md-8">
 	    			<input id="address" class="form-control" name='address' value='{{brewery.address}}' required>
 	    		</div>
 	    	</div>
 
 	    	<div class="form-group ">
 	    		<label for='city' class="col-md-3 control-label">City: </label>
-	    		<div class="col-md-3">
+	    		<div class="col-md-8">
 	    			<input id="city" class="form-control" name='city' value='{{brewery.city}}' required>
 	    		</div>
 	    	</div>
 
 	    	<div class="form-group ">
 	    		<label for='state' class="col-md-3 control-label">State: </label>
-	    		<div class="col-md-3">
+	    		<div class="col-md-8">
 	    			<input id="state" class="form-control" name='state' value='{{brewery.state}}' required>
 	    		</div>
 	    	</div>
 
 	    	<div class="form-group ">
 	    		<label for='zip' class="col-md-3 control-label">Zip: </label>
-	    		<div class="col-md-3">
+	    		<div class="col-md-8">
 	    			<input id="zip" class="form-control" name='zip' value='{{brewery.zip}}' required>
 	    		</div>
-	    	</div>
-
-	    	<div class="form-group ">
-	    			<input class='hidden form-control'  name="id" id="id" value='{{brewery.id}}'>
 	    	</div>
 
 	    	<div class="form-group ">
@@ -218,17 +219,19 @@
 	    		<div class="col-md-6">
 	    		<input type='file' name="image" id='image' class='form-control' value='{{brewery.image}}'>
 	    		</div>
-		</div>
-		<button type="submit" class="btn btn-primary">Update Brewery</button>
+			</div>
+			<div class="text-center" style="margin: auto; padding-left: 20%;">
+		<button type="submit" class="btn btn-primary btn-sm pull-left">Update Brewery</button>
 	</div>
 	</form>
-	<a href='/brewery/{{brewery.id}}/owner/edit' class="btn btn-primary">Cancel</a>
+	<a href='/brewery/{{brewery.id}}/owner/edit' class="btn btn-warning pull-left btn-sm">Cancel</a>
 
-	<form class="form-horizontal" role="form" method="post" action="/breweries/{{brewery.id}}/delete">
-	<div class="form-group ">
-	    <input class='hidden form-control'  name="id" id="id" value='{{brewery.id}}'>
-	</div>
-	<button type="submit" class="btn btn-primary">Delete Brewery</button>
+	<form class="" role="form" method="post" action="/breweries/:id/delete">
+	<button type="submit" class="btn btn-danger btn-sm">Delete Brewery</button>
 	</form>
+			</div>
+		</div>
+</div>
+</div>
 
 {% endblock %}
