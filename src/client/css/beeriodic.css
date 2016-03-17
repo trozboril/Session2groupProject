@@ -14,6 +14,11 @@
   
   font-size: 6px; 
 }
+
+.not a {
+  color: white;
+}
+
 .longpopup{
   display: none;
   clear: both;

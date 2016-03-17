@@ -9,6 +9,14 @@ $('[data-toggle="popover"]').popover();
 
 
 
+
+
+
+
+
+
+
+
 $('.americanbtn').on('click', function(body){
   
     $('.americans').toggleClass('show');
