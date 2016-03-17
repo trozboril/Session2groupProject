@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var knex = require('../db/knex');
+var multer = require('multer');
+var upload = multer({dest: 'src/client/images/'});
 
 // *** root route *** //
 router.get('/', function (req, res, next) {
@@ -9,6 +11,12 @@ router.get('/', function (req, res, next) {
 	} else {
 		res.render('index', { maintitle: 'Tapt!', title: 'Tapt,', name: req.user.name, id: req.user.id});
 	}
+});
+
+//*** image upload ***//
+router.post('/upload', upload.single('jpg'), function (req, res, next) {
+	console.log(req.file.path.substring(10));
+	res.send('<img src="' + req.file.path.substring(10) + '">');
 });
 
 
@@ -177,7 +185,7 @@ router.post('/breweries/:breweryID/beer/:beerID/remove', function (req, res, nex
 });
 
 // *** edit a brewery *** //
-router.post('/breweries/:id/edit', function (req, res, next) {
+router.post('/breweries/:id/edit', upload.single('jpg'), function (req, res, next) {
 	console.log(req.body);
 	var theID = parseInt(req.body.id);
 	knex('breweries')
@@ -189,7 +197,7 @@ router.post('/breweries/:id/edit', function (req, res, next) {
     	state: req.body.state,
     	zip: parseInt(req.body.zip),
     	description: req.body.description,
-    	image: req.body.image
+    	image: req.file.path.substring(10)
   }).then(function() {
   	res.redirect('/brewery/'+ req.body.id + '/owner/edit');
   });
@@ -210,13 +218,14 @@ router.get('/breweries/new', function (req, res, next) {
 	res.render('newBrewery', {id: req.user.id});
 });
 
-router.post('/breweries/new', function (req, res, next) {
+router.post('/breweries/new', upload.single('jpg'), function (req, res, next) {
 	// routes should be the resource and then the "action"
 	// eg => breweries
 	if( !req.user ){
 		res.redirect('/');
 	} else {
 		var zipper = parseInt(req.body.zip);
+		console.log(req.file);
 
 		// table names should be plural
 		// e.g. breweries
@@ -228,7 +237,7 @@ router.post('/breweries/new', function (req, res, next) {
 			state: req.body.state,
 			zip: zipper,
 			description: req.body.description,
-			image: req.body.image
+			image: req.file.path.substring(10)
 		}, 'id').then(function (breweryId) {
 			knex('brewery_owner').insert({
 				brewery_id: parseInt(breweryId),
