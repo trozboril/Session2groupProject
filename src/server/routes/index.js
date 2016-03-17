@@ -134,10 +134,6 @@ router.get('/user/:id', function (req, res, next) {
 	}
 });
 
-// *** serve up pubcrawl app *** ///
-router.get('/pubcrawl', function (req, res, next) {
-	res.render('pubCrawl');
-});
 
 // *** get brewery owner render brewery update page *** //
 router.get('/brewery/:id/owner/edit', function (req, res, next) {
@@ -182,22 +178,30 @@ router.post('/breweries/:breweryID/beer/:beerID/remove', function (req, res, nex
 // *** edit a brewery *** //
 router.post('/breweries/:id/edit', function (req, res, next) {
 	console.log(req.body);
+	var theID = parseInt(req.body.id);
 	knex('breweries')
-  		.where('id', '=', req.params.id)
+  		.where('id', '=', theID)
   		.update({
     	name: req.body.name,
     	address: req.body.address,
     	city: req.body.city,
     	state: req.body.state,
-    	zip: req.body.zip,
+    	zip: parseInt(req.body.zip),
     	description: req.body.description,
     	image: req.body.image
   }).then(function() {
-  	res.redirect('/breweries/:id/owner/edit');
+  	res.redirect('/brewery/'+ req.body.id + '/owner/edit');
   });
 
 });
 
+// *** DELETE A BREWERY *** //
+router.post('/breweries/:id/delete', function (req, res, next) {
+	knex('breweries').where('id', req.params.id).del()
+	.then(function () {
+		res.redirect('/user/' + req.user.id);
+	});
+});
 
 // *** user after logged in can create a new brewery *** //
 
@@ -254,10 +258,10 @@ router.get('/pubcrawl/breweries/:id', function (req, res, next) {
 	});
 });
 
-router.get('/pubCrawl', function (req, res, next) {
+router.get('/pubcrawl', function (req, res, next) {
 	knex.select('*').from('breweries')
 	.then(function (breweries) {
-		knex.render('pubCrawl', {breweries: breweries});
+		res.render('pubCrawl', {breweries: breweries});
 	});
 });
 
