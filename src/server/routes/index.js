@@ -254,14 +254,14 @@ router.post('/contact', function (req, res, next) {
 router.get('/pubcrawl/breweries/:id', function (req, res, next) {
 	knex.select('*').from('breweries').where('id', req.params.id)
 	.then(function (info) {
-		res.render('pubCrawl', {info: info});
+		res.render('pubCrawl', {info: info, id: req.user.id});
 	});
 });
 
 router.get('/pubcrawl', function (req, res, next) {
 	knex.select('*').from('breweries')
 	.then(function (breweries) {
-		res.render('pubCrawl', {breweries: breweries});
+		res.render('pubCrawl', {breweries: breweries, id: req.user.id});
 	});
 });
 
