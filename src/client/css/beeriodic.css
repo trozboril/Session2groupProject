@@ -24,13 +24,12 @@
   clear: both;
 }
 
+
 .beertypeslist h3 {
   color: #C63D0F;
 }
 
-.highlight{
-  border: 2px solid yellow;
-}
+
 .hide{
   display:none;
 }
@@ -62,34 +61,56 @@
 }
 .not .american{
   background: #FFCA5A;
+  
+
 }
  .not .belgian {
-  background: #E58500; 
+  background: #E58500;
+  
+ 
 }
 .not .english{
-  background: #B04500; 
+  background: #B04500;
+  
+ 
  
 
 }
 .not .german{
-  background: #882300; 
+  background: #882300;
+  
+ 
   
 
 }
 .not .french{
-  background: #600903; 
+  background: #600903;
+  
+ 
   
 
 }
 .not .others{
   background: #3F0708; 
+  
+
  
 
 }
 .not .bohemian{
   background: orange; 
+  
+
  
 
+}
+
+.highlight{
+border-left: 5px solid #292929;
+ }
+
+.newhighlight{
+  border: 5px solid purple;
 }
 
 

@@ -8,11 +8,21 @@ $(document).on('ready', function() {
 $('[data-toggle="popover"]').popover();
 
 
+//if the inner text of one element matches the other element
+//highlight the other element.
+
+$('.americans').on('click', function() {
+if($('.american').innerText === $('.name').innerText){
+    $('.american').toggleClass('newhighlight');
+}
+    
 
 
 
+});
 
 
+$.each($(".american.element .name"), function (index, el) { console.log(el.innerText) });
 
 
 
