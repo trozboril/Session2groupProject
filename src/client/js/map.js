@@ -67,9 +67,9 @@ var styles = [{
   visibility: 'on' }  
   ]
 }];   
-var geocoder;
-var map;
-var bounds = new google.maps.LatLngBounds();
+  var geocoder;
+  var map;
+  var bounds = new google.maps.LatLngBounds();
 function init() {
   var directionsService = new google.maps.DirectionsService;
   var directionsDisplay = new google.maps.DirectionsRenderer;
