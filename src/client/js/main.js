@@ -13,6 +13,8 @@ $('.americans').on('click', function() {
     for (var i = 0; i < $(".american").length; i++){
         if ( $(".american .name")[i].innerHTML === $(this)[0].innerText ) {
            $($(".american")[i]).toggleClass('newhighlight');
+                      $(this).toggleClass('newhighlight');
+
         }
     }
 });
@@ -21,6 +23,7 @@ $('.germans').on('click', function() {
     for (var i = 0; i < $(".german").length; i++){
         if ( $(".german .name")[i].innerHTML === $(this)[0].innerText ) {
            $($(".german")[i]).toggleClass('newhighlight');
+           $(this).toggleClass('newhighlight');
         }
     }
 });
@@ -29,6 +32,8 @@ $('.englishs').on('click', function() {
     for (var i = 0; i < $(".english").length; i++){
         if ( $(".english .name")[i].innerHTML === $(this)[0].innerText ) {
            $($(".english")[i]).toggleClass('newhighlight');
+                      $(this).toggleClass('newhighlight');
+
         }
     }
 });
@@ -37,6 +42,8 @@ $('.bohemians').on('click', function() {
     for (var i = 0; i < $(".bohemian").length; i++){
         if ( $(".bohemian .name")[i].innerHTML === $(this)[0].innerText ) {
            $($(".bohemian")[i]).toggleClass('newhighlight');
+                      $(this).toggleClass('newhighlight');
+
         }
     }
 });
@@ -45,6 +52,8 @@ $('.belgians').on('click', function() {
     for (var i = 0; i < $(".belgian").length; i++){
         if ( $(".belgian .name")[i].innerHTML === $(this)[0].innerText ) {
            $($(".belgian")[i]).toggleClass('newhighlight');
+                      $(this).toggleClass('newhighlight');
+
         }
     }
 });
@@ -53,6 +62,8 @@ $('.frenchs').on('click', function() {
     for (var i = 0; i < $(".french").length; i++){
         if ( $(".french .name")[i].innerHTML === $(this)[0].innerText ) {
            $($(".french")[i]).toggleClass('newhighlight');
+                      $(this).toggleClass('newhighlight');
+
         }
     }
 });
@@ -61,6 +72,8 @@ $('.others1').on('click', function() {
     for (var i = 0; i < $(".others").length; i++){
         if ( $(".others .name")[i].innerHTML === $(this)[0].innerText ) {
            $($(".others")[i]).toggleClass('newhighlight');
+                      $(this).toggleClass('newhighlight');
+
         }
     }
 });
