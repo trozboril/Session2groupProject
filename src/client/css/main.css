@@ -195,14 +195,18 @@ footer {
 
 
 .indBeer {
-  border: 1px solid #292929;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  padding-left: 20px;
+  /*border: 1px solid #292929;*/
+  /*-webkit-border-radius: 4px;*/
+  /*-moz-border-radius: 4px;*/
+  /*border-radius: 4px;*/
+  /*padding-left: 20px;*/
   padding-bottom: 10px;
   /*margin-left: 10px;*/
   margin-top: 10px;
+}
+
+.indBeer p{
+  margin-bottom: 5px;
 }
 #breweriesHeader h1 {
   font-size: 48px;
@@ -210,4 +214,8 @@ footer {
 
 .deleteBrew {
   margin-bottom: 15px;
+}
+
+.beertypeslist h3:hover, .beertypeslist p:hover {
+  cursor: pointer;
 }
