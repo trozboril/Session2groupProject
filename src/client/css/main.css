@@ -188,11 +188,11 @@ footer {
   color: #C63D0F;
 }
 
-#map_canvas {
-  height: 400px;
-  width: 400px;
+#map {
+  height: 600px;
+  width: 100%;
+  padding: 0;
 }
-
 
 .indBeer {
   /*border: 1px solid #292929;*/

@@ -67,18 +67,51 @@ var styles = [{
   visibility: 'on' }  
   ]
 }];   
-var geocoder;
-var map;
-var bounds = new google.maps.LatLngBounds();
+  var geocoder;
+  var map;
+  var bounds = new google.maps.LatLngBounds();
 function init() {
+  var directionsService = new google.maps.DirectionsService;
+  var directionsDisplay = new google.maps.DirectionsRenderer;
   map = new google.maps.Map(
-    document.getElementById("map_canvas"), {
+    document.getElementById("map"), {
       center: new google.maps.LatLng(39.7392, -104.9903),
       zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       styles: styles
     });
+  directionsDisplay.setMap(map);
+
+  if ( window.usersPosition && window.endDestination ) {
+    calculateAndDisplayRoute(directionsService, directionsDisplay);  
+  }
+
+
   geocoder = new google.maps.Geocoder();
+  if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            window.usersPosition = pos;
+            var yourlocation;
+            var marker = new google.maps.Marker({
+              icon: 'http://maps.google.com/mapfiles/ms/icons/red.png',
+              map: map,
+              position: pos,
+              content: yourlocation,
+              animation: google.maps.Animation.DROP,
+            });
+            yourlocationinfoWindow(marker, map, yourlocation);
+
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
   for (i = 0; i < locations.length; i++) {
     geocodeAddress(locations, i);
   }
@@ -118,7 +151,17 @@ function infoWindow(marker, map, title, address, description, page) {
     var html = "<div><h3>" + title + "</h3><p>" + address + "<br><br>" + description + "<br></div><a href='" + page + "'>View Brewery Info</a></p></div>";
     iw = new google.maps.InfoWindow({
       content: html,
-      maxWidth: 350
+      maxWidth: 400
+    });
+    iw.open(map, marker);
+  });
+}
+function yourlocationinfoWindow(marker, map, title, address, description, page) {
+  google.maps.event.addListener(marker, 'click', function () {
+    var html = "<div><h4>Your are here.</h4></div>";
+    iw = new google.maps.InfoWindow({
+      content: html,
+      maxWidth: 400
     });
     iw.open(map, marker);
   });
@@ -140,23 +183,40 @@ function createMarker(results) {
   return marker;
 }
 
+function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: window.usersPosition,
+          destination: window.endDestination,
+          travelMode: google.maps.TravelMode.DRIVING
+        }, function(response, status) {
+          if (status === google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+
 $(document).ready(function () {
   var numBreweries = $('.brewpub').length;
 
   $('.brewery').each(function () {
     $(this).on('click', function () {
-      var newObj = {
+      var breweryPin = {
         name: $(this).parent().children('.name').text(),
         address: $(this).parent().children('.address').text(),
         zip: $(this).parent().children('.zip').text(),
         description: $(this).parent().children('.description').text()
       };
-      locations.push(newObj);
+
+      window.endDestination = breweryPin.address;
+      locations.push(breweryPin);
       init();
     });
   });
   $('.removebrewery').each(function () {
     $(this).on('click', function () {
+      window.endDestination = '';
       var theName = $(this).parent().children('.name').text();
       for (var i = 0; i < locations.length; i++) {
         if (locations[i].name === theName) {
@@ -168,3 +228,4 @@ $(document).ready(function () {
     });
   });
 });
+
