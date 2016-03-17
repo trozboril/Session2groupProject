@@ -5,6 +5,8 @@
     <br><br><br>
     <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
       <div class="beertypeslist">
+
+      <h2 class="thetop"><strong>Beer Types</strong></h2>
         
         
         <!-- <select name="category"> -->
@@ -96,14 +98,15 @@
             <p class="englishs">English-Style Bitter</p>
         </div>
         
+        <div>
         <button data-toggle="collapse" data-target="#frenchcollapse">
-        <h3 value="french" class="frenchbtn"><strong>French</strong></h3>
+            <h3 value="french" class="frenchbtn"><strong>French</strong></h3>
         </button>
+        
         <div id="frenchcollapse" class="collapse">
             <p class="frenchs">French-Style Biere De Garde</p>
         </div>
-
-
+      </div>
 
         <button data-toggle="collapse" data-target="#otherscollapse">
         <h3 value="others" class="othersbtn"><strong>Others</strong></h3>
@@ -147,6 +150,9 @@
     </div>
     <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10">
       <div class="row">
+
+      <h1 class="thetop"><strong>Beeriodic Table</strong></h1>
+      <p class="thetopp">The Beeriodic Table consists of 79 different beers. On the left of the page<br> you will find the beer types separated by country of origin. Click the name to expand the list<br> and select a type of beer that interests you! hover over the bottom text for a brief<br> description and click on the Beer symbol or number for a full breakdown.</p>
         
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
           
@@ -272,6 +278,9 @@
               </a>
             {% endfor %}
           </div>
+
+
+
           <div class="not">
             {% for beer in others %}
               <a href="/beers/{{beer.id}}">
