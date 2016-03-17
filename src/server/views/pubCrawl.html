@@ -12,11 +12,12 @@
 
        {% for brewery in breweries %}
        <div class='brewpub'style="border: 1px solid black">
-           <p id='name'>{{brewery.name}}</p>
-           <p id='address'>{{brewery.address}}, {{brewery.city}}, {{brewery.state}} </p>
-           <p id="zip">{{brewery.zip}}</p>
-           <p id="description">{{brewery.description}}</p>
-           <button id='brewery' class='btn btn-primary'>Find Brewery</button>
+           <p class='name'>{{brewery.name}}</p>
+           <p class='address'>{{brewery.address}}, {{brewery.city}}, {{brewery.state}} </p>
+           <p class="zip">{{brewery.zip}}</p>
+           <p class="description">{{brewery.description}}</p>
+           <button class='brewery btn btn-primary'>Find Brewery</button>
+           <button class='removebrewery btn btn-primary'>Unpin Brewery</button>
        </div>
        {% endfor %}
 

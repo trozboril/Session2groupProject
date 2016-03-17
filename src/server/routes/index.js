@@ -113,6 +113,7 @@ router.get('/user/:id', function (req, res, next) {
 		.then(function (beer) {
 			knex.from('beers').innerJoin('saved_beer', 'beers.id', 'beer_id')
 		.then(function (savedBeers) {
+			console.log(savedBrewery);
 			res.render('user', {
 				id: req.user.id,
 				user: user[0],
@@ -254,14 +255,14 @@ router.post('/contact', function (req, res, next) {
 router.get('/pubcrawl/breweries/:id', function (req, res, next) {
 	knex.select('*').from('breweries').where('id', req.params.id)
 	.then(function (info) {
-		res.render('pubCrawl', {info: info});
+		res.render('pubCrawl', {info: info, id: req.user.ID});
 	});
 });
 
 router.get('/pubcrawl', function (req, res, next) {
 	knex.select('*').from('breweries')
 	.then(function (breweries) {
-		res.render('pubCrawl', {breweries: breweries});
+		res.render('pubCrawl', {breweries: breweries, id: req.user.id});
 	});
 });
 
