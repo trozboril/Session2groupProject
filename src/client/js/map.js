@@ -148,7 +148,7 @@ $(document).ready(function () {
     var breweryDescription;
     var breweryLocation = [];
 
-    $('#brewery').on('click', function () {
+    $('.brewery').on('click', function () {
     var breweryName = $('p:eq(0)').text();
     var breweryAddress = $('p:eq(1)').text();
     var breweryZip = $('p:eq(2)').text();
