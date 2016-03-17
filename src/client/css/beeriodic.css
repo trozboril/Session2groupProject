@@ -4,6 +4,10 @@
   flex-direction: column;
   min-height: 100vh;
 }
+button{
+  border: none;
+  background: #ebe8e8;
+}
 .element{
   height:6%;
   width: 10%;
@@ -61,57 +65,100 @@
 }
 .not .american{
   background: #FFCA5A;
-  
-
+}
+.not .american .popover{
+  background: #FFCA5A;
+  color: white;
+}
+.not .american .popover-title{
+  background: url('../../../images/beer_foam_by_danmandson-d53wplz.jpg');
+  color: white;
+  text-align: center;
 }
  .not .belgian {
   background: #E58500;
   
  
 }
+.not .belgian .popover{
+  background: #E58500;
+  color: white;
+}
+.not .belgian .popover-title{
+  background: url('../../../images/beer_foam_by_danmandson-d53wplz.jpg');
+  color: white;
+  text-align: center;
+}
 .not .english{
   background: #B04500;
   
- 
- 
-
+}
+.not .english .popover{
+  background: #B04500;
+  color: white;
+}
+.not .english .popover-title{
+  background: url('../../../images/beer_foam_by_danmandson-d53wplz.jpg');
+  color: white;
+  text-align: center;
 }
 .not .german{
   background: #882300;
-  
- 
-  
 
+}
+.not .german .popover{
+  background: #882300;
+  color: white;
+}
+.not .german .popover-title{
+  background: url('../../../images/beer_foam_by_danmandson-d53wplz.jpg');
+  color: white;
+  text-align: center;
 }
 .not .french{
   background: #600903;
-  
- 
-  
-
+}
+.not .french .popover{
+  background: #600903;
+  color: white;
+}
+.not .french .popover-title{
+  background: url('../../../images/beer_foam_by_danmandson-d53wplz.jpg');
+  color: white;
+  text-align: center;
 }
 .not .others{
   background: #3F0708; 
-  
-
- 
-
+}
+.not .others .popover{
+  background: #3F0708;
+  color: white;
+}
+.not .others .popover-title{
+  background: url('../../../images/beer_foam_by_danmandson-d53wplz.jpg');
+  color: white;
+  text-align: center;
 }
 .not .bohemian{
   background: orange; 
-  
-
- 
-
+}
+.not .bohemian .popover{
+  background: orange;
+  color: white;
+}
+.not .bohemian .popover-title{
+  background: url('../../../images/beer_foam_by_danmandson-d53wplz.jpg');
+  color: white;
+  text-align: center;
 }
 
 .highlight{
-border-left: 5px solid #292929;
+border-left: 5px solid #0FC69C;
  }
 
 .newhighlight{
-  border-right: 5px solid #00e6e6;
-  border-left: 5px solid #00e6e6;
+  border-right: 5px solid #FF3571;
+  border-left: 5px solid #FF3571;
 
 }
 

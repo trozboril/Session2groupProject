@@ -188,6 +188,7 @@ router.post('/breweries/:breweryID/beer/:beerID/remove', function (req, res, nex
 router.post('/breweries/:id/edit', upload.single('jpg'), function (req, res, next) {
 	console.log(req.body);
 	var theID = parseInt(req.body.id);
+	if(req.file) {
 	knex('breweries')
   		.where('id', '=', theID)
   		.update({
@@ -198,9 +199,23 @@ router.post('/breweries/:id/edit', upload.single('jpg'), function (req, res, nex
     	zip: parseInt(req.body.zip),
     	description: req.body.description,
     	image: req.file.path.substring(10)
-  }).then(function() {
-  	res.redirect('/brewery/'+ req.body.id + '/owner/edit');
-  });
+  		}).then(function() {
+  			res.redirect('/brewery/'+ req.body.id + '/owner/edit');
+  		});
+  	}else {
+  		knex('breweries')
+  		.where('id', '=', theID)
+  		.update({
+    	name: req.body.name,
+    	address: req.body.address,
+    	city: req.body.city,
+    	state: req.body.state,
+    	zip: parseInt(req.body.zip),
+    	description: req.body.description
+  		}).then(function() {
+  			res.redirect('/brewery/'+ req.body.id + '/owner/edit');
+  		});
+  	}
 
 });
 
