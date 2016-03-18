@@ -299,8 +299,8 @@ router.get('/contact', function (req, res, next) {
 
 });
 
-router.post('/contact', function (req, res, next) {
-
+router.post('/contact_tapt', function (req, res, next) {
+	res.redirect('/');
 });
 
 router.get('/pubcrawl/breweries/:id', function (req, res, next) {
