@@ -45,7 +45,7 @@ router.get('/beers', function (req, res, next) {
 
 
       // console.log(sortedBeers);
-      res.render('beers', sortedBeers, {id: req.user.id}); 
+      res.render('beers', sortedBeers); 
     });
 
 });
