@@ -131,7 +131,8 @@ router.get('/user/:id', function (req, res, next) {
 				console.log(result);
 				res.render('user', {
 					result: result,
-					id: req.user.id
+					id: req.user.id,
+					name: req.user.name
 				});
 			});	
 
