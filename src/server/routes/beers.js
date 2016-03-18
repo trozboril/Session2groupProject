@@ -58,7 +58,8 @@ router.get('/beers/:id',function(req, res, next) {
         .then(function (beertypes) {
             console.log(beertypes);
             res.render('beer', {
-                beertypes: beertypes
+                beertypes: beertypes,
+                id: req.user.id
             });
         });
 });
