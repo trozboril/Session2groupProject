@@ -43,11 +43,11 @@
                    <p><strong>ABV: </strong> {{beer.abv}}</p>
                    <p><strong>IBU: </strong> {{beer.ibu}}</p>
                    <p><strong>Description: </strong> {{beer.description}}</p>
-                   <a href='/beer/{{beer.beer_id}}' class="btn btn-primary pull-left">Learn more here</a>
+                   <!-- <a href='/beer/{{beer.beer_id}}' class="btn btn-primary pull-left">Learn more here</a> -->
 
                    <form class="form-horizontal" role="form" method="post" action="/beer/{{beer.id}}/remove">
                     <input class="hidden" name="id" value="{{beer.id}}">
-                    <button type="submit" class="btn btn-warning">Remove Beer</button>
+                    <button type="submit" class="btn btn-warning">Remove Saved Beer</button>
                   </form>
                </div>
             {% endfor %}

@@ -32,7 +32,7 @@ d{% extends 'layout.html' %}
                    		<p><strong>ABV: </strong> {{beer.abv}}</p>
                    		<p><strong>IBU: </strong> {{beer.ibu}}</p>
                    		<p><strong>Description: </strong> {{beer.description}}</p>
-                  		 <a href='/beer/{{beer.id}}' class="btn btn-primary pull-left btn-sm">Learn more</a>
+                  		 <!-- <a href='/beer/{{beer.id}}' class="btn btn-primary pull-left btn-sm">Learn more</a> -->
                		<form class="" role="form" method="post" action="/beer/{{beer.id}}/save">
                 		<input class="hidden" name="id" value="{{beer.id}}">
                			<button type="submit" class="btn btn-danger btn-sm pull-right">Save Beer</button>
