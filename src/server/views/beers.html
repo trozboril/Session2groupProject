@@ -180,7 +180,7 @@
           </div>
           
           <div class="not">
-            {% for beer in bohemian %}
+            {% for beer in sortedBeers.bohemian %}
               <a href="/beers/{{beer.id}}">
                 <div class="bohemian element">
                   
@@ -200,7 +200,7 @@
           </div>
           
           <div class="not">
-            {% for beer in belgian %}
+            {% for beer in sortedBeers.belgian %}
               <a href="/beers/{{beer.id}}">
                 <div class="belgian element">
                   
@@ -221,7 +221,7 @@
           </div>
           
           <div class="not">
-            {% for beer in french %}
+            {% for beer in sortedBeers.french %}
               <a href="/beers/{{beer.id}}">
                 <div class="french element">
                   
@@ -240,7 +240,7 @@
           </div>
           
           <div class="not">
-            {% for beer in german %}
+            {% for beer in sortedBeers.german %}
               <a href="/beers/{{beer.id}}">
                 <div class="german element">
                   
@@ -261,7 +261,7 @@
           </div>
           
           <div class="not">
-            {% for beer in english %}
+            {% for beer in sortedBeers.english %}
               <a href="/beers/{{beer.id}}">
                 <div class="english element">
                   
@@ -282,7 +282,7 @@
 
 
           <div class="not">
-            {% for beer in others %}
+            {% for beer in sortedBeers.others %}
               <a href="/beers/{{beer.id}}">
                 <div class="others element">
                   
