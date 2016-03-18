@@ -106,40 +106,67 @@ router.get('/user/:id', function (req, res, next) {
 	if (!req.user) {
 		res.redirect('/');
 	} else {
-		knex.select('*').from('users').where('id', req.params.id)
+		knex('saved_brewery').select('breweries.*')
+			.innerJoin('users', 'saved_brewery.user_id', 'users.id')
+			.innerJoin('breweries', 'saved_brewery.brewery_id', 'breweries.id')
+			.where('users.id', req.params.id)
+			.then(function (savedBreweries) {
+				return knex('saved_beer').select('beers.*')
+					.innerJoin('users', 'saved_beer.user_id', 'users.id')
+					.innerJoin('beers', 'saved_beer.beer_id', 'beers.id')
+					.where('users.id', req.params.id)
+					.then(function (savedBeers) {
+						return { breweries: savedBreweries, beers: savedBeers };
+					});
+			}).then(function (breweriesAndBeers) {
+				return knex('brewery_owner').select('breweries.*')
+					.innerJoin('users', 'brewery_owner.user_id', 'users.id')
+					.innerJoin('breweries', 'brewery_owner.brewery_id', 'breweries.id')
+					.where('users.id', req.params.id).
+					then(function (ownedBreweries) {
+						breweriesAndBeers.ownedBreweries = ownedBreweries;
+						return breweriesAndBeers;
+					});
+			}).then(function (result) {
+				console.log(result);
+				res.render('user', {
+					result: result
+				});
+			});	
 
-		.then(function (user) {
-			knex.select('*').from('brewery_owner').where('user_id', req.params.id)
-		.then(function (owner) {
-			knex.from('breweries').innerJoin('brewery_owner', 'breweries.id', 'brewery_id')
-		.then(function (breweries) {
-			knex.select('*').from('saved_brewery').where('user_id', req.params.id)
-		.then(function (brewery) {
-			knex.from('breweries').innerJoin('saved_brewery', 'breweries.id', 'brewery_id')
-		.then(function (savedBrewery) {
-			knex.select('*').from('saved_beer').where('user_id', req.params.id)
-		.then(function (beer) {
-			knex.from('beers').innerJoin('saved_beer', 'beers.id', 'beer_id')
-		.then(function (savedBeers) {
-			console.log(savedBrewery);
-			res.render('user', {
-				id: req.user.id,
-				user: user[0],
-				owner: owner,
-				breweries: breweries,
-				brewery: brewery,
-				savedBrewery: savedBrewery,
-				beer: beer,
-				savedBeers: savedBeers
-			});
-		});
-		});
-		});
+		// knex.select('*').from('users').where('id', req.params.id)
 
-		});
-		});
-		});
-		});
+		// .then(function (user) {
+		// 	knex.select('*').from('brewery_owner').where('user_id', req.params.id)
+		// .then(function (owner) {
+		// 	knex.from('breweries').innerJoin('brewery_owner', 'breweries.id', 'brewery_id')
+		// .then(function (breweries) {
+		// 	knex.select('*').from('saved_brewery').where('user_id', req.params.id)
+		// .then(function (usersBrewery) {
+		// 	knex.from('breweries').innerJoin('saved_brewery', 'breweries.id', 'brewery_id')
+		// .then(function (savedBreweries) {
+		// 	knex.select('*').from('saved_beer').where('user_id', req.params.id)
+		// .then(function (beer) {
+		// 	knex.from('beers').innerJoin('saved_beer', 'beers.id', 'beer_id')
+		// .then(function (savedBeers) {
+		// 	res.render('user', {
+		// 		id: req.user.id,
+		// 		user: user[0],
+		// 		owner: owner,
+		// 		breweries: breweries,
+		// 		brewery: usersBrewery,
+		// 		savedBreweries: savedBreweries,
+		// 		beer: beer,
+		// 		savedBeers: savedBeers
+		// 	});
+		// });
+		// });
+		// });
+
+		// });
+		// });
+		// });
+		// });
 	}
 });
 

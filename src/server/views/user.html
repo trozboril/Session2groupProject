@@ -12,15 +12,15 @@
        <div class="col-sm-3 col-md-3">
            <h2 >Saved Breweries</h2>
            <div id="savedBreweries">
-               {% if savedBrewery.length > 0 %}
-               {% for brewery in savedBrewery %}
+               {% if result.breweries.length > 0 %}
+               {% for brewery in result.breweries %}
                <div class='indBrew'>
                    <h3>{{brewery.name}}</h3>
                    <h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
                    <p><strong>Description: </strong> {{brewery.description}}</p>
                    <a href="/brewery/{{brewery.brewery_id}}" class="btn btn-primary pull-left">Learn more here</a>
 
-                   <form class="form-horizontal" role="form" method="post" action="/brewery/{{brewery.brewery_id}}/remove">
+                   <form class="form-horizontal" role="form" method="post" action="/brewery/{{brewery.id}}/remove">
                        <input class="hidden" name="id" value="{{brewery.id}}">
                        <button type="submit" class="btn btn-danger">Remove Brewery</button>
                    </form>
@@ -34,8 +34,8 @@
       <div class="col-md-6 col-sm-6">
          <h3 >Saved Beers</h3>
          <div id="savedBeers">
-         {% if savedBeers.length > 0 %}
-         {% for beer in savedBeers %}
+         {% if result.beers.length > 0 %}
+         {% for beer in result.beers %}
                <div class='indBeer'>
                   <h4>{{beer.name}}</h3>
                    <p><strong>Type: </strong> {{beer.type}}
@@ -45,7 +45,7 @@
                    <p><strong>Description: </strong> {{beer.description}}</p>
                    <a href='/beer/{{beer.beer_id}}' class="btn btn-primary pull-left">Learn more here</a>
 
-                   <form class="form-horizontal" role="form" method="post" action="/beer/{{beer.beer_id}}/remove">
+                   <form class="form-horizontal" role="form" method="post" action="/beer/{{beer.id}}/remove">
                     <input class="hidden" name="id" value="{{beer.id}}">
                     <button type="submit" class="btn btn-warning">Remove Beer</button>
                   </form>
@@ -63,8 +63,8 @@
          <a href="/breweries/new" class="btn btn-primary">Create New Brewery</a>
          <div id="ownedBreweries">
             <h2>Owned breweries</h3>
-            {% if owner %}
-               {% for brewery in breweries %}
+            {% if result.ownedBreweries %}
+               {% for brewery in result.ownedBreweries %}
                <div class='indBrew'>
                   <h3>{{brewery.name}}</h3>
                    <h4>Address: {{brewery.address}} {{brewery.city}}, {{brewery.state}}, {{brewery.zip}}</h4>
