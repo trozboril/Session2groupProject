@@ -130,7 +130,8 @@ router.get('/user/:id', function (req, res, next) {
 			}).then(function (result) {
 				console.log(result);
 				res.render('user', {
-					result: result
+					result: result,
+					id: req.user.id
 				});
 			});	
 
