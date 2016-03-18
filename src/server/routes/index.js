@@ -295,8 +295,11 @@ router.post('/breweries/new', upload.single('jpg'), function (req, res, next) {
 // *** basic contact page *** //
 
 router.get('/contact', function (req, res, next) {
+	if( !req.user ) {
+		res.redirect('/');
+	} else {
 	res.render('contact', {id: req.user.id});
-
+	}
 });
 
 router.post('/contact_tapt', function (req, res, next) {
